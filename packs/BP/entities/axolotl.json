@@ -2,17 +2,6 @@
     "format_version": "1.16.0",
     "minecraft:entity": {
         "component_groups": {
-            "smokey_bedrock:convert_to_warden": {
-                "minecraft:transformation": {
-                    "into": "minecraft:warden<minecraft:spawn_emerging>",
-                    "transformation_sound": "convert_to_drowned",
-                    "drop_equipment": true,
-                    "delay": {
-                        "value": 4
-                    }
-                },
-                "minecraft:is_shaking": {}
-            },
             "attack_cooldown": {
                 "minecraft:attack_cooldown": {
                     "attack_cooldown_complete_event": {
@@ -38,7 +27,7 @@
                         "mate_type": "minecraft:axolotl"
                     },
                     "mutation_factor": {
-                        "variant": 0.00083 // roughly 1/1200
+                        "variant": 0.00083
                     },
                     "require_tame": false,
                     "transform_to_item": "water_bucket:0"
@@ -147,6 +136,17 @@
             "axolotl_wild": {
                 "minecraft:variant": {
                     "value": 3
+                }
+            },
+            "smokey_bedrock:convert_to_warden": {
+                "minecraft:is_shaking": {},
+                "minecraft:transformation": {
+                    "delay": {
+                        "value": 4
+                    },
+                    "drop_equipment": true,
+                    "into": "minecraft:warden<minecraft:spawn_emerging>",
+                    "transformation_sound": "convert_to_drowned"
                 }
             }
         },
@@ -318,14 +318,14 @@
                         "deals_damage": true
                     },
                     {
+                        "deals_damage": false,
                         "on_damage": {
+                            "event": "smokey_bedrock:convert_to_warden",
                             "filters": {
                                 "test": "has_damage",
                                 "value": "sonic_boom"
-                            },
-                            "event": "smokey_bedrock:convert_to_warden"
-                        },
-                        "deals_damage": false
+                            }
+                        }
                     }
                 ]
             },
@@ -393,13 +393,6 @@
             "is_summonable": true
         },
         "events": {
-            "smokey_bedrock:convert_to_warden": {
-                "add": {
-                    "component_groups": [
-                        "smokey_bedrock:convert_to_warden"
-                    ]
-                }
-            },
             "attack_cooldown_complete_event": {
                 "remove": {
                     "component_groups": [
@@ -528,6 +521,13 @@
                 "remove": {
                     "component_groups": [
                         "axolotl_dried"
+                    ]
+                }
+            },
+            "smokey_bedrock:convert_to_warden": {
+                "add": {
+                    "component_groups": [
+                        "smokey_bedrock:convert_to_warden"
                     ]
                 }
             },
