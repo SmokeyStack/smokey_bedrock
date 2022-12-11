@@ -3,7 +3,7 @@
     "header": {
         "name": "Smokey Bedrock",
         "description": "Made By SmokeyStack",
-        "uuid": "985D1EE4-0E9D-49DE-9A99-E208ADC08D0C",
+        "uuid": "ada6a807-4846-4547-8b2f-250e2ff56ee7",
         "version": [
             1,
             0,
@@ -17,8 +17,8 @@
     },
     "modules": [
         {
-            "type": "data",
-            "uuid": "700d26f6-d1e0-499f-8574-1367b731820e",
+            "type": "resources",
+            "uuid": "89cd5594-68be-49e5-9bfa-52c8ba07a07d",
             "version": [
                 1,
                 0,
@@ -28,7 +28,7 @@
     ],
     "dependencies": [
         {
-            "uuid": "ada6a807-4846-4547-8b2f-250e2ff56ee7",
+            "uuid": "985D1EE4-0E9D-49DE-9A99-E208ADC08D0C",
             "version": [
                 1,
                 0,

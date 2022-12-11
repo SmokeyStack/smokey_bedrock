@@ -142,11 +142,11 @@
                 "minecraft:is_shaking": {},
                 "minecraft:transformation": {
                     "delay": {
-                        "value": 4
+                        "value": 0
                     },
                     "drop_equipment": true,
                     "into": "minecraft:warden<minecraft:spawn_emerging>",
-                    "transformation_sound": "convert_to_drowned"
+                    "transformation_sound": "mob.warden.nearby_closest"
                 }
             }
         },
