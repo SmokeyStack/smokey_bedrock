@@ -1,0 +1,141 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "component_groups": {
+            "smokey_bedrock:ghast_adult": {
+                "minecraft:experience_reward": {
+                    "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
+                },
+                "minecraft:loot": {
+                    "table": "loot_tables/entities/ghast.json"
+                },
+                "minecraft:movement": {
+                    "value": 0.03
+                }
+            },
+            "smokey_bedrock:ghast_baby": {
+                "minecraft:experience_reward": {
+                    "on_death": "query.last_hit_by_player ? 10 + (query.equipment_count * Math.Random(1,3)) : 0"
+                },
+                "minecraft:is_baby": {},
+                "minecraft:movement": {
+                    "value": 0.05
+                },
+                "minecraft:scale": {
+                    "value": 0.5
+                }
+            }
+        },
+        "components": {
+            "minecraft:behavior.float": {
+                "priority": 0
+            },
+            "minecraft:behavior.float_wander": {
+                "must_reach": true,
+                "priority": 2
+            },
+            "minecraft:behavior.hurt_by_target": {
+                "priority": 1
+            },
+            "minecraft:behavior.nearest_attackable_target": {
+                "entity_types": [
+                    {
+                        "filters": {
+                            "subject": "other",
+                            "test": "is_family",
+                            "value": "player"
+                        },
+                        "max_dist": 28
+                    }
+                ],
+                "must_see": true,
+                "priority": 2
+            },
+            "minecraft:behavior.ranged_attack": {
+                "attack_radius": 64,
+                "charge_charged_trigger": 1,
+                "charge_shoot_trigger": 2,
+                "priority": 1
+            },
+            "minecraft:breathable": {
+                "suffocate_time": 0,
+                "total_supply": 15
+            },
+            "minecraft:can_fly": {},
+            "minecraft:collision_box": {
+                "height": 4,
+                "width": 4.02
+            },
+            "minecraft:conditional_bandwidth_optimization": {},
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "cause": "fall",
+                    "deals_damage": false
+                }
+            },
+            "minecraft:despawn": {
+                "despawn_from_distance": {}
+            },
+            "minecraft:fire_immune": {},
+            "minecraft:follow_range": {
+                "max": 64,
+                "value": 64
+            },
+            "minecraft:health": {
+                "max": 10,
+                "value": 10
+            },
+            "minecraft:is_hidden_when_invisible": {},
+            "minecraft:jump.static": {},
+            "minecraft:nameable": {},
+            "minecraft:navigation.float": {
+                "can_path_over_water": true
+            },
+            "minecraft:physics": {},
+            "minecraft:pushable": {
+                "is_pushable": true,
+                "is_pushable_by_piston": true
+            },
+            "minecraft:shooter": {
+                "def": "minecraft:fireball"
+            },
+            "minecraft:type_family": {
+                "family": [
+                    "ghast",
+                    "monster",
+                    "mob"
+                ]
+            }
+        },
+        "description": {
+            "identifier": "minecraft:ghast",
+            "is_experimental": false,
+            "is_spawnable": true,
+            "is_summonable": true
+        },
+        "events": {
+            "minecraft:entity_spawned": {
+                "randomize": [
+                    {
+                        "add": {
+                            "component_groups": [
+                                "smokey_bedrock:ghast_adult"
+                            ]
+                        },
+                        "remove": {},
+                        "weight": 95
+                    },
+                    {
+                        "add": {
+                            "component_groups": [
+                                "smokey_bedrock:ghast_baby"
+                            ]
+                        },
+                        "remove": {},
+                        "weight": 5
+                    }
+                ]
+            }
+        }
+    }
+}
