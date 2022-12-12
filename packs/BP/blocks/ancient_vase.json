@@ -1,0 +1,38 @@
+{
+    "format_version": "1.19.50",
+    "minecraft:block": {
+        "components": {
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 3
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 1
+            },
+            "minecraft:loot": "loot_tables/chests/ancient_city.json",
+            "minecraft:map_color": "#0A0A0A",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "sculk"
+                }
+            },
+            "minecraft:on_player_destroyed": {
+                "event": "smokey_bedrock:shriek"
+            },
+            "minecraft:unit_cube": {}
+        },
+        "description": {
+            "identifier": "smokey_bedrock:ancient_vase"
+        },
+        "events": {
+            "smokey_bedrock:shriek": {
+                "run_command": {
+                    "command": [
+                        "playsound shriek.sculk_shrieker @a[r=16]",
+                        "particle smokey_bedrock:shriek_wave",
+                        "effect @e[r=16] darkness 20 0 true"
+                    ]
+                }
+            }
+        }
+    }
+}
