@@ -27,8 +27,8 @@
             "smokey_bedrock:shriek": {
                 "run_command": {
                     "command": [
-                        "playsound shriek.sculk_shrieker @a[r=16]",
                         "particle smokey_bedrock:shriek_wave",
+                        "playsound shriek.sculk_shrieker @a[r=16]",
                         "effect @e[r=16] darkness 20 0 true"
                     ]
                 }
