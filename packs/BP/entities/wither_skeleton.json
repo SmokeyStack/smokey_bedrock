@@ -14,6 +14,15 @@
                 }
             },
             "smokey_bedrock:wither_skeleton_baby": {
+                "minecraft:behavior.ranged_attack": {
+                    "attack_interval_max": 3,
+                    "attack_interval_min": 1,
+                    "attack_radius": 15,
+                    "priority": 0
+                },
+                "minecraft:equipment": {
+                    "table": "loot_tables/entities/wither_skeleton_gear_baby.json"
+                },
                 "minecraft:experience_reward": {
                     "on_death": "query.last_hit_by_player ? 10 + (query.equipment_count * Math.Random(1,3)) : 0"
                 },
@@ -22,7 +31,10 @@
                     "value": 0.38
                 },
                 "minecraft:scale": {
-                    "value": 0.5
+                    "value": 0.6
+                },
+                "minecraft:shooter": {
+                    "def": "minecraft:arrow"
                 }
             }
         },

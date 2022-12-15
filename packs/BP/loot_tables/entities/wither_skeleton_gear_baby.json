@@ -1,0 +1,32 @@
+{
+    "pools": [
+        {
+            "entries": [
+                {
+                    "functions": [
+                        {
+                            "count": {
+                                "max": 1,
+                                "min": 0
+                            },
+                            "function": "looting_enchant"
+                        },
+                        {
+                            "enchants": [
+                                {
+                                    "id": "flame",
+                                    "level": 1
+                                }
+                            ],
+                            "function": "specific_enchants"
+                        }
+                    ],
+                    "name": "minecraft:bow",
+                    "type": "item",
+                    "weight": 1
+                }
+            ],
+            "rolls": 1
+        }
+    ]
+}
