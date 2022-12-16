@@ -1,0 +1,52 @@
+{
+    "format_version": "1.12.0",
+    "minecraft:entity": {
+        "components": {
+            "minecraft:collision_box": {
+                "height": 0.25,
+                "width": 0.25
+            },
+            "minecraft:conditional_bandwidth_optimization": {
+                "default_values": {
+                    "max_dropped_ticks": 7,
+                    "max_optimized_distance": 80,
+                    "use_motion_prediction_hints": true
+                }
+            },
+            "minecraft:physics": {},
+            "minecraft:projectile": {
+                "anchor": 1,
+                "hit_sound": "bow.hit",
+                "on_hit": {
+                    "definition_event": {
+                        "event_trigger": {
+                            "event": "smokey_bedrock:web_projectile_event",
+                            "target": "self"
+                        }
+                    }
+                }
+            },
+            "minecraft:pushable": {
+                "is_pushable": true,
+                "is_pushable_by_piston": true
+            }
+        },
+        "description": {
+            "identifier": "smokey_bedrock:web_projectile",
+            "is_experimental": false,
+            "is_spawnable": false,
+            "is_summonable": true,
+            "runtime_identifier": "minecraft:arrow"
+        },
+        "events": {
+            "smokey_bedrock:web_projectile_event": {
+                "run_command": {
+                    "command": [
+                        "fill ~-1~~-1 ~2~2~2 web 0 replace air",
+                        "kill @s"
+                    ]
+                }
+            }
+        }
+    }
+}
