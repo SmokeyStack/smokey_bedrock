@@ -42,7 +42,7 @@
             "smokey_bedrock:web_projectile_event": {
                 "run_command": {
                     "command": [
-                        "fill ~-1~~-1 ~2~2~2 web 0 replace air",
+                        "fill ~-1~-1~-1 ~1~1~1 web 0 replace air",
                         "kill @s"
                     ]
                 }

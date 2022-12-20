@@ -2,26 +2,26 @@
     "format_version": "1.10.0",
     "minecraft:client_entity": {
         "description": {
-            "identifier": "smokey_bedrock:web_projectile",
-            "materials": {
-                "default": "egg"
-            },
-            "textures": {
-                "default": "textures/items/egg"
+            "animations": {
+                "flying": "animation.actor.billboard"
             },
             "geometry": {
                 "default": "geometry.item_sprite"
             },
+            "identifier": "smokey_bedrock:web_projectile",
+            "materials": {
+                "default": "egg"
+            },
             "render_controllers": [
                 "controller.render.item_sprite"
             ],
-            "animations": {
-                "flying": "animation.actor.billboard"
-            },
             "scripts": {
                 "animate": [
                     "flying"
                 ]
+            },
+            "textures": {
+                "default": "textures/blocks/web"
             }
         }
     }
