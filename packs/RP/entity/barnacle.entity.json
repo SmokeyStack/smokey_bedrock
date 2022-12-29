@@ -3,8 +3,7 @@
     "minecraft:client_entity": {
         "description": {
             "animations": {
-                "move": "animation.squid.move",
-                "squid_rotate": "animation.squid.rotate"
+                "move": "animation.barnacle.move"
             },
             "geometry": {
                 "default": "geometry.barnacle"
@@ -18,8 +17,7 @@
             ],
             "scripts": {
                 "animate": [
-                    "move",
-                    "squid_rotate"
+                    "move"
                 ]
             },
             "spawn_egg": {
@@ -27,7 +25,7 @@
                 "texture_index": 15
             },
             "textures": {
-                "default": "textures/entity/squid"
+                "default": "textures/entity/barnacle"
             }
         }
     }
