@@ -4,7 +4,7 @@
         "component_groups": {
             "emerging": {
                 "minecraft:behavior.emerge": {
-                    "duration": 1,
+                    "duration": 1.58,
                     "on_done": {
                         "event": "minecraft:emerged",
                         "target": "self"
@@ -21,8 +21,8 @@
         "components": {
             "minecraft:behavior.dig": {
                 "digs_in_daylight": false,
-                "duration": 5.5,
-                "idle_time": 500,
+                "duration": 1.08,
+                "idle_time": 5,
                 "on_start": {
                     "event": "on_digging_event",
                     "target": "self"
@@ -31,30 +31,11 @@
                 "suspicion_is_disturbance": true,
                 "vibration_is_disturbance": true
             },
-            "minecraft:behavior.eat_block": {
-                "eat_and_replace_block_pairs": [
-                    {
-                        "eat_block": "grass",
-                        "replace_block": "dirt"
-                    },
-                    {
-                        "eat_block": "tallgrass",
-                        "replace_block": "air"
-                    }
-                ],
-                // "on_eat": {
-                //     "event": "minecraft:on_eat_block",
-                //     "target": "self"
-                // },
-                "priority": 15,
-                "success_chance": "0.01",
-                "time_until_eat": 1.8
-            },
             "minecraft:behavior.eat_mob": {
                 "eat_animation_time": 0.3,
                 "eat_mob_sound": "tongue",
                 "loot_table": "loot_tables/entities/frog.json",
-                "priority": 8,
+                "priority": 7,
                 "pull_in_force": 0.75,
                 "reach_mob_distance": 1.75,
                 "run_speed": 0.5
@@ -78,14 +59,14 @@
                     }
                 ],
                 "must_see": true,
-                "priority": 7,
+                "priority": 8,
                 "within_radius": 16
             },
             "minecraft:behavior.random_look_around": {
-                "priority": 11
+                "priority": 12
             },
             "minecraft:behavior.random_stroll": {
-                "priority": 9,
+                "priority": 11,
                 "speed_multiplier": 0.5
             },
             "minecraft:breathable": {
