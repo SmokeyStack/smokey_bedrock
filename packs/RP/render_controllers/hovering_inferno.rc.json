@@ -1,0 +1,30 @@
+{
+    "format_version": "1.8.0",
+    "render_controllers": {
+        "controller.render.hovering_inferno": {
+            "geometry": "Geometry.default",
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "part_visibility": [
+                {
+                    "shield": "q.variant && q.health >= 30"
+                },
+                {
+                    "shield2": "q.variant && q.health >= 20"
+                },
+                {
+                    "shield3": "q.variant && q.health >= 10"
+                },
+                {
+                    "shield4": "q.variant && q.health >= 0"
+                }
+            ],
+            "textures": [
+                "Texture.default"
+            ]
+        }
+    }
+}

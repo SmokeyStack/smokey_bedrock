@@ -1,0 +1,40 @@
+{
+    "format_version": "1.8.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "smokey_bedrock:hovering_inferno",
+            "min_engine_version": "1.8.0",
+            "materials": {
+                "default": "stray_clothes"
+            },
+            "textures": {
+                "default": "textures/entity/hovering_inferno"
+            },
+            "geometry": {
+                "default": "geometry.hovering_inferno"
+            },
+            "animations": {
+                "look_at_target": "animation.common.look_at_target",
+                "move": "animation.hovering_inferno.move"
+            },
+            "particle_effects": {
+                "charged_flames": "minecraft:mobflame_emitter"
+            },
+            "animation_controllers": [
+                {
+                    "move": "controller.animation.blaze.move"
+                },
+                {
+                    "flame": "controller.animation.blaze.flame"
+                }
+            ],
+            "render_controllers": [
+                "controller.render.hovering_inferno"
+            ],
+            "spawn_egg": {
+                "texture": "spawn_egg",
+                "texture_index": 21
+            }
+        }
+    }
+}
