@@ -82,6 +82,9 @@
                 "default": "zombie"
             },
             "min_engine_version": "1.8.0",
+            "particle_effects": {
+                "digging": "minecraft:warden_dig"
+            },
             "render_controllers": [
                 "controller.render.zombie"
             ],
@@ -89,6 +92,13 @@
                 "pre_animation": [
                     "variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;"
                 ]
+            },
+            "sound_effects": {
+                "clicking": "mob.warden.clicking",
+                "dig": "mob.warden.dig",
+                "emerge": "mob.warden.emerge",
+                "roar": "mob.warden.roar",
+                "sniff": "mob.warden.sniff"
             },
             "spawn_egg": {
                 "texture": "spawn_egg",
