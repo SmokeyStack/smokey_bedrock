@@ -1,0 +1,27 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.smokey_bedrock.emerge": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "emerge": "q.is_emerging"
+                        }
+                    ]
+                },
+                "emerge": {
+                    "animations": [
+                        "emerge"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!q.is_emerging"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
