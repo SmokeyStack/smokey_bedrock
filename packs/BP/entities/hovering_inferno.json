@@ -60,6 +60,12 @@
                         }
                     ]
                 },
+                "minecraft:experience_reward": {
+                    "on_death": "query.last_hit_by_player ? 10 : 0"
+                },
+                "minecraft:loot": {
+                    "table": "loot_tables/entities/blaze.json"
+                },
                 "minecraft:variant": {
                     "value": 0
                 }
@@ -117,9 +123,6 @@
             "minecraft:despawn": {
                 "despawn_from_distance": {}
             },
-            "minecraft:experience_reward": {
-                "on_death": "query.last_hit_by_player ? 10 : 0"
-            },
             "minecraft:fire_immune": {},
             "minecraft:follow_range": {
                 "max": 48,
@@ -144,9 +147,6 @@
             },
             "minecraft:is_hidden_when_invisible": {},
             "minecraft:jump.static": {},
-            "minecraft:loot": {
-                "table": "loot_tables/entities/blaze.json"
-            },
             "minecraft:movement": {
                 "value": 0.23
             },
@@ -203,7 +203,13 @@
             "smokey_bedrock:no_shield": {
                 "add": {
                     "component_groups": [
+                        "mode_switcher",
                         "no_shield"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "has_shield"
                     ]
                 }
             },
@@ -211,6 +217,11 @@
                 "add": {
                     "component_groups": [
                         "convert_to_no_shield"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "has_shield"
                     ]
                 }
             },
