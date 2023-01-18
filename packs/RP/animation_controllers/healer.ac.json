@@ -1,0 +1,28 @@
+{
+    "animation_controllers": {
+        "controller.animation.healer.dancing": {
+            "initial_state": "default",
+            "states": {
+                "dancing": {
+                    "animations": [
+                        "dance"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!query.variant"
+                        }
+                    ]
+                },
+                "default": {
+                    "blend_transition": 0.2,
+                    "transitions": [
+                        {
+                            "dancing": "query.variant"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "format_version": "1.10.0"
+}

@@ -1,0 +1,53 @@
+{
+    "format_version": "1.8.0",
+    "minecraft:client_entity": {
+        "description": {
+            "animation_controllers": [
+                {
+                    "general": "controller.animation.allay.general"
+                },
+                {
+                    "look_at_target": "controller.animation.allay.look_at_target"
+                },
+                {
+                    "holding": "controller.animation.allay.holding"
+                },
+                {
+                    "dancing": "controller.animation.healer.dancing"
+                }
+            ],
+            "animations": {
+                "dance": "animation.allay.dance",
+                "fly": "animation.allay.fly",
+                "hold_item": "animation.allay.hold_item",
+                "hold_item_fly": "animation.allay.hold_item_fly",
+                "idle": "animation.allay.idle",
+                "look_at_target_default": "animation.allay.look_at_target.default"
+            },
+            "enable_attachables": true,
+            "geometry": {
+                "default": "geometry.allay"
+            },
+            "held_item_ignores_lighting": true,
+            "identifier": "smokey_bedrock:healer",
+            "materials": {
+                "default": "allay"
+            },
+            "render_controllers": [
+                "controller.render.allay"
+            ],
+            "scripts": {
+                "pre_animation": [
+                    "variable.holding_trident = query.is_item_name_any('slot.weapon.mainhand', 'minecraft:trident');"
+                ]
+            },
+            "spawn_egg": {
+                "base_color": "#FFFF00",
+                "overlay_color": "#FFFF00"
+            },
+            "textures": {
+                "default": "textures/entity/healer"
+            }
+        }
+    }
+}

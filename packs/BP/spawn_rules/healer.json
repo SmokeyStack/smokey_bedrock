@@ -1,0 +1,31 @@
+{
+    "format_version": "1.8.0",
+    "minecraft:spawn_rules": {
+        "conditions": [
+            {
+                "minecraft:biome_filter": {
+                    "any_of": [
+                        {
+                            "operator": "==",
+                            "test": "has_biome_tag",
+                            "value": "roofed"
+                        }
+                    ]
+                },
+                "minecraft:herd": {
+                    "max_size": 3,
+                    "min_size": 1
+                },
+                "minecraft:spawns_on_surface": {},
+                "minecraft:spawns_underground": {},
+                "minecraft:weight": {
+                    "default": 10
+                }
+            }
+        ],
+        "description": {
+            "identifier": "smokey_bedrock:healer",
+            "population_control": "animal"
+        }
+    }
+}

@@ -1,0 +1,289 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "component_groups": {
+            "happy": {
+                "minecraft:environment_sensor": {
+                    "triggers": [
+                        {
+                            "event": "not_happy",
+                            "filters": {
+                                "all_of": {
+                                    "operator": "!=",
+                                    "test": "has_biome_tag",
+                                    "value": "roofed"
+                                }
+                            }
+                        }
+                    ]
+                },
+                "minecraft:variant": {
+                    "value": 1
+                }
+            },
+            "not_happy": {
+                "minecraft:environment_sensor": {
+                    "triggers": [
+                        {
+                            "event": "happy",
+                            "filters": {
+                                "all_of": {
+                                    "test": "has_biome_tag",
+                                    "value": "roofed"
+                                }
+                            }
+                        }
+                    ]
+                },
+                "minecraft:variant": {
+                    "value": 0
+                }
+            },
+            "not_tamed": {
+                "minecraft:tameable": {
+                    "probability": 1,
+                    "tame_event": {
+                        "event": "minecraft:on_tame",
+                        "target": "self"
+                    },
+                    "tame_items": "amethyst_shard"
+                }
+            },
+            "tamed": {
+                "minecraft:is_tamed": {}
+            }
+        },
+        "components": {
+            "minecraft:ambient_sound_interval": {
+                "event_name": "ambient",
+                "event_names": [
+                    {
+                        "condition": "query.is_using_item",
+                        "event_name": "ambient.tame"
+                    },
+                    {
+                        "condition": "!query.is_using_item",
+                        "event_name": "ambient"
+                    }
+                ],
+                "range": 5,
+                "value": 5
+            },
+            "minecraft:balloonable": {
+                "mass": 0.5
+            },
+            "minecraft:behavior.float": {
+                "priority": 7
+            },
+            "minecraft:behavior.follow_owner": {
+                "can_teleport": false,
+                "ignore_vibration": false,
+                "priority": 6,
+                "speed_multiplier": 8,
+                "start_distance": 16,
+                "stop_distance": 4
+            },
+            "minecraft:behavior.look_at_player": {
+                "priority": 8,
+                "probability": 0.02,
+                "target_distance": 6
+            },
+            "minecraft:behavior.panic": {
+                "priority": 1,
+                "speed_multiplier": 2
+            },
+            "minecraft:behavior.random_hover": {
+                "hover_height": [
+                    1,
+                    4
+                ],
+                "interval": 1,
+                "priority": 9,
+                "xz_dist": 8,
+                "y_dist": 8,
+                "y_offset": -1
+            },
+            "minecraft:behavior.random_look_around": {
+                "priority": 8
+            },
+            "minecraft:breathable": {
+                "suffocateTime": 0,
+                "totalSupply": 15
+            },
+            "minecraft:can_fly": {},
+            "minecraft:collision_box": {
+                "height": 0.6,
+                "width": 0.35
+            },
+            "minecraft:conditional_bandwidth_optimization": {},
+            "minecraft:damage_sensor": {
+                "triggers": [
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "subject": "other",
+                                        "test": "is_family",
+                                        "value": "player"
+                                    },
+                                    {
+                                        "subject": "other",
+                                        "test": "is_owner",
+                                        "value": true
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ]
+            },
+            "minecraft:environment_sensor": {
+                "triggers": [
+                    {
+                        "event": "happy",
+                        "filters": {
+                            "all_of": {
+                                "test": "has_biome_tag",
+                                "value": "roofed"
+                            }
+                        }
+                    }
+                ]
+            },
+            "minecraft:flying_speed": {
+                "value": 0.1
+            },
+            "minecraft:follow_range": {
+                "value": 1024
+            },
+            "minecraft:game_event_movement_tracking": {
+                "emit_flap": true
+            },
+            "minecraft:health": {
+                "value": 20
+            },
+            "minecraft:hurt_on_condition": {
+                "damage_conditions": [
+                    {
+                        "cause": "lava",
+                        "damage_per_tick": 4,
+                        "filters": {
+                            "operator": "==",
+                            "subject": "self",
+                            "test": "in_lava",
+                            "value": true
+                        }
+                    }
+                ]
+            },
+            "minecraft:is_hidden_when_invisible": {},
+            "minecraft:jump.static": {},
+            "minecraft:leashable": {
+                "hard_distance": 6,
+                "max_distance": 10,
+                "soft_distance": 4
+            },
+            "minecraft:mob_effect": {
+                "cooldown_time": 6,
+                "effect_range": 20,
+                "effect_time": 13,
+                "entity_filter": {
+                    "all_of": [
+                        {
+                            "subject": "other",
+                            "test": "is_family",
+                            "value": "player"
+                        },
+                        {
+                            "operator": "not",
+                            "subject": "other",
+                            "test": "has_ability",
+                            "value": "invulnerable"
+                        }
+                    ]
+                },
+                "mob_effect": "regeneration"
+            },
+            "minecraft:movement": {
+                "value": 0.1
+            },
+            "minecraft:movement.hover": {},
+            "minecraft:nameable": {},
+            "minecraft:navigation.hover": {
+                "avoid_damage_blocks": true,
+                "avoid_sun": false,
+                "avoid_water": true,
+                "can_pass_doors": false,
+                "can_path_from_air": true,
+                "can_path_over_water": true,
+                "can_sink": false
+            },
+            "minecraft:physics": {
+                "has_gravity": false
+            },
+            "minecraft:pushable": {
+                "is_pushable": true,
+                "is_pushable_by_piston": true
+            },
+            "minecraft:type_family": {
+                "family": [
+                    "allay",
+                    "mob"
+                ]
+            }
+        },
+        "description": {
+            "identifier": "smokey_bedrock:healer",
+            "is_experimental": false,
+            "is_spawnable": true,
+            "is_summonable": true
+        },
+        "events": {
+            "happy": {
+                "add": {
+                    "component_groups": [
+                        "happy"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "not_happy"
+                    ]
+                }
+            },
+            "minecraft:entity_spawned": {
+                "add": {
+                    "component_groups": [
+                        "not_tamed"
+                    ]
+                }
+            },
+            "minecraft:on_tame": {
+                "add": {
+                    "component_groups": [
+                        "tamed"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "not_tamed"
+                    ]
+                }
+            },
+            "not_happy": {
+                "add": {
+                    "component_groups": [
+                        "not_happy"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "happy"
+                    ]
+                }
+            }
+        }
+    }
+}
