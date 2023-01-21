@@ -7,7 +7,7 @@
                     "general": "controller.animation.allay.general"
                 },
                 {
-                    "look_at_target": "controller.animation.allay.look_at_target"
+                    "look_at_target": "controller.animation.healer.look_at_target"
                 },
                 {
                     "holding": "controller.animation.allay.holding"

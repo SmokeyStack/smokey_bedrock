@@ -2,6 +2,29 @@
     "format_version": "1.16.0",
     "minecraft:entity": {
         "component_groups": {
+            "boost": {
+                "minecraft:mob_effect": {
+                    "cooldown_time": 6,
+                    "effect_range": 20,
+                    "effect_time": 13,
+                    "entity_filter": {
+                        "all_of": [
+                            {
+                                "subject": "other",
+                                "test": "is_family",
+                                "value": "player"
+                            },
+                            {
+                                "operator": "not",
+                                "subject": "other",
+                                "test": "has_ability",
+                                "value": "invulnerable"
+                            }
+                        ]
+                    },
+                    "mob_effect": "health_boost"
+                }
+            },
             "happy": {
                 "minecraft:environment_sensor": {
                     "triggers": [
@@ -47,6 +70,29 @@
                         "target": "self"
                     },
                     "tame_items": "amethyst_shard"
+                }
+            },
+            "regeneration": {
+                "minecraft:mob_effect": {
+                    "cooldown_time": 6,
+                    "effect_range": 20,
+                    "effect_time": 13,
+                    "entity_filter": {
+                        "all_of": [
+                            {
+                                "subject": "other",
+                                "test": "is_family",
+                                "value": "player"
+                            },
+                            {
+                                "operator": "not",
+                                "subject": "other",
+                                "test": "has_ability",
+                                "value": "invulnerable"
+                            }
+                        ]
+                    },
+                    "mob_effect": "regeneration"
                 }
             },
             "tamed": {
@@ -185,27 +231,6 @@
                 "max_distance": 10,
                 "soft_distance": 4
             },
-            "minecraft:mob_effect": {
-                "cooldown_time": 6,
-                "effect_range": 20,
-                "effect_time": 13,
-                "entity_filter": {
-                    "all_of": [
-                        {
-                            "subject": "other",
-                            "test": "is_family",
-                            "value": "player"
-                        },
-                        {
-                            "operator": "not",
-                            "subject": "other",
-                            "test": "has_ability",
-                            "value": "invulnerable"
-                        }
-                    ]
-                },
-                "mob_effect": "regeneration"
-            },
             "minecraft:movement": {
                 "value": 0.1
             },
@@ -229,7 +254,7 @@
             },
             "minecraft:type_family": {
                 "family": [
-                    "allay",
+                    "healer",
                     "mob"
                 ]
             }
@@ -261,16 +286,42 @@
                 }
             },
             "minecraft:on_tame": {
-                "add": {
-                    "component_groups": [
-                        "tamed"
-                    ]
-                },
-                "remove": {
-                    "component_groups": [
-                        "not_tamed"
-                    ]
-                }
+                "sequence": [
+                    {
+                        "add": {
+                            "component_groups": [
+                                "tamed"
+                            ]
+                        }
+                    },
+                    {
+                        "randomize": [
+                            {
+                                "add": {
+                                    "component_groups": [
+                                        "regeneration"
+                                    ]
+                                },
+                                "weight": 9
+                            },
+                            {
+                                "add": {
+                                    "component_groups": [
+                                        "boost"
+                                    ]
+                                },
+                                "weight": 1
+                            }
+                        ]
+                    },
+                    {
+                        "remove": {
+                            "component_groups": [
+                                "not_tamed"
+                            ]
+                        }
+                    }
+                ]
             },
             "not_happy": {
                 "add": {

@@ -1,5 +1,27 @@
 {
     "animation_controllers": {
+        "controller.animation.healer.look_at_target": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "looking_at_target": "!query.variant"
+                        }
+                    ]
+                },
+                "looking_at_target": {
+                    "animations": [
+                        "look_at_target_default"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "query.variant"
+                        }
+                    ]
+                }
+            }
+        },
         "controller.animation.healer.dancing": {
             "initial_state": "default",
             "states": {
