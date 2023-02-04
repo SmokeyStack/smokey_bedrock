@@ -13,7 +13,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 project(adk VERSION 0.1 LANGUAGES CXX)
 
-include_directories(include)
+include_directories(include SmokeyBedrock)
 add_executable(adk
     Main.cpp
 )
