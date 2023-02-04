@@ -1,5 +1,4 @@
-#include "BlockState.h"
-#include "ItemState.h"
+#include "generator/BlockState.h"
 
 int main() {
     head("amethyst_block", "amethyst_block");
