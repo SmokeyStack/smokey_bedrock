@@ -31,7 +31,8 @@ int main() {
         "weakness",     "wither"};
 
     for (const std::string& a : effect_list)
-        blocks.subscribe(a, new ScentedCandleBlock(BlockProperty::Property()));
+        blocks.subscribe(a + "_candle",
+                         new ScentedCandleBlock(BlockProperty::Property(), a));
 
     return 0;
 }

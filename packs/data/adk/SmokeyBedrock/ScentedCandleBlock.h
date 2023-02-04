@@ -7,11 +7,14 @@
 #include "json.hpp"
 
 class ScentedCandleBlock : public CandleBlock {
+   protected:
+    std::string _effect;
+
    public:
     ScentedCandleBlock() {}
     /// @brief Represents a scented candle block
     /// @param property A BlockProperty object
-    ScentedCandleBlock(BlockProperty::Property property) {
+    ScentedCandleBlock(BlockProperty::Property property, std::string effect) {
         _block_light_filter = property.block_light_filter;
         _crafting = property.crafting;
         _explosion = property.explosion;
@@ -23,6 +26,7 @@ class ScentedCandleBlock : public CandleBlock {
         _loot = property.loot;
         _color = property.colour;
         _rotation = property.rotation;
+        _effect = effect;
     }
 
     /// @brief Generates the json object
@@ -40,13 +44,13 @@ class ScentedCandleBlock : public CandleBlock {
 
         // Events
         j["minecraft:block"]["events"][mod_id + ":effect_one"]["run_command"]
-         ["command"] = {"effect @e[r=4] " + id + " 10 0 true"};
+         ["command"] = {"effect @e[r=4] " + _effect + " 10 0 true"};
         j["minecraft:block"]["events"][mod_id + ":effect_two"]["run_command"]
-         ["command"] = {"effect @e[r=8] " + id + " 10 0 true"};
+         ["command"] = {"effect @e[r=8] " + _effect + " 10 0 true"};
         j["minecraft:block"]["events"][mod_id + ":effect_three"]["run_command"]
-         ["command"] = {"effect @e[r=12] " + id + " 10 0 true"};
+         ["command"] = {"effect @e[r=12] " + _effect + " 10 0 true"};
         j["minecraft:block"]["events"][mod_id + ":effect_four"]["run_command"]
-         ["command"] = {"effect @e[r=16] " + id + " 10 0 true"};
+         ["command"] = {"effect @e[r=16] " + _effect + " 10 0 true"};
 
         j["minecraft:block"].erase("permutations");
 
