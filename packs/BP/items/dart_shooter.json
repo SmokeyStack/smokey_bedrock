@@ -1,0 +1,53 @@
+{
+    "format_version": "1.19.50",
+    "minecraft:item": {
+        "components": {
+            "minecraft:cooldown": {
+                "category": "woodenbow",
+                "duration": 0.5
+            },
+            "minecraft:icon": {
+                "texture": "stick"
+            },
+            "minecraft:max_stack_size": 1,
+            "minecraft:on_use": {
+                "on_use": {
+                    "event": "minecraft:shoot"
+                }
+            }
+        },
+        "description": {
+            "identifier": "smokey_bedrock:dart_shooter"
+        },
+        "events": {
+            "minecraft:shoot": {
+                "sequence": [
+                    {
+                        "condition": "q.is_item_name_any('slot.weapon.offhand', 'smokey_bedrock:exploding_dart')",
+                        "run_command": {
+                            "command": [
+                                "clear @s smokey_bedrock:exploding_dart 0 1"
+                            ]
+                        },
+                        "shoot": {
+                            "launch_power": 1,
+                            "projectile": "smokey_bedrock:exploding_dart"
+                        }
+                    },
+                    {
+                        "condition": "q.is_item_name_any('slot.weapon.offhand', 'smokey_bedrock:poison_dart')",
+                        "run_command": {
+                            "command": [
+                                "clear @s smokey_bedrock:poison_dart 0 1"
+                            ]
+                        },
+                        "shoot": {
+                            "launch_power": 1,
+                            "projectile": "smokey_bedrock:poison_dart"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}
