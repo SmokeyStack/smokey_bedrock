@@ -11,7 +11,7 @@
 		"filterDefinitions": {
 			"adk": {
 				"url": "github.com/SmokeyStack/adk",
-				"version": "1d88da1be3e55d4681fac9950ee8418fd9cafeac"
+				"version": "0.3.0"
 			},
 			"texture_list": {
 				"url": "github.com/Bedrock-OSS/regolith-filters",

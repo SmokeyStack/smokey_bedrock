@@ -2,7 +2,7 @@
     "format_version": "1.12",
     "minecraft:recipe_shaped": {
         "description": {
-            "identifier": "smokey_bedrock:darkness_candle"
+            "identifier": "smokey_bedrock:recipe_candle_instant_health"
         },
         "tags": [
             "crafting_table"
@@ -10,7 +10,7 @@
         "pattern": [
             "#*#",
             "#/#",
-            "#-#"
+            "###"
         ],
         "key": {
             "#": {
@@ -20,11 +20,11 @@
                 "item": "minecraft:candle"
             },
             "*": {
-                "item": "minecraft:sculk"
+                "item": "minecraft:amethyst_cluster"
             }
         },
         "result": {
-            "item": "smokey_bedrock:darkness_candle"
+            "item": "smokey_bedrock:candle_instant_health"
         }
     }
 }
