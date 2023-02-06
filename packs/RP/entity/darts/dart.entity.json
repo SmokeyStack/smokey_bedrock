@@ -2,7 +2,7 @@
     "format_version": "1.10.0",
     "minecraft:client_entity": {
         "description": {
-            "identifier": "smokey_bedrock:exploding_dart",
+            "identifier": "smokey_bedrock:dart",
             "materials": {
                 "default": "arrow"
             },

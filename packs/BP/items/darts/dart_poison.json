@@ -9,7 +9,7 @@
             "minecraft:max_stack_size": 16
         },
         "description": {
-            "identifier": "smokey_bedrock:poison_dart"
+            "identifier": "smokey_bedrock:dart_poison"
         }
     }
 }

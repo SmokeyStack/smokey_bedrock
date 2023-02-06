@@ -4,6 +4,54 @@
         "component_groups": {
             "despawn": {
                 "minecraft:instant_despawn": {}
+            },
+            "exploding": {
+                "minecraft:explode": {
+                    "breaks_blocks": false,
+                    "fuse_length": [
+                        3,
+                        3
+                    ],
+                    "fuse_lit": true,
+                    "power": 5
+                }
+            },
+            "poison": {
+                "minecraft:projectile": {
+                    "anchor": 1,
+                    "gravity": 0.05,
+                    "hit_sound": "bow.hit",
+                    "offset": [
+                        0,
+                        -0.1,
+                        0
+                    ],
+                    "on_hit": {
+                        "impact_damage": {
+                            "damage": [
+                                1,
+                                1
+                            ],
+                            "destroy_on_hit": true,
+                            "knockback": true,
+                            "semi_random_diff_damage": false
+                        },
+                        "mob_effect": {
+                            "amplifier": 0,
+                            "durationeasy": 200,
+                            "durationhard": 200,
+                            "durationnormal": 200,
+                            "effect": "poison"
+                        },
+                        "stick_in_ground": {
+                            "shake_time": 0.35
+                        }
+                    },
+                    "power": 1.6,
+                    "should_bounce": true,
+                    "uncertainty_base": 16,
+                    "uncertainty_multiplier": 4
+                }
             }
         },
         "components": {
@@ -37,13 +85,6 @@
                         "knockback": true,
                         "semi_random_diff_damage": false
                     },
-                    "mob_effect": {
-                        "amplifier": 0,
-                        "durationeasy": 200,
-                        "durationhard": 200,
-                        "durationnormal": 200,
-                        "effect": "poison"
-                    },
                     "stick_in_ground": {
                         "shake_time": 0.35
                     }
@@ -65,7 +106,7 @@
             }
         },
         "description": {
-            "identifier": "smokey_bedrock:poison_dart",
+            "identifier": "smokey_bedrock:dart",
             "is_experimental": false,
             "is_spawnable": false,
             "is_summonable": true
@@ -75,6 +116,20 @@
                 "add": {
                     "component_groups": [
                         "despawn"
+                    ]
+                }
+            },
+            "exploding": {
+                "add": {
+                    "component_groups": [
+                        "exploding"
+                    ]
+                }
+            },
+            "poison": {
+                "add": {
+                    "component_groups": [
+                        "poison"
                     ]
                 }
             }

@@ -7,7 +7,7 @@
                 "duration": 0.5
             },
             "minecraft:icon": {
-                "texture": "stick"
+                "texture": "dart_shooter"
             },
             "minecraft:max_stack_size": 1,
             "minecraft:on_use": {
@@ -23,27 +23,27 @@
             "minecraft:shoot": {
                 "sequence": [
                     {
-                        "condition": "q.is_item_name_any('slot.weapon.offhand', 'smokey_bedrock:exploding_dart')",
+                        "condition": "q.is_item_name_any('slot.weapon.offhand', 'smokey_bedrock:dart_exploding')",
                         "run_command": {
                             "command": [
-                                "clear @s smokey_bedrock:exploding_dart 0 1"
+                                "clear @s smokey_bedrock:dart_exploding 0 1"
                             ]
                         },
                         "shoot": {
                             "launch_power": 1,
-                            "projectile": "smokey_bedrock:exploding_dart"
+                            "projectile": "smokey_bedrock:dart<exploding>"
                         }
                     },
                     {
-                        "condition": "q.is_item_name_any('slot.weapon.offhand', 'smokey_bedrock:poison_dart')",
+                        "condition": "q.is_item_name_any('slot.weapon.offhand', 'smokey_bedrock:dart_poison')",
                         "run_command": {
                             "command": [
-                                "clear @s smokey_bedrock:poison_dart 0 1"
+                                "clear @s smokey_bedrock:dart_poison 0 1"
                             ]
                         },
                         "shoot": {
                             "launch_power": 1,
-                            "projectile": "smokey_bedrock:poison_dart"
+                            "projectile": "smokey_bedrock:dart<poison>"
                         }
                     }
                 ]
