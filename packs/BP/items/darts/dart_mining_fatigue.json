@@ -7,11 +7,11 @@
                 "texture": "stick"
             },
             "minecraft:projectile": {
-                "projectile_entity": "smokey_bedrock:dart<exploding>"
+                "projectile_entity": "smokey_bedrock:dart<mining_fatigue>"
             }
         },
         "description": {
-            "identifier": "smokey_bedrock:dart_exploding"
+            "identifier": "smokey_bedrock:dart_mining_fatigue"
         }
     }
 }
