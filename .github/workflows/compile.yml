@@ -1,4 +1,4 @@
-name: Compile
+name: Compiling Add-On
 on: push
 jobs:
   build:
@@ -7,4 +7,4 @@ jobs:
       - uses: actions/checkout@v3
       - uses: Bedrock-OSS/regolith-action@v1.0.3
         with:
-          profile: export
+          profile: build
