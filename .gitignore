@@ -3,3 +3,10 @@
 /node_modules
 package-lock.json
 package.json
+
+# adk
+adk-build
+assets
+include
+test
+compile.bat
