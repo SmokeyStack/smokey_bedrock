@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v3
@@ -16,26 +16,18 @@ jobs:
     - name: Move Data Files
       run: |
         mkdir tmp
-        mv packs/data/adk tmp
-        ls -R
+        move packs/data/adk tmp
 
     - name: regolith
       shell: bash
-      run: |
-        wget https://github.com/Bedrock-OSS/regolith/releases/download/1.0.3/regolith_1.0.3_Linux_x86_64.tar.gz
-        tar -xzf regolith_1.0.3_Linux_x86_64.tar.gz
-        mv regolith /usr/local/bin
-        rm regolith_1.0.3_Linux_x86_64.tar.gz
-        chmod +x /usr/local/bin/regolith
+      run: winget install Bedrock-OSS.regolith
 
     - name: install
-      shell: bash
       run: regolith install-all
 
     - name: Move Data Files Back
       run: |
-        mv tmp/adk packs/data/adk
-        ls -R
+        move tmp/adk packs/data/adk
 
     - name: Compile
       run: regolith run build
