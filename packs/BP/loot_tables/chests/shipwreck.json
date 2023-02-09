@@ -1,0 +1,95 @@
+{
+    "pools": [
+        {
+            "entries": [
+                {
+                    "functions": [
+                        {
+                            "destination": "buriedtreasure",
+                            "function": "exploration_map"
+                        }
+                    ],
+                    "name": "minecraft:map",
+                    "type": "item"
+                }
+            ],
+            "rolls": 1
+        },
+        {
+            "entries": [
+                {
+                    "name": "minecraft:compass",
+                    "type": "item",
+                    "weight": 1
+                },
+                {
+                    "name": "minecraft:map",
+                    "type": "item",
+                    "weight": 1
+                },
+                {
+                    "name": "minecraft:clock",
+                    "type": "item",
+                    "weight": 1
+                },
+                {
+                    "functions": [
+                        {
+                            "count": {
+                                "max": 10,
+                                "min": 1
+                            },
+                            "function": "set_count"
+                        }
+                    ],
+                    "name": "minecraft:paper",
+                    "type": "item",
+                    "weight": 20
+                },
+                {
+                    "functions": [
+                        {
+                            "count": {
+                                "max": 20,
+                                "min": 2
+                            },
+                            "function": "set_count"
+                        }
+                    ],
+                    "name": "smokey_bedrock:dart_nausea",
+                    "type": "item",
+                    "weight": 20
+                },
+                {
+                    "functions": [
+                        {
+                            "count": {
+                                "max": 5,
+                                "min": 1
+                            },
+                            "function": "set_count"
+                        }
+                    ],
+                    "name": "minecraft:feather",
+                    "type": "item",
+                    "weight": 10
+                },
+                {
+                    "functions": [
+                        {
+                            "count": {
+                                "max": 5,
+                                "min": 1
+                            },
+                            "function": "set_count"
+                        }
+                    ],
+                    "name": "minecraft:book",
+                    "type": "item",
+                    "weight": 5
+                }
+            ],
+            "rolls": 3
+        }
+    ]
+}

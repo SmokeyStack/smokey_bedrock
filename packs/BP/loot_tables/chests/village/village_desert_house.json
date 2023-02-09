@@ -1,0 +1,113 @@
+{
+    "pools": [
+        {
+            "entries": [
+                {
+                    "name": "minecraft:clay_ball",
+                    "type": "item"
+                },
+                {
+                    "functions": [
+                        {
+                            "data": 2,
+                            "function": "set_data"
+                        }
+                    ],
+                    "name": "minecraft:dye",
+                    "type": "item"
+                },
+                {
+                    "functions": [
+                        {
+                            "count": {
+                                "max": 4,
+                                "min": 1
+                            },
+                            "function": "set_count"
+                        }
+                    ],
+                    "name": "minecraft:cactus",
+                    "type": "item",
+                    "weight": 10
+                },
+                {
+                    "functions": [
+                        {
+                            "count": {
+                                "max": 7,
+                                "min": 1
+                            },
+                            "function": "set_count"
+                        }
+                    ],
+                    "name": "minecraft:wheat",
+                    "type": "item",
+                    "weight": 10
+                },
+                {
+                    "functions": [
+                        {
+                            "count": {
+                                "max": 14,
+                                "min": 2
+                            },
+                            "function": "set_count"
+                        }
+                    ],
+                    "name": "smokey_bedrock:dart_hunger",
+                    "type": "item",
+                    "weight": 10
+                },
+                {
+                    "functions": [
+                        {
+                            "count": {
+                                "max": 4,
+                                "min": 1
+                            },
+                            "function": "set_count"
+                        }
+                    ],
+                    "name": "minecraft:bread",
+                    "type": "item",
+                    "weight": 10
+                },
+                {
+                    "name": "minecraft:book",
+                    "type": "item"
+                },
+                {
+                    "functions": [
+                        {
+                            "count": {
+                                "max": 3,
+                                "min": 1
+                            },
+                            "function": "set_count"
+                        }
+                    ],
+                    "name": "minecraft:deadbush",
+                    "type": "item",
+                    "weight": 2
+                },
+                {
+                    "functions": [
+                        {
+                            "count": {
+                                "max": 3,
+                                "min": 1
+                            },
+                            "function": "set_count"
+                        }
+                    ],
+                    "name": "minecraft:emerald",
+                    "type": "item"
+                }
+            ],
+            "rolls": {
+                "max": 8,
+                "min": 3
+            }
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "format_version": "1.19.50",
+    "minecraft:item": {
+        "components": {
+            "minecraft:allow_off_hand": true,
+            "minecraft:icon": {
+                "texture": "stick"
+            },
+            "minecraft:projectile": {
+                "projectile_entity": "smokey_bedrock:dart<exploding>"
+            }
+        },
+        "description": {
+            "identifier": "smokey_bedrock:dart_exploding"
+        }
+    }
+}

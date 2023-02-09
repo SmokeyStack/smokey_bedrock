@@ -1,0 +1,402 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "component_groups": {
+            "blindness": {
+                "minecraft:projectile": {
+                    "anchor": 1,
+                    "gravity": 0.05,
+                    "hit_sound": "bow.hit",
+                    "offset": [
+                        0,
+                        -0.1,
+                        0
+                    ],
+                    "on_hit": {
+                        "impact_damage": {
+                            "damage": [
+                                1,
+                                1
+                            ],
+                            "destroy_on_hit": true,
+                            "knockback": true,
+                            "semi_random_diff_damage": false
+                        },
+                        "mob_effect": {
+                            "amplifier": 0,
+                            "durationeasy": 200,
+                            "durationhard": 200,
+                            "durationnormal": 200,
+                            "effect": "blindness"
+                        },
+                        "stick_in_ground": {
+                            "shake_time": 0.35
+                        }
+                    },
+                    "power": 1.6,
+                    "should_bounce": true,
+                    "uncertainty_base": 16,
+                    "uncertainty_multiplier": 4
+                }
+            },
+            "despawn": {
+                "minecraft:instant_despawn": {}
+            },
+            "exploding": {
+                "minecraft:explode": {
+                    "breaks_blocks": false,
+                    "fuse_length": [
+                        3,
+                        3
+                    ],
+                    "fuse_lit": true,
+                    "power": 5
+                }
+            },
+            "hunger": {
+                "minecraft:projectile": {
+                    "anchor": 1,
+                    "gravity": 0.05,
+                    "hit_sound": "bow.hit",
+                    "offset": [
+                        0,
+                        -0.1,
+                        0
+                    ],
+                    "on_hit": {
+                        "impact_damage": {
+                            "damage": [
+                                1,
+                                1
+                            ],
+                            "destroy_on_hit": true,
+                            "knockback": true,
+                            "semi_random_diff_damage": false
+                        },
+                        "mob_effect": {
+                            "amplifier": 0,
+                            "durationeasy": 200,
+                            "durationhard": 200,
+                            "durationnormal": 200,
+                            "effect": "hunger"
+                        },
+                        "stick_in_ground": {
+                            "shake_time": 0.35
+                        }
+                    },
+                    "power": 1.6,
+                    "should_bounce": true,
+                    "uncertainty_base": 16,
+                    "uncertainty_multiplier": 4
+                }
+            },
+            "mining_fatigue": {
+                "minecraft:projectile": {
+                    "anchor": 1,
+                    "gravity": 0.05,
+                    "hit_sound": "bow.hit",
+                    "offset": [
+                        0,
+                        -0.1,
+                        0
+                    ],
+                    "on_hit": {
+                        "impact_damage": {
+                            "damage": [
+                                1,
+                                1
+                            ],
+                            "destroy_on_hit": true,
+                            "knockback": true,
+                            "semi_random_diff_damage": false
+                        },
+                        "mob_effect": {
+                            "amplifier": 0,
+                            "durationeasy": 200,
+                            "durationhard": 200,
+                            "durationnormal": 200,
+                            "effect": "mining_fatigue"
+                        },
+                        "stick_in_ground": {
+                            "shake_time": 0.35
+                        }
+                    },
+                    "power": 1.6,
+                    "should_bounce": true,
+                    "uncertainty_base": 16,
+                    "uncertainty_multiplier": 4
+                }
+            },
+            "nausea": {
+                "minecraft:projectile": {
+                    "anchor": 1,
+                    "gravity": 0.05,
+                    "hit_sound": "bow.hit",
+                    "offset": [
+                        0,
+                        -0.1,
+                        0
+                    ],
+                    "on_hit": {
+                        "impact_damage": {
+                            "damage": [
+                                1,
+                                1
+                            ],
+                            "destroy_on_hit": true,
+                            "knockback": true,
+                            "semi_random_diff_damage": false
+                        },
+                        "mob_effect": {
+                            "amplifier": 0,
+                            "durationeasy": 200,
+                            "durationhard": 200,
+                            "durationnormal": 200,
+                            "effect": "nausea"
+                        },
+                        "stick_in_ground": {
+                            "shake_time": 0.35
+                        }
+                    },
+                    "power": 1.6,
+                    "should_bounce": true,
+                    "uncertainty_base": 16,
+                    "uncertainty_multiplier": 4
+                }
+            },
+            "poison": {
+                "minecraft:projectile": {
+                    "anchor": 1,
+                    "gravity": 0.05,
+                    "hit_sound": "bow.hit",
+                    "offset": [
+                        0,
+                        -0.1,
+                        0
+                    ],
+                    "on_hit": {
+                        "impact_damage": {
+                            "damage": [
+                                1,
+                                1
+                            ],
+                            "destroy_on_hit": true,
+                            "knockback": true,
+                            "semi_random_diff_damage": false
+                        },
+                        "mob_effect": {
+                            "amplifier": 0,
+                            "durationeasy": 200,
+                            "durationhard": 200,
+                            "durationnormal": 200,
+                            "effect": "poison"
+                        },
+                        "stick_in_ground": {
+                            "shake_time": 0.35
+                        }
+                    },
+                    "power": 1.6,
+                    "should_bounce": true,
+                    "uncertainty_base": 16,
+                    "uncertainty_multiplier": 4
+                }
+            },
+            "slowness": {
+                "minecraft:projectile": {
+                    "anchor": 1,
+                    "gravity": 0.05,
+                    "hit_sound": "bow.hit",
+                    "offset": [
+                        0,
+                        -0.1,
+                        0
+                    ],
+                    "on_hit": {
+                        "impact_damage": {
+                            "damage": [
+                                1,
+                                1
+                            ],
+                            "destroy_on_hit": true,
+                            "knockback": true,
+                            "semi_random_diff_damage": false
+                        },
+                        "mob_effect": {
+                            "amplifier": 0,
+                            "durationeasy": 200,
+                            "durationhard": 200,
+                            "durationnormal": 200,
+                            "effect": "slowness"
+                        },
+                        "stick_in_ground": {
+                            "shake_time": 0.35
+                        }
+                    },
+                    "power": 1.6,
+                    "should_bounce": true,
+                    "uncertainty_base": 16,
+                    "uncertainty_multiplier": 4
+                }
+            },
+            "weakness": {
+                "minecraft:projectile": {
+                    "anchor": 1,
+                    "gravity": 0.05,
+                    "hit_sound": "bow.hit",
+                    "offset": [
+                        0,
+                        -0.1,
+                        0
+                    ],
+                    "on_hit": {
+                        "impact_damage": {
+                            "damage": [
+                                1,
+                                1
+                            ],
+                            "destroy_on_hit": true,
+                            "knockback": true,
+                            "semi_random_diff_damage": false
+                        },
+                        "mob_effect": {
+                            "amplifier": 0,
+                            "durationeasy": 200,
+                            "durationhard": 200,
+                            "durationnormal": 200,
+                            "effect": "weakness"
+                        },
+                        "stick_in_ground": {
+                            "shake_time": 0.35
+                        }
+                    },
+                    "power": 1.6,
+                    "should_bounce": true,
+                    "uncertainty_base": 16,
+                    "uncertainty_multiplier": 4
+                }
+            }
+        },
+        "components": {
+            "minecraft:collision_box": {
+                "height": 0.25,
+                "width": 0.25
+            },
+            "minecraft:conditional_bandwidth_optimization": {},
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "deals_damage": false
+                }
+            },
+            "minecraft:physics": {},
+            "minecraft:projectile": {
+                "anchor": 1,
+                "gravity": 0.05,
+                "hit_sound": "bow.hit",
+                "offset": [
+                    0,
+                    -0.1,
+                    0
+                ],
+                "on_hit": {
+                    "impact_damage": {
+                        "damage": [
+                            1,
+                            1
+                        ],
+                        "destroy_on_hit": true,
+                        "knockback": true,
+                        "semi_random_diff_damage": false
+                    },
+                    "stick_in_ground": {
+                        "shake_time": 0.35
+                    }
+                },
+                "power": 1.6,
+                "should_bounce": true,
+                "uncertainty_base": 16,
+                "uncertainty_multiplier": 4
+            },
+            "minecraft:pushable": {
+                "is_pushable": false,
+                "is_pushable_by_piston": true
+            },
+            "minecraft:timer": {
+                "time": 3,
+                "time_down_event": {
+                    "event": "despawn"
+                }
+            }
+        },
+        "description": {
+            "identifier": "smokey_bedrock:dart",
+            "is_experimental": false,
+            "is_spawnable": false,
+            "is_summonable": true
+        },
+        "events": {
+            "blindness": {
+                "add": {
+                    "component_groups": [
+                        "blindness"
+                    ]
+                }
+            },
+            "despawn": {
+                "add": {
+                    "component_groups": [
+                        "despawn"
+                    ]
+                }
+            },
+            "exploding": {
+                "add": {
+                    "component_groups": [
+                        "exploding"
+                    ]
+                }
+            },
+            "hunger": {
+                "add": {
+                    "component_groups": [
+                        "hunger"
+                    ]
+                }
+            },
+            "mining_fatigue": {
+                "add": {
+                    "component_groups": [
+                        "mining_fatigue"
+                    ]
+                }
+            },
+            "nausea": {
+                "add": {
+                    "component_groups": [
+                        "nausea"
+                    ]
+                }
+            },
+            "poison": {
+                "add": {
+                    "component_groups": [
+                        "poison"
+                    ]
+                }
+            },
+            "slowness": {
+                "add": {
+                    "component_groups": [
+                        "slowness"
+                    ]
+                }
+            },
+            "weakness": {
+                "add": {
+                    "component_groups": [
+                        "weakness"
+                    ]
+                }
+            }
+        }
+    }
+}
