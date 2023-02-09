@@ -17,6 +17,7 @@ jobs:
       run: |
         mkdir tmp
         mv packs/data/adk tmp
+        ls -R
 
     - name: regolith
       shell: bash
@@ -32,7 +33,9 @@ jobs:
       run: regolith install-all
 
     - name: Move Data Files Back
-      run: mv tmp packs/data/adk
+      run: |
+        mv tmp packs/data/adk
+        ls -R
 
     - name: Compile
       run: regolith run build
