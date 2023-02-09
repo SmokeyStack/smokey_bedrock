@@ -8,9 +8,6 @@ on:
 
 jobs:
   build:
-    # The CMake configure and build commands are platform agnostic and should work equally well on Windows or Mac.
-    # You can convert this to a matrix build if you need cross-platform coverage.
-    # See: https://docs.github.com/en/free-pro-team@latest/actions/learn-github-actions/managing-complex-workflows#using-a-build-matrix
     runs-on: ubuntu-latest
 
     steps:
@@ -24,10 +21,10 @@ jobs:
     - name: regolith
       shell: bash
       run: |
-        wget https://github.com/Bedrock-OSS/regolith/releases/download/$(cat ${{ github.action_path }}/version)/regolith_$(cat ${{ github.action_path }}/version)_Linux_x86_64.tar.gz
-        tar -xzf regolith_$(cat ${{ github.action_path }}/version)_Linux_x86_64.tar.gz
+        wget https://github.com/Bedrock-OSS/regolith/releases/download/1.0.3/regolith_1.0.3_Linux_x86_64.tar.gz
+        tar -xzf regolith_1.0.3_Linux_x86_64.tar.gz
         mv regolith /usr/local/bin
-        rm regolith_$(cat ${{ github.action_path }}/version)_Linux_x86_64.tar.gz
+        rm regolith_1.0.3_Linux_x86_64.tar.gz
         chmod +x /usr/local/bin/regolith
 
     - name: install
