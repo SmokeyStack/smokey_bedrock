@@ -1,0 +1,33 @@
+name: Compiling Add-On
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Move Data Files
+      run: |
+        mkdir tmp
+        move packs/data/adk tmp
+        tree /f
+    - uses: engineerd/configurator@v0.0.9
+      with:
+        name: "regolith.exe"
+        url: "https://github.com/Bedrock-OSS/regolith/releases/download/1.0.3/regolith_1.0.3_Windows_x86_64.zip"
+        pathInArchive: "egolith_1.0.3_Windows_x86_64/regolith.exe"
+    - name: install
+      run: regolith install-all
+
+    - name: Move Data Files Back
+      run: |
+        move tmp/adk packs/data/adk
+    - name: Compile
+      run: regolith run build
