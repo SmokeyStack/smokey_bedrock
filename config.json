@@ -26,6 +26,9 @@
 				},
 				"filters": [
 					{
+						"filter": "adk"
+					},
+					{
 						"filter": "texture_list"
 					}
 				]
