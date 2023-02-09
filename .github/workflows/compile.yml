@@ -21,7 +21,7 @@ jobs:
 
     - name: regolith
       run: |
-        Invoke-WebRequest -Uri https://github.com/Bedrock-OSS/regolith/releases/download/1.0.3/regolith_1.0.3_Windows_x86_64.zip
+        Invoke-WebRequest -Uri https://github.com/Bedrock-OSS/regolith/releases/download/1.0.3/regolith_1.0.3_Windows_x86_64.zip -OutFile "D:/a/_temp"
         move "D:/a/_temp/regolith_1.0.3_Windows_x86_64.zip" "D:/a/smokey_bedrock/smokey_bedrock"
         7z x regolith_1.0.3_Windows_x86_64.zip
 
