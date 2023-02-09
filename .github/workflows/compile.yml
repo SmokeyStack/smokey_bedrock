@@ -22,7 +22,7 @@ jobs:
       with:
         name: "regolith.exe"
         url: "https://github.com/Bedrock-OSS/regolith/releases/download/1.0.3/regolith_1.0.3_Windows_x86_64.zip"
-        pathInArchive: "regolith_1.0.3_Windows_x86_64/regolith.exe"
+        pathInArchive: "regolith.exe"
     - name: install
       run: regolith install-all
 
