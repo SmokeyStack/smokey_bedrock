@@ -8,26 +8,35 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on:  windows-latest
 
     steps:
     - uses: actions/checkout@v3
 
     - name: Move Data Files
-      run: |
+      run:  |
         mkdir tmp
         move packs/data/adk tmp
         tree /f
     - uses: engineerd/configurator@v0.0.9
       with:
         name: "regolith.exe"
-        url: "https://github.com/Bedrock-OSS/regolith/releases/download/1.0.3/regolith_1.0.3_Windows_x86_64.zip"
-        pathInArchive: "regolith.exe"
+        url:  "https://github.com/Bedrock-OSS/regolith/releases/download/1.0.3/regolith_1.0.3_Windows_x86_64.zip"
+        pathInArchive:  "regolith.exe"
+
     - name: install
-      run: regolith install-all
+      run:  regolith install-all
 
     - name: Move Data Files Back
-      run: |
-        move tmp/adk packs/data/adk
+      run:  move tmp/adk packs/data/adk
+
     - name: Compile
-      run: regolith run build
+      run:  regolith run build
+
+    - name: Set Up BDS
+    - uses: ScriptAPIOSS/setup-bds-action@v1
+      with:
+        BDS_VERSION:  latest
+        BDS_CHANNEL:  stable
+        EULA_ACCEPT:  true
+        PP_ACCEPT:  true
