@@ -340,5 +340,8 @@ int main() {
     for (const std::string& a : effect_list)
         candleBlock("candle_" + a, "sculk");
 
+    simpleBlock("honeycomb_bricks");
+    simpleBlock("honeycomb_tiles");
+
     return 0;
 }

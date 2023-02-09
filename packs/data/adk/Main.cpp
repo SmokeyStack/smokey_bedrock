@@ -34,5 +34,12 @@ int main() {
         blocks.subscribe("candle_" + a,
                          new ScentedCandleBlock(BlockProperty::Property(), a));
 
+    blocks.subscribe(
+        "honeycomb_bricks",
+        new Block(BlockProperty::Property().setMining(1).setExplosion(3)));
+    blocks.subscribe(
+        "honeycomb_tiles",
+        new Block(BlockProperty::Property().setMining(1).setExplosion(3)));
+
     return 0;
 }

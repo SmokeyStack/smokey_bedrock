@@ -5,6 +5,9 @@
     "texture_data": {
         "honeycomb_bricks": {
             "textures": "textures/blocks/honeycomb_bricks"
+        },
+        "honeycomb_tiles": {
+            "textures": "textures/blocks/honeycomb_tiles"
         }
     }
 }
