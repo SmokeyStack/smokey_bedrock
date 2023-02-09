@@ -34,7 +34,7 @@ jobs:
 
     - name: Move Data Files Back
       run: |
-        mv tmp packs/data/adk
+        mv tmp/adk packs/data/adk
         ls -R
 
     - name: Compile
