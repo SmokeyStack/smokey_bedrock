@@ -1,0 +1,107 @@
+{
+    "pools": [
+        {
+            "entries": [
+                {
+                    "functions": [
+                        {
+                            "count": {
+                                "max": 3,
+                                "min": 1
+                            },
+                            "function": "minecraft:set_count"
+                        }
+                    ],
+                    "name": "minecraft:apple",
+                    "type": "item",
+                    "weight": 15
+                },
+                {
+                    "functions": [
+                        {
+                            "count": {
+                                "max": 4,
+                                "min": 1
+                            },
+                            "function": "minecraft:set_count"
+                        }
+                    ],
+                    "name": "minecraft:coal",
+                    "type": "item",
+                    "weight": 15
+                },
+                {
+                    "functions": [
+                        {
+                            "count": {
+                                "max": 8,
+                                "min": 2
+                            },
+                            "function": "minecraft:set_count"
+                        }
+                    ],
+                    "name": "smokey_bedrock:dart_weakness",
+                    "type": "item",
+                    "weight": 15
+                },
+                {
+                    "functions": [
+                        {
+                            "count": {
+                                "max": 3,
+                                "min": 1
+                            },
+                            "function": "minecraft:set_count"
+                        }
+                    ],
+                    "name": "minecraft:gold_nugget",
+                    "type": "item",
+                    "weight": 10
+                },
+                {
+                    "name": "minecraft:stone_axe",
+                    "type": "item",
+                    "weight": 2
+                },
+                {
+                    "name": "minecraft:rotten_flesh",
+                    "type": "item",
+                    "weight": 10
+                },
+                {
+                    "name": "minecraft:emerald",
+                    "type": "item",
+                    "weight": 1
+                },
+                {
+                    "functions": [
+                        {
+                            "count": {
+                                "max": 3,
+                                "min": 2
+                            },
+                            "function": "minecraft:set_count"
+                        }
+                    ],
+                    "name": "minecraft:wheat",
+                    "type": "item",
+                    "weight": 10
+                }
+            ],
+            "rolls": {
+                "max": 8,
+                "min": 2
+            }
+        },
+        {
+            "entries": [
+                {
+                    "name": "minecraft:golden_apple",
+                    "type": "item",
+                    "weight": 1
+                }
+            ],
+            "rolls": 1
+        }
+    ]
+}

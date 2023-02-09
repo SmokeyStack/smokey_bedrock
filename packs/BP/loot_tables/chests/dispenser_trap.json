@@ -1,0 +1,40 @@
+{
+    "pools": [
+        {
+            "entries": [
+                {
+                    "functions": [
+                        {
+                            "count": {
+                                "max": 7,
+                                "min": 2
+                            },
+                            "function": "set_count"
+                        }
+                    ],
+                    "name": "minecraft:arrow",
+                    "type": "item",
+                    "weight": 30
+                },
+                {
+                    "functions": [
+                        {
+                            "count": {
+                                "max": 14,
+                                "min": 4
+                            },
+                            "function": "set_count"
+                        }
+                    ],
+                    "name": "smokey_bedrock:dart_exploding",
+                    "type": "item",
+                    "weight": 30
+                }
+            ],
+            "rolls": {
+                "max": 2,
+                "min": 2
+            }
+        }
+    ]
+}
