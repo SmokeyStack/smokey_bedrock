@@ -67,7 +67,9 @@ jobs:
 
     - name: Get JSON
       run:  |
-        curl https://gist.github.com/2488c7781836bae83844362ee1ebc734.git
+        git clone https://gist.github.com/2488c7781836bae83844362ee1ebc734.git
+        mv 2488c7781836bae83844362ee1ebc734/world_behavior_packs.json "./bds/worlds/Bedrock level"
+        mv 2488c7781836bae83844362ee1ebc734/world_resource_packs.json "./bds/worlds/Bedrock level"
         ls
 
     - name: Start Server
