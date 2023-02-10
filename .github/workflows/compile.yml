@@ -66,4 +66,10 @@ jobs:
         TARGET_DEST_PATH: ./bds/development_resource_packs
 
     - name: See folder
+      run:  |
+        ./bds/bedrock_server
+        sleep 120s
+        stop
+  
+    - name: See folder
       run:  ls -R
