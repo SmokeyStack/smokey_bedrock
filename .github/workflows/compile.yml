@@ -32,8 +32,6 @@ jobs:
 
     - name: Compile
       run:  regolith run build
-
-    - name: Set Up BDS
     - uses: ScriptAPIOSS/setup-bds-action@v1
       with:
         BDS_VERSION:  latest
