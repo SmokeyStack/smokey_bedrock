@@ -57,21 +57,21 @@ jobs:
       uses: ScriptAPIOSS/setup-resource-packs@v1.0.4
       with:
         TARGET_SOURCE_PATHS:  ./BP
-        TARGET_DEST_PATH: ./bds/development_behavior_packs
+        TARGET_DEST_PATH: ${{ steps.setup-bds.outputs.DOWNLOAD_PATH }}/development_behavior_packs
 
     - name: Set Up RP
       uses: ScriptAPIOSS/setup-resource-packs@v1.0.4
       with:
         TARGET_SOURCE_PATHS:  ./RP
-        TARGET_DEST_PATH: ./bds/development_resource_packs
+        TARGET_DEST_PATH: ${{ steps.setup-bds.outputs.DOWNLOAD_PATH }}/development_resource_packs
 
-    - name: Start Server
-      working-directory: bds
-      run:  ./bedrock_server
-      
-    - name: Stop Server
-      working-directory: bds
-      run:  stop
+    - uses: ScriptAPIOSS/bds-gametest-run-action@v1
+      with:
+        BDS_PATH: ${{ steps.setup-bds.outputs.DOWNLOAD_PATH }}
+        TIMEOUT_TICKS: 1000
+        AUTOMATION_REPEAT_COUNT: 5
+        AUTOMATION_REPEAT_FAILURES_ONLY: true
+        MAX_TESTS_PER_BATCH: 5
   
     - name: See folder
       run:  ls -R
