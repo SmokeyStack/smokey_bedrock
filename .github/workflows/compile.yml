@@ -38,6 +38,3 @@ jobs:
         BDS_CHANNEL:  stable
         EULA_ACCEPT:  true
         PP_ACCEPT:  true
-
-    - name: Check Files
-    - run:  tree /f
