@@ -68,6 +68,7 @@ jobs:
     - name: Get JSON
       run:  |
         git clone https://gist.github.com/2488c7781836bae83844362ee1ebc734.git
+        mkdir "./bds/worlds/Bedrock level"
         mv 2488c7781836bae83844362ee1ebc734/world_behavior_packs.json "./bds/worlds/Bedrock level"
         mv 2488c7781836bae83844362ee1ebc734/world_resource_packs.json "./bds/worlds/Bedrock level"
         ls
