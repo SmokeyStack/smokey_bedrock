@@ -32,9 +32,7 @@ jobs:
 
     - name: Compile
       run:  regolith run build
-    - uses: ScriptAPIOSS/setup-bds-action@v1
+    - uses: actions/upload-artifact@v3
       with:
-        BDS_VERSION:  latest
-        BDS_CHANNEL:  stable
-        EULA_ACCEPT:  true
-        PP_ACCEPT:  true
+        name: packs
+        path: build
