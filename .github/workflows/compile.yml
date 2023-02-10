@@ -53,5 +53,17 @@ jobs:
         EULA_ACCEPT:  true
         PP_ACCEPT:  true
 
+    - name: Set Up BP
+      uses: ScriptAPIOSS/setup-resource-packs@v1.0.4
+      with:
+        TARGET_SOURCE_PATHS:  ./BP
+        TARGET_DEST_PATH: ./bds/development_behavior_packs
+
+    - name: Set Up RP
+      uses: ScriptAPIOSS/setup-resource-packs@v1.0.4
+      with:
+        TARGET_SOURCE_PATHS:  ./RP
+        TARGET_DEST_PATH: ./bds/development_resource_packs
+
     - name: See folder
       run:  ls -R
