@@ -65,12 +65,13 @@ jobs:
         TARGET_SOURCE_PATHS:  ./RP
         TARGET_DEST_PATH: ./bds/development_resource_packs
 
-    - name: See folder
+    - name: Start Server
       working-directory: bds
-      run:  |
-        ./bedrock_server
-        sleep 120s
-        stop
+      run:  ./bedrock_server
+      
+    - name: Stop Server
+      working-directory: bds
+      run:  stop
   
     - name: See folder
       run:  ls -R
