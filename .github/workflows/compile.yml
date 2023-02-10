@@ -65,9 +65,14 @@ jobs:
         TARGET_SOURCE_PATHS:  ./RP
         TARGET_DEST_PATH: ./bds/development_resource_packs
 
+    - name: Get JSON
+      run:  |
+        curl https://gist.github.com/2488c7781836bae83844362ee1ebc734.git
+        ls
+
     - name: Start Server
       working-directory:  bds
-      run:  timeout 2m bedrock_server
+      run:  timeout 2m bedrock_server --preserve-status
   
     - name: See folder
       run:  ls -R
