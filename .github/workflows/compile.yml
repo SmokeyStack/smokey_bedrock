@@ -29,7 +29,8 @@ jobs:
     - name: Move Data Files Back
       run:  |
         move tmp/adk packs/data/adk
-        more packs/data/adk/Main.cpp
+        cd packs/data/adk
+        more Main.cpp
 
     - name: Compile
       run:  |
