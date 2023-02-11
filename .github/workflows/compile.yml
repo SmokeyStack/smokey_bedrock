@@ -30,7 +30,9 @@ jobs:
       run:  move tmp/adk packs/data/adk
 
     - name: Compile
-      run:  regolith run build
+      run:  |
+        regolith run build
+        tree /f
     - uses: actions/upload-artifact@v3
       with:
         name: packs
