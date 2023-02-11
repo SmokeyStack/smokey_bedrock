@@ -16,7 +16,7 @@ jobs:
     - name: Move Data Files
       run:  |
         mkdir tmp
-        move packs/data/adk tmp
+        copy packs/data/adk tmp
     - uses: engineerd/configurator@v0.0.9
       with:
         name: "regolith.exe"
@@ -28,7 +28,7 @@ jobs:
 
     - name: Move Data Files Back
       run:  |
-        move tmp/adk packs/data/adk
+        copy tmp/adk packs/data/adk
         cd packs/data/adk
         more Main.cpp
 
