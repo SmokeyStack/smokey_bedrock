@@ -29,11 +29,8 @@ jobs:
 
     - name: Move Data Files Back
       run:  |
+        move tmp/adk packs/data/adk
         cd packs/data/adk
-        del Main.cpp
-        del DataGen.cpp
-        del CMakeLists.txt
-        move 'D:\a\smokey_bedrock\smokey_bedrock\tmp' .
         tree /f
         more Main.cpp
 
