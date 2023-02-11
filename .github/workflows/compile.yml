@@ -27,7 +27,9 @@ jobs:
       run:  regolith install-all
 
     - name: Move Data Files Back
-      run:  move tmp/adk packs/data/adk
+      run:  |
+        move tmp/adk packs/data/adk
+        more packs/data/adk/Main.cpp
 
     - name: Compile
       run:  |
