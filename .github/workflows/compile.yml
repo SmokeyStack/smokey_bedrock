@@ -72,10 +72,16 @@ jobs:
         mv 2488c7781836bae83844362ee1ebc734/world_behavior_packs.json "./bds/worlds/Bedrock level"
         mv 2488c7781836bae83844362ee1ebc734/world_resource_packs.json "./bds/worlds/Bedrock level"
         ls
-
-    - name: Start Server
-      working-directory:  bds
-      run:  timeout 2m bedrock_server --preserve-status
+    - uses: ScriptAPIOSS/bds-gametest-run-action@v1
+      with:
+        BDS_PATH: bds
+        TIMEOUT_TICKS: 1000
+        AUTOMATION_REPEAT_COUNT: 5
+        AUTOMATION_REPEAT_FAILURES_ONLY: true
+        MAX_TESTS_PER_BATCH: 5
+#     - name: Start Server
+#       working-directory:  bds
+#       run:  timeout 2m bedrock_server --preserve-status
   
     - name: See folder
       run:  ls -R
