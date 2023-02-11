@@ -29,6 +29,9 @@ jobs:
 
     - name: Move Data Files Back
       run:  |
+        del packs/data/adk/Main.cpp
+        del packs/data/adk/DataGen.cpp
+        del packs/data/adk/CMakeLists.txt
         move tmp/adk/* packs/data/adk
         cd packs/data/adk
         tree /f
