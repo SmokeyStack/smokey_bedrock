@@ -74,10 +74,6 @@ jobs:
         mv smokey_bedrock_world/level.dat "./bds/worlds/Bedrock level"
         mv smokey_bedrock_world/level.dat_old "./bds/worlds/Bedrock level"
         ls
-    - uses: ScriptAPIOSS/bds-gametest-run-action@v1
+    - uses: SmokeyStack/add-on-ci@main
       with:
         BDS_PATH: bds
-        TIMEOUT_TICKS: 1000
-        AUTOMATION_REPEAT_COUNT: 5
-        AUTOMATION_REPEAT_FAILURES_ONLY: true
-        MAX_TESTS_PER_BATCH: 5
