@@ -52,13 +52,9 @@ jobs:
       with:
         name: packs
 
-    - name: Set Up BDS
-      uses: ScriptAPIOSS/setup-bds-action@v1.0.8
+    - uses: SmokeyStack/add-on-ci@main
       with:
-        BDS_VERSION:  latest
-        BDS_CHANNEL:  preview
-        EULA_ACCEPT:  true
-        PP_ACCEPT:  true
+        BDS_PATH: bds
 
     - name: Set Up BP
       uses: ScriptAPIOSS/setup-resource-packs@v1.0.4
@@ -80,7 +76,3 @@ jobs:
         mv smokey_bedrock_world/world_resource_packs.json "./bds/worlds/Bedrock level"
         mv smokey_bedrock_world/level.dat "./bds/worlds/Bedrock level"
         mv smokey_bedrock_world/level.dat_old "./bds/worlds/Bedrock level"
-
-    - uses: SmokeyStack/add-on-ci@main
-      with:
-        BDS_PATH: bds
