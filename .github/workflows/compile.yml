@@ -16,7 +16,7 @@ jobs:
     - name: Move Data Files
       run:  |
         mkdir tmp
-        move packs/data/adk tmp
+        copy packs/data/adk tmp
     - uses: engineerd/configurator@v0.0.9
       with:
         name: "regolith.exe"
@@ -27,10 +27,15 @@ jobs:
       run:  regolith install-all
 
     - name: Move Data Files Back
-      run:  move tmp/adk packs/data/adk
+      run:  |
+        copy tmp/adk packs/data/adk
+        cd packs/data/adk
+        more Main.cpp
 
     - name: Compile
-      run:  regolith run build
+      run:  |
+        regolith run build
+        tree /f
     - uses: actions/upload-artifact@v3
       with:
         name: packs
