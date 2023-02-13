@@ -1,0 +1,19 @@
+{
+    "num_mip_levels": 4,
+    "padding": 8,
+    "resource_pack_name": "vanilla",
+    "texture_data": {
+        "honeycomb_bricks": {
+            "textures": "textures/blocks/honeycomb_bricks"
+        },
+        "honeycomb_tiles": {
+            "textures": "textures/blocks/honeycomb_tiles"
+        },
+        "smooth_honeycomb": {
+            "textures": "textures/blocks/smooth_honeycomb"
+        },
+        "solidified_honey": {
+            "textures": "textures/blocks/solidified_honey"
+        }
+    }
+}

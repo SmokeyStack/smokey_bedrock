@@ -56,7 +56,7 @@ jobs:
       uses: ScriptAPIOSS/setup-bds-action@v1.0.8
       with:
         BDS_VERSION:  latest
-        BDS_CHANNEL:  preview
+        BDS_CHANNEL:  stable
         EULA_ACCEPT:  true
         PP_ACCEPT:  true
 

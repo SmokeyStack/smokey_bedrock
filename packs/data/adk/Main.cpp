@@ -6,6 +6,7 @@
 #include "BlockProperty.h"
 #include "HeadBlock.h"
 #include "Registry.h"
+#include "SlabBlock.h"
 #include "SmokeyBedrock/ScentedCandleBlock.h"
 
 int main() {
@@ -33,6 +34,31 @@ int main() {
     for (const std::string& a : effect_list)
         blocks.subscribe("candle_" + a,
                          new ScentedCandleBlock(BlockProperty::Property(), a));
+
+    blocks.subscribe(
+        "honeycomb_bricks",
+        new Block(BlockProperty::Property().setMining(1).setExplosion(3)));
+    blocks.subscribe(
+        "honeycomb_tiles",
+        new Block(BlockProperty::Property().setMining(1).setExplosion(3)));
+    blocks.subscribe(
+        "solidified_honey",
+        new Block(BlockProperty::Property().setMining(1).setExplosion(3)));
+    blocks.subscribe(
+        "smooth_honeycomb",
+        new Block(BlockProperty::Property().setMining(1).setExplosion(3)));
+    blocks.subscribe(
+        "honeycomb_bricks_slab",
+        new SlabBlock(BlockProperty::Property().setMining(1).setExplosion(3)));
+    blocks.subscribe(
+        "honeycomb_tiles_slab",
+        new SlabBlock(BlockProperty::Property().setMining(1).setExplosion(3)));
+    blocks.subscribe(
+        "solidified_honey_slab",
+        new SlabBlock(BlockProperty::Property().setMining(1).setExplosion(3)));
+    blocks.subscribe(
+        "smooth_honeycomb_slab",
+        new SlabBlock(BlockProperty::Property().setMining(1).setExplosion(3)));
 
     return 0;
 }
