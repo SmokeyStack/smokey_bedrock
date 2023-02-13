@@ -67,11 +67,10 @@ int main() {
     headBlock("crafting_table", "crafting_table_front", "crafting_table_side",
               "crafting_table_front", "crafting_table_side",
               "crafting_table_top", "crafting_table_bottom");
-    headBlock("crimson_fungus", "nether_shroom_red");
     headBlock("crimson_hyphae", "crimson_log_side");
     headBlock("crimson_nylium", "crimson_nylium_side", "crimson_nylium_side",
               "crimson_nylium_side", "crimson_nylium_side",
-              "crimson_nylium_side", "netherrack");
+              "crimson_nylium_top", "netherrack");
     headBlock("crimson_planks", "crimson_planks");
     headBlock("crimson_stem", "crimson_log_side", "crimson_log_top");
     headBlock("crying_obsidian", "crying_obsidian");
@@ -111,7 +110,8 @@ int main() {
               "ender_chest_inventory_side", "ender_chest_inventory_front",
               "ender_chest_inventory_side", "ender_chest_inventory_top",
               "ender_chest_inventory_top");
-    headBlock("exposed_copper", "exposed_cut_copper");
+    headBlock("exposed_copper", "exposed_copper");
+    headBlock("exposed_cut_copper", "exposed_cut_copper");
     headBlock("farmland", "farmland_side", "farmland_side", "farmland_side",
               "farmland_side", "farmland", "farmland_side");
     headBlock("fletching_table", "fletching_table_side1",
@@ -174,7 +174,6 @@ int main() {
               "mycelium_side", "mycelium_top", "mycelium_bottom");
     headBlock("nether_brick", "nether_brick");
     headBlock("nether_gold_ore", "nether_gold_ore");
-    headBlock("nether_wart", "nether_wart");
     headBlock("nether_wart_block", "nether_wart_block");
     headBlock("netherite_block", "netherite_block");
     headBlock("netherrack", "netherrack");
@@ -221,7 +220,6 @@ int main() {
     headBlock("raw_gold_block", "raw_gold_block");
     headBlock("raw_iron_block", "raw_iron_block");
     headBlock("red_glazed_terracotta", "red_glazed_terracotta");
-    headBlock("red_mushroom", "mushroom_red");
     headBlock("red_mushroom_block", "mushroom_red_north", "mushroom_red_east",
               "mushroom_red_south", "mushroom_red_west", "mushroom_red_top",
               "mushroom_red_bottom");
@@ -298,15 +296,16 @@ int main() {
     headBlock("tinted_glass", "tinted_glass");
     headBlock("tnt", "tnt_side", "tnt_side", "tnt_side", "tnt_side", "tnt_top",
               "tnt_bottom");
-    // headBlock("trapped_chest");
+    headBlock("trapped_chest", "chest_inventory_side", "chest_inventory_side",
+              "trapped_chest_inventory_front", "chest_inventory_side",
+              "chest_inventory_top", "chest_inventory_top");
     headBlock("tuff", "tuff");
     headBlock("undyed_shulker_box", "undyed_shulker_box_top");
     headBlock("verdant_froglight", "verdant_froglight_side",
               "verdant_froglight_top");
-    headBlock("warped_fungus", "nether_shroom_blue");
     headBlock("warped_hyphae", "warped_stem_side");
     headBlock("warped_nylium", "warped_nylium_side", "warped_nylium_side",
-              "warped_nylium_side", "warped_nylium_side", "warped_nylium_side",
+              "warped_nylium_side", "warped_nylium_side", "warped_nylium_top",
               "netherrack");
     headBlock("warped_planks", "warped_planks");
     headBlock("warped_stem", "warped_stem_side", "warped_stem_top");
@@ -340,8 +339,14 @@ int main() {
     for (const std::string& a : effect_list)
         candleBlock("candle_" + a, "sculk");
 
-    simpleBlock("honeycomb_bricks");
-    simpleBlock("honeycomb_tiles");
+    simpleBlock("honeycomb_bricks", "honeycomb_bricks");
+    simpleBlock("honeycomb_tiles", "honeycomb_tiles");
+    simpleBlock("solidified_honey", "solidified_honey");
+    simpleBlock("smooth_honeycomb", "smooth_honeycomb");
+    slabBlock("honeycomb_bricks_slab", "honeycomb_bricks");
+    slabBlock("honeycomb_tiles_slab", "honeycomb_tiles");
+    slabBlock("solidified_honey_slab", "solidified_honey");
+    slabBlock("smooth_honeycomb_slab", "smooth_honeycomb");
 
     return 0;
 }

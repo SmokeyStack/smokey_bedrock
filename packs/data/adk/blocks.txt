@@ -38,14 +38,12 @@ concrete
 concrete_powder
 copper_block
 copper_ore
-coral
 coral_block
 cracked_deepslate_bricks
 cracked_deepslate_tiles
 cracked_nether_bricks
 cracked_polished_blackstone_bricks
 crafting_table
-crimson_fungus
 crimson_hyphae
 crimson_nylium
 crimson_planks
@@ -81,7 +79,6 @@ exposed_copper
 exposed_cut_copper
 farmland
 fletching_table
-flowering_azalea
 furnace
 gilded_blackstone
 glass
@@ -131,7 +128,6 @@ muddy_mangrove_roots
 mycelium
 nether_brick
 nether_gold_ore
-nether_wart
 nether_wart_block
 netherite_block
 netherrack
@@ -168,7 +164,6 @@ raw_copper_block
 raw_gold_block
 raw_iron_block
 red_glazed_terracotta
-red_mushroom
 red_mushroom_block
 red_nether_brick
 red_sandstone
@@ -221,7 +216,6 @@ trapped_chest
 tuff
 undyed_shulker_box
 verdant_froglight
-warped_fungus
 warped_hyphae
 warped_nylium
 warped_planks

@@ -8,6 +8,12 @@
         },
         "honeycomb_tiles": {
             "textures": "textures/blocks/honeycomb_tiles"
+        },
+        "smooth_honeycomb": {
+            "textures": "textures/blocks/smooth_honeycomb"
+        },
+        "solidified_honey": {
+            "textures": "textures/blocks/solidified_honey"
         }
     }
 }
