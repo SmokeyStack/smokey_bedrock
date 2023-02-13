@@ -81,6 +81,6 @@ jobs:
         mv smokey_bedrock_world/level.dat "./bds/worlds/Bedrock level"
         mv smokey_bedrock_world/level.dat_old "./bds/worlds/Bedrock level"
 
-    - uses: SmokeyStack/add-on-ci@main
+    - uses: SmokeyStack/add-on-ci@09136291060baec74caf83236bc54d7857ec64eb
       with:
         BDS_PATH: bds
