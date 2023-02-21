@@ -1,6 +1,4 @@
 #include <fstream>
-#include <iostream>
-#include <vector>
 
 #include "Block.h"
 #include "BlockProperty.h"
@@ -59,6 +57,35 @@ int main() {
     blocks.subscribe(
         "smooth_honeycomb_slab",
         new SlabBlock(BlockProperty::Property().setMining(1).setExplosion(3)));
+
+    blocks.subscribe("fossilized_shell", new Block(BlockProperty::Property()));
+
+    blocks.subscribe(
+        "searocket_white",
+        new Block(BlockProperty::Property().setCollision(false).setSelection(
+            {-6, 0, -6}, {12, 13, 12})));
+    blocks.subscribe(
+        "searocket_pink",
+        new Block(BlockProperty::Property().setCollision(false).setSelection(
+            {-6, 0, -6}, {12, 13, 12})));
+
+    blocks.subscribe(
+        "seagrass_blue",
+        new Block(BlockProperty::Property().setCollision(false).setSelection(
+            {-6, 0, -6}, {12, 13, 12})));
+    blocks.subscribe(
+        "seagrass_purple",
+        new Block(BlockProperty::Property().setCollision(false).setSelection(
+            {-6, 0, -6}, {12, 13, 12})));
+
+    blocks.subscribe("seagrass_block_blue",
+                     new Block(BlockProperty::Property()));
+    blocks.subscribe("seagrass_block_dried_blue",
+                     new Block(BlockProperty::Property()));
+    blocks.subscribe("seagrass_block_purple",
+                     new Block(BlockProperty::Property()));
+    blocks.subscribe("seagrass_block_dried_purple",
+                     new Block(BlockProperty::Property()));
 
     return 0;
 }

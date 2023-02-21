@@ -3,17 +3,65 @@
     "padding": 8,
     "resource_pack_name": "vanilla",
     "texture_data": {
+        "blue_seagrass": {
+            "textures": "textures/blocks/blue_seagrass"
+        },
+        "blue_seagrass_block_side": {
+            "textures": "textures/blocks/blue_seagrass_block_side"
+        },
+        "blue_seagrass_block_top": {
+            "textures": "textures/blocks/blue_seagrass_block_top"
+        },
+        "dried_blue_seagrass_block_side": {
+            "textures": "textures/blocks/dried_blue_seagrass_block_side"
+        },
+        "dried_blue_seagrass_block_top": {
+            "textures": "textures/blocks/dried_blue_seagrass_block_top"
+        },
+        "dried_purple_seagrass_block_side": {
+            "textures": "textures/blocks/dried_purple_seagrass_block_side"
+        },
+        "dried_purple_seagrass_block_top": {
+            "textures": "textures/blocks/dried_purple_seagrass_block_top"
+        },
+        "dried_seagrass_block_bottom": {
+            "textures": "textures/blocks/dried_seagrass_block_bottom"
+        },
+        "fossilized_shell": {
+            "textures": "textures/blocks/fossilized_shell"
+        },
+        "fossilized_shell_sides": {
+            "textures": "textures/blocks/fossilized_shell_sides"
+        },
         "honeycomb_bricks": {
             "textures": "textures/blocks/honeycomb_bricks"
         },
         "honeycomb_tiles": {
             "textures": "textures/blocks/honeycomb_tiles"
         },
+        "pink_searocket": {
+            "textures": "textures/blocks/pink_searocket"
+        },
+        "purple_seagrass": {
+            "textures": "textures/blocks/purple_seagrass"
+        },
+        "purple_seagrass_block_side": {
+            "textures": "textures/blocks/purple_seagrass_block_side"
+        },
+        "purple_seagrass_block_top": {
+            "textures": "textures/blocks/purple_seagrass_block_top"
+        },
+        "seagrass_block_bottom": {
+            "textures": "textures/blocks/seagrass_block_bottom"
+        },
         "smooth_honeycomb": {
             "textures": "textures/blocks/smooth_honeycomb"
         },
         "solidified_honey": {
             "textures": "textures/blocks/solidified_honey"
+        },
+        "white_searocket": {
+            "textures": "textures/blocks/white_searocket"
         }
     }
 }

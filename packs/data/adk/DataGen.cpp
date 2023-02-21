@@ -348,5 +348,34 @@ int main() {
     slabBlock("solidified_honey_slab", "solidified_honey");
     slabBlock("smooth_honeycomb_slab", "smooth_honeycomb");
 
+    simpleBlock("fossilized_shell", "fossilized_shell_sides",
+                "fossilized_shell_sides", "fossilized_shell_sides",
+                "fossilized_shell_sides", "fossilized_shell",
+                "fossilized_shell_sides");
+
+    crossBlock("searocket_white", "white_searocket");
+    crossBlock("searocket_pink", "pink_searocket");
+    crossBlock("seagrass_blue", "blue_seagrass");
+    crossBlock("seagrass_purple", "purple_seagrass");
+
+    simpleBlock("seagrass_block_blue", "blue_seagrass_block_side",
+                "blue_seagrass_block_side", "blue_seagrass_block_side",
+                "blue_seagrass_block_side", "blue_seagrass_block_top",
+                "seagrass_block_bottom");
+    simpleBlock("seagrass_block_dried_blue", "dried_blue_seagrass_block_side",
+                "dried_blue_seagrass_block_side",
+                "dried_blue_seagrass_block_side",
+                "dried_blue_seagrass_block_side",
+                "dried_blue_seagrass_block_top", "dried_seagrass_block_bottom");
+    simpleBlock("seagrass_block_purple", "purple_seagrass_block_side",
+                "purple_seagrass_block_side", "purple_seagrass_block_side",
+                "purple_seagrass_block_side", "purple_seagrass_block_top",
+                "seagrass_block_bottom");
+    simpleBlock(
+        "seagrass_block_dried_purple", "dried_purple_seagrass_block_side",
+        "dried_purple_seagrass_block_side", "dried_purple_seagrass_block_side",
+        "dried_purple_seagrass_block_side", "dried_purple_seagrass_block_top",
+        "dried_seagrass_block_bottom");
+
     return 0;
 }
