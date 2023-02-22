@@ -91,12 +91,18 @@ int main() {
 
     blocks.subscribe("scute_block", new Block(BlockProperty::Property()));
     blocks.subscribe("scute_block_tile", new Block(BlockProperty::Property()));
+    blocks.subscribe("scute_block_shingles",
+                     new Block(BlockProperty::Property()));
     blocks.subscribe(
         "scute_block_slab",
         new SlabBlock(
             BlockProperty::Property().setCategory(SLAB).setTab(CONSTRUCTION)));
     blocks.subscribe(
         "scute_block_tile_slab",
+        new SlabBlock(
+            BlockProperty::Property().setCategory(SLAB).setTab(CONSTRUCTION)));
+    blocks.subscribe(
+        "scute_block_shingles_slab",
         new SlabBlock(
             BlockProperty::Property().setCategory(SLAB).setTab(CONSTRUCTION)));
 

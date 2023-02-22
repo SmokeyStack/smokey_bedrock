@@ -379,8 +379,10 @@ int main() {
 
     simpleBlock("scute_block", "scute_block");
     simpleBlock("scute_block_tile", "scute_block_tile");
+    simpleBlock("scute_block_shingles", "scute_block_shingles");
     slabBlock("scute_block_slab", "scute_block");
     slabBlock("scute_block_tile_slab", "scute_block_tile");
+    slabBlock("scute_block_shingles_slab", "scute_block_shingles");
 
     return 0;
 }
