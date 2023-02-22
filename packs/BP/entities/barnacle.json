@@ -5,9 +5,6 @@
             "minecraft:attack": {
                 "damage": 4
             },
-            // "minecraft:behavior.look_at_target": {
-            //     "priority": 5
-            // },
             "minecraft:behavior.melee_attack": {
                 "priority": 4
             },
@@ -85,7 +82,7 @@
                         }
                     ]
                 },
-                "sensor_range": 1.5
+                "sensor_range": 1
             },
             "minecraft:health": {
                 "value": 20
@@ -105,7 +102,6 @@
                 ]
             },
             "minecraft:is_hidden_when_invisible": {},
-            "minecraft:jump.static": {},
             "minecraft:mob_effect": {
                 "cooldown_time": 5,
                 "effect_range": 2,
@@ -161,7 +157,8 @@
             "minecraft:type_family": {
                 "family": [
                     "barnacle",
-                    "mob"
+                    "mob",
+                    "monster"
                 ]
             },
             "minecraft:underwater_movement": {

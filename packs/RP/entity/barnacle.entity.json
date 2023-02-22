@@ -10,7 +10,7 @@
             },
             "identifier": "smokey_bedrock:barnacle",
             "materials": {
-                "default": "squid"
+                "default": "entity_alphatest"
             },
             "render_controllers": [
                 "controller.render.squid"
