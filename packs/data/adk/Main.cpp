@@ -17,7 +17,9 @@ int main() {
     while (std::getline(file, str)) block_list.push_back(str);
 
     for (const std::string& a : block_list)
-        blocks.subscribe(a, new HeadBlock(BlockProperty::Property()));
+        blocks.subscribe(
+            a, new HeadBlock(
+                   BlockProperty::Property().setCategory(SKULL).setTab(ITEMS)));
 
     std::vector<std::string> effect_list = {
         "absorption",   "bad_omen",     "blindness",       "conduit_power",
@@ -86,6 +88,17 @@ int main() {
                      new Block(BlockProperty::Property()));
     blocks.subscribe("seagrass_block_dried_purple",
                      new Block(BlockProperty::Property()));
+
+    blocks.subscribe("scute_block", new Block(BlockProperty::Property()));
+    blocks.subscribe("scute_block_tile", new Block(BlockProperty::Property()));
+    blocks.subscribe(
+        "scute_block_slab",
+        new SlabBlock(
+            BlockProperty::Property().setCategory(SLAB).setTab(CONSTRUCTION)));
+    blocks.subscribe(
+        "scute_block_tile_slab",
+        new SlabBlock(
+            BlockProperty::Property().setCategory(SLAB).setTab(CONSTRUCTION)));
 
     return 0;
 }

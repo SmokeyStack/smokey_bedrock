@@ -377,5 +377,10 @@ int main() {
         "dried_purple_seagrass_block_side", "dried_purple_seagrass_block_top",
         "dried_seagrass_block_bottom");
 
+    simpleBlock("scute_block", "scute_block");
+    simpleBlock("scute_block_tile", "scute_block_tile");
+    slabBlock("scute_block_slab", "scute_block");
+    slabBlock("scute_block_tile_slab", "scute_block_tile");
+
     return 0;
 }
