@@ -385,15 +385,15 @@ int main() {
     slabBlock("scute_block_tile_slab", "scute_block_tile");
     slabBlock("scute_block_shingles_slab", "scute_block_shingles");
 
-    simpleItem("scute_chestplate", "netherite_ingot");
+    simpleItem("scute_chestplate", "scute_chestplate");
     armorModel("smokey_bedrock", "scute_chestplate",
-               "textures/models/armor/diamond_1", CHEST);
-    simpleItem("scute_leggings", "diamond");
+               "textures/armour/scute_upper", CHEST);
+    simpleItem("scute_leggings", "scute_leggings");
     armorModel("smokey_bedrock", "scute_leggings",
-               "textures/models/armor/diamond_2", LEGS);
-    simpleItem("scute_boots", "stick");
-    armorModel("smokey_bedrock", "scute_boots",
-               "textures/models/armor/diamond_2", FEET);
+               "textures/armour/scute_lower", LEGS);
+    simpleItem("scute_boots", "scute_boots");
+    armorModel("smokey_bedrock", "scute_boots", "textures/armour/scute_upper",
+               FEET);
 
     return 0;
 }

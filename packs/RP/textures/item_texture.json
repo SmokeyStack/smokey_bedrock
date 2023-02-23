@@ -3,6 +3,15 @@
     "texture_data": {
         "dart_shooter": {
             "textures": "textures/items/bamboo"
+        },
+        "scute_boots": {
+            "textures": "textures/items/scute_boots"
+        },
+        "scute_chestplate": {
+            "textures": "textures/items/scute_chestplate"
+        },
+        "scute_leggings": {
+            "textures": "textures/items/scute_leggings"
         }
     },
     "texture_name": "atlas.items"
