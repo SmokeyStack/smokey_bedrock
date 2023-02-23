@@ -1,4 +1,5 @@
 #include "generator/BlockState.h"
+#include "generator/ItemState.h"
 
 int main() {
     headBlock("amethyst_block", "amethyst_block");
@@ -383,6 +384,16 @@ int main() {
     slabBlock("scute_block_slab", "scute_block");
     slabBlock("scute_block_tile_slab", "scute_block_tile");
     slabBlock("scute_block_shingles_slab", "scute_block_shingles");
+
+    simpleItem("scute_chestplate", "netherite_ingot");
+    armorModel("smokey_bedrock", "scute_chestplate",
+               "textures/models/armor/diamond_1", CHEST);
+    simpleItem("scute_leggings", "diamond");
+    armorModel("smokey_bedrock", "scute_leggings",
+               "textures/models/armor/diamond_2", LEGS);
+    simpleItem("scute_boots", "stick");
+    armorModel("smokey_bedrock", "scute_boots",
+               "textures/models/armor/diamond_2", FEET);
 
     return 0;
 }

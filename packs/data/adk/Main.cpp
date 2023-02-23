@@ -1,8 +1,12 @@
 #include <fstream>
 
+#include "ArmorItem.h"
+#include "ArmorType.h"
 #include "Block.h"
+#include "BlockCategory.h"
 #include "BlockProperty.h"
 #include "HeadBlock.h"
+#include "Item.h"
 #include "Registry.h"
 #include "SlabBlock.h"
 #include "SmokeyBedrock/ScentedCandleBlock.h"
@@ -10,6 +14,7 @@
 int main() {
     const std::string MODID = "smokey_bedrock";
     Registry<Block> blocks(MODID);
+    Registry<Item> items(MODID);
 
     std::ifstream file("./data/adk/blocks.txt");
     std::string str;
@@ -18,8 +23,9 @@ int main() {
 
     for (const std::string& a : block_list)
         blocks.subscribe(
-            a, new HeadBlock(
-                   BlockProperty::Property().setCategory(SKULL).setTab(ITEMS)));
+            a, new HeadBlock(BlockProperty::Property()
+                                 .setCategory(adk::CreativeCategory::SKULL)
+                                 .setTab(adk::CreativeTab::ITEMS)));
 
     std::vector<std::string> effect_list = {
         "absorption",   "bad_omen",     "blindness",       "conduit_power",
@@ -95,16 +101,29 @@ int main() {
                      new Block(BlockProperty::Property()));
     blocks.subscribe(
         "scute_block_slab",
-        new SlabBlock(
-            BlockProperty::Property().setCategory(SLAB).setTab(CONSTRUCTION)));
+        new SlabBlock(BlockProperty::Property()
+                          .setCategory(adk::CreativeCategory::SLAB)
+                          .setTab(adk::CreativeTab::CONSTRUCTION)));
     blocks.subscribe(
         "scute_block_tile_slab",
-        new SlabBlock(
-            BlockProperty::Property().setCategory(SLAB).setTab(CONSTRUCTION)));
+        new SlabBlock(BlockProperty::Property()
+                          .setCategory(adk::CreativeCategory::SLAB)
+                          .setTab(adk::CreativeTab::CONSTRUCTION)));
     blocks.subscribe(
         "scute_block_shingles_slab",
-        new SlabBlock(
-            BlockProperty::Property().setCategory(SLAB).setTab(CONSTRUCTION)));
+        new SlabBlock(BlockProperty::Property()
+                          .setCategory(adk::CreativeCategory::SLAB)
+                          .setTab(adk::CreativeTab::CONSTRUCTION)));
+
+    items.subscribe("scute_chestplate",
+                    new ArmorItem(ItemProperty::Property(), 6,
+                                  adk::ArmorSlot::CHEST, 100, true, 1, 1));
+    items.subscribe("scute_leggings",
+                    new ArmorItem(ItemProperty::Property(), 5,
+                                  adk::ArmorSlot::LEGS, 100, true, 1, 1));
+    items.subscribe("scute_boots",
+                    new ArmorItem(ItemProperty::Property(), 2,
+                                  adk::ArmorSlot::FEET, 100, true, 1, 1));
 
     return 0;
 }
