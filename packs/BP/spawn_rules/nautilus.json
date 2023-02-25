@@ -1,0 +1,49 @@
+{
+    "format_version": "1.8.0",
+    "minecraft:spawn_rules": {
+        "conditions": [
+            {
+                "minecraft:biome_filter": {
+                    "all_of": [
+                        {
+                            "operator": "==",
+                            "test": "has_biome_tag",
+                            "value": "ocean"
+                        },
+                        {
+                            "operator": "!=",
+                            "test": "has_biome_tag",
+                            "value": "frozen"
+                        },
+                        {
+                            "operator": "!=",
+                            "test": "has_biome_tag",
+                            "value": "cold"
+                        }
+                    ]
+                },
+                "minecraft:density_limit": {
+                    "surface": 8,
+                    "underground": 0
+                },
+                "minecraft:height_filter": {
+                    "max": 30,
+                    "min": -64
+                },
+                "minecraft:herd": {
+                    "max_size": 1,
+                    "min_size": 1
+                },
+                "minecraft:spawns_on_surface": {},
+                "minecraft:spawns_underwater": {},
+                "minecraft:weight": {
+                    "default": 100
+                }
+            }
+        ],
+        "description": {
+            "identifier": "smokey_bedrock:nautilus",
+            "population_control": "water_animal"
+        }
+    }
+}
