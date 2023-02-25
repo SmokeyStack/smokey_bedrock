@@ -1,0 +1,18 @@
+{
+    "entity_sounds": {
+        "entities": {
+            "smokey_bedrock:nautilus": {
+                "events": {
+                    "ambient": "mob.axolotl.swim",
+                    "death": "mob.turtle.death",
+                    "hurt": "mob.turtle.hurt"
+                },
+                "pitch": [
+                    0.80,
+                    1.20
+                ],
+                "volume": 1
+            }
+        }
+    }
+}

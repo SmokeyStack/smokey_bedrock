@@ -125,5 +125,10 @@ int main() {
                     new ArmorItem(ItemProperty::Property(), 2,
                                   adk::ArmorSlot::FEET, 100, true, 1, 1));
 
+    items.subscribe(
+        "bucket_nautilus",
+        new Item(
+            ItemProperty::Property().setIcon("bucket_nautilus").setStack(1)));
+
     return 0;
 }

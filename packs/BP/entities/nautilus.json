@@ -156,6 +156,48 @@
             "minecraft:conditional_bandwidth_optimization": {},
             "minecraft:behavior.panic": {
                 "speed_multiplier": 5.0
+            },
+            "minecraft:interact": {
+                "interactions": [
+                    {
+                        "on_interact": {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "player"
+                                    },
+                                    {
+                                        "test": "has_equipment",
+                                        "domain": "hand",
+                                        "subject": "other",
+                                        "value": "water_bucket"
+                                    }
+                                ]
+                            },
+                            "event": "become_bucket"
+                        },
+                        "use_item": true,
+                        "transform_to_item": "smokey_bedrock:bucket_nautilus",
+                        "play_sounds": "milk.screamer",
+                        "interact_text": "action.interact.milk"
+                    }
+                ]
+            }
+        },
+        "events": {
+            "become_bucket": {
+                "add": {
+                    "component_groups": [
+                        "become_bucket"
+                    ]
+                }
+            }
+        },
+        "component_groups": {
+            "become_bucket": {
+                "minecraft:instant_despawn": {}
             }
         }
     }

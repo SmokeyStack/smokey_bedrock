@@ -1,4 +1,4 @@
-import { world, ItemStack, MinecraftItemTypes, BlockLocation, system, MinecraftEffectTypes } from "@minecraft/server";
+import { world, ItemStack, MinecraftItemTypes, BlockLocation, system, MinecraftEffectTypes, Items, MinecraftBlockTypes, Direction } from "@minecraft/server";
 
 world.events.entityHurt.subscribe((eventData) => {
     if (eventData.damageSource.damagingEntity == null)
@@ -78,3 +78,26 @@ system.runSchedule(() => {
     });
 
 }, 20);
+
+world.events.itemUseOn.subscribe((eventData) => {
+    if (eventData.item.typeId == 'smokey_bedrock:bucket_nautilus') {
+        let offset;
+        switch (eventData.blockFace) {
+            case Direction.down: offset = [0, -1, 0]; break;
+            case Direction.east: offset = [1, 0, 0]; break;
+            case Direction.north: offset = [0, 0, -1]; break;
+            case Direction.south: offset = [0, 0, 1]; break;
+            case Direction.up: offset = [0, 1, 0]; break;
+            case Direction.west: offset = [-1, 0, 0]; break;
+            default: break;
+        }
+
+        world.getDimension('overworld').getBlock(eventData.blockLocation.offset(offset[0], offset[1], offset[2])).setType(MinecraftBlockTypes.water);
+        world.getDimension('overworld').fillBlocks(eventData.blockLocation.offset(offset[0], offset[1], offset[2]), eventData.blockLocation.offset(offset[0], offset[1] + 1, offset[2]), MinecraftBlockTypes.water, { matchingBlock: MinecraftBlockTypes.air.createDefaultBlockPermutation() })
+        world.getDimension('overworld').spawnEntity('smokey_bedrock:nautilus', eventData.blockLocation.offset(offset[0], offset[1], offset[2]));
+        world.getDimension('overworld').fillBlocks(eventData.blockLocation.offset(offset[0], offset[1] + 1, offset[2]), eventData.blockLocation.offset(offset[0], offset[1] + 1, offset[2]), MinecraftBlockTypes.air, { matchingBlock: MinecraftBlockTypes.water.createDefaultBlockPermutation() })
+
+        let item = new ItemStack(MinecraftItemTypes.bucket, 1);
+        eventData.source.getComponent('minecraft:inventory').container.setItem(eventData.source.selectedSlot, item);
+    }
+})

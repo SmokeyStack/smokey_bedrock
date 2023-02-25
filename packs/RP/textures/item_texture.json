@@ -1,6 +1,9 @@
 {
     "resource_pack_name": "vanilla",
     "texture_data": {
+        "bucket_nautilus": {
+            "textures": "textures/items/bucket_nautilus"
+        },
         "dart_shooter": {
             "textures": "textures/items/bamboo"
         },
