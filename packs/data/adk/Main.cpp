@@ -129,6 +129,13 @@ int main() {
         "bucket_nautilus",
         new Item(
             ItemProperty::Property().setIcon("bucket_nautilus").setStack(1)));
+    items.subscribe(
+        "bucket_squid",
+        new Item(ItemProperty::Property().setIcon("bucket_squid").setStack(1)));
+    items.subscribe(
+        "bucket_squid_glow",
+        new Item(
+            ItemProperty::Property().setIcon("bucket_squid_glow").setStack(1)));
 
     return 0;
 }
