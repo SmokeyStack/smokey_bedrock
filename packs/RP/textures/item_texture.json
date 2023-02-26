@@ -4,6 +4,12 @@
         "bucket_nautilus": {
             "textures": "textures/items/bucket_nautilus"
         },
+        "bucket_squid": {
+            "textures": "textures/items/bucket_squid"
+        },
+        "bucket_squid_glow": {
+            "textures": "textures/items/bucket_squid_glow"
+        },
         "dart_shooter": {
             "textures": "textures/items/bamboo"
         },
