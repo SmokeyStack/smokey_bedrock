@@ -1,6 +1,9 @@
 {
     "resource_pack_name": "vanilla",
     "texture_data": {
+        "bucket_jellyfish": {
+            "textures": "textures/items/bucket_jellyfish"
+        },
         "bucket_nautilus": {
             "textures": "textures/items/bucket_nautilus"
         },

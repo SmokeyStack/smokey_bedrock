@@ -261,7 +261,7 @@ function updateLiquid(
     );
 }
 
-function bucketNautilus(eventData: ItemUseOnEvent, entity: string) {
+function bucketEntity(eventData: ItemUseOnEvent, entity: string) {
     let player: Player = eventData.source as any;
 
     if (player.typeId != 'minecraft:player') return;
@@ -330,8 +330,12 @@ world.events.itemUseOn.subscribe((eventData) => {
         Items.get('smokey_bedrock:bucket_squid_glow'),
         EntityTypes.get('minecraft:glow_squid')
     );
+    bucket_entities.set(
+        Items.get('smokey_bedrock:bucket_jellyfish'),
+        EntityTypes.get('smokey_bedrock:jellyfish')
+    );
 
     if (!bucket_entities.has(Items.get(item.typeId))) return;
 
-    bucketNautilus(eventData, bucket_entities.get(Items.get(item.typeId)).id);
+    bucketEntity(eventData, bucket_entities.get(Items.get(item.typeId)).id);
 });

@@ -1,0 +1,48 @@
+{
+	"animations": {
+		"animation.jellyfish.tentacles": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"rotation": [0, "q.life_time*60", 0]
+				},
+				"tentacle": {
+					"rotation": [0, "8*(math.sin(q.life_time)*360)", 0],
+					"position": [0, "3*(math.sin(q.life_time*100))", 0]
+				},
+				"tentacle2": {
+					"rotation": [0, "16*(math.sin(q.life_time)*360)", 0],
+					"position": [0, "-3*(math.sin(q.life_time*100))", 0]
+				},
+				"tentacle3": {
+					"rotation": [0, "24*(math.sin(q.life_time)*360)", 0],
+					"position": [0, "2*(math.sin(q.life_time*100))", 0]
+				},
+				"tentacle4": {
+					"rotation": [0, "32*(math.sin(q.life_time)*360)", 0],
+					"position": [0, "-1*(math.sin(q.life_time*100))", 0]
+				},
+				"tentacle5": {
+					"rotation": [0, "40*(math.sin(q.life_time)*360)", 0],
+					"position": [0, "-2*(math.sin(q.life_time*100))", 0]
+				},
+				"tentacle6": {
+					"rotation": [0, "48*(math.sin(q.life_time)*360)", 0],
+					"position": [0, "4*(math.sin(q.life_time*100))", 0]
+				},
+				"tentacle7": {
+					"rotation": [0, "56*(math.sin(q.life_time)*360)", 0],
+					"position": [0, "(math.sin(q.life_time*100))", 0]
+				},
+				"tentacle8": {
+					"rotation": [0, "64*(math.sin(q.life_time)*360)", 0],
+					"position": [0, "5*(math.sin(q.life_time*100))", 0]
+				},
+				"root": {
+					"rotation": [15, 0, 0]
+				}
+			}
+		}
+	},
+	"format_version": "1.8.0"
+}

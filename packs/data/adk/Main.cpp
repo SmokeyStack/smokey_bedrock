@@ -136,6 +136,10 @@ int main() {
         "bucket_squid_glow",
         new Item(
             ItemProperty::Property().setIcon("bucket_squid_glow").setStack(1)));
+    items.subscribe(
+        "bucket_jellyfish",
+        new Item(
+            ItemProperty::Property().setIcon("bucket_jellyfish").setStack(1)));
 
     return 0;
 }

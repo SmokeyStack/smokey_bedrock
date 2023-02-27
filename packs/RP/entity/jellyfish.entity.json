@@ -1,0 +1,32 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "animations": {
+                "tentacles": "animation.jellyfish.tentacles"
+            },
+            "geometry": {
+                "default": "geometry.jellyfish"
+            },
+            "identifier": "smokey_bedrock:jellyfish",
+            "materials": {
+                "default": "entity_alphablend"
+            },
+            "render_controllers": [
+                "controller.render.cod"
+            ],
+            "scripts": {
+                "animate": [
+                    "tentacles"
+                ]
+            },
+            "spawn_egg": {
+                "texture": "spawn_egg",
+                "texture_index": 45
+            },
+            "textures": {
+                "default": "textures/entity/jellyfish"
+            }
+        }
+    }
+}
