@@ -13,7 +13,7 @@
             },
             "identifier": "smokey_bedrock:nautilus",
             "materials": {
-                "default": "cod"
+                "default": "entity_alphatest"
             },
             "particle_effects": {
                 "bubbles": "smokey_bedrock:nautilus_bubble"

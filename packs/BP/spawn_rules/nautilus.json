@@ -24,7 +24,7 @@
                 },
                 "minecraft:density_limit": {
                     "surface": 8,
-                    "underground": 0
+                    "underground": 8
                 },
                 "minecraft:height_filter": {
                     "max": 30,

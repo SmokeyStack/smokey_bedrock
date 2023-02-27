@@ -31,7 +31,7 @@
         ],
         "description": {
             "identifier": "smokey_bedrock:baiji_dolphin",
-            "population_control": "animal"
+            "population_control": "water_animal"
         }
     }
 }
