@@ -19,13 +19,25 @@ add_executable(adk
 )
 
 include_directories(include)
-add_executable(recipe
+add_executable(recipegenerator
     RecipeGen.cpp
 )
 
 include_directories(include/generator)
-add_executable(datagen
+add_executable(datagenerator
     DataGen.cpp
     include/generator/BlockState.h
     include/generator/ItemState.h
+)
+
+enable_testing()
+
+include_directories(include)
+add_executable(BlockTest
+    test/BlockTest.cpp
+)
+
+add_test(
+    NAME BlockTest
+    COMMAND BlockTest
 )
