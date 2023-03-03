@@ -1,3 +1,6 @@
+#include <spdlog/async.h>
+#include <spdlog/sinks/basic_file_sink.h>
+
 #include <fstream>
 
 #include "ArmorItem.h"
@@ -12,6 +15,11 @@
 #include "SmokeyBedrock/ScentedCandleBlock.h"
 
 int main() {
+    auto logger = spdlog::basic_logger_mt<spdlog::async_factory>(
+        "adk", "logs/async_log.txt");
+
+    logger->info("");
+
     const std::string MODID = "smokey_bedrock";
     Registry<Block> blocks(MODID);
     Registry<Item> items(MODID);
@@ -23,9 +31,8 @@ int main() {
 
     for (const std::string& a : block_list)
         blocks.subscribe(
-            a, new HeadBlock(BlockProperty::Property()
-                                 .setCategory(adk::CreativeCategory::SKULL)
-                                 .setTab(adk::CreativeTab::ITEMS)));
+            a, new HeadBlock(BlockProperty().setCreativeCategory(
+                   adk::CreativeTab::ITEMS, adk::CreativeCategory::SKULL)));
 
     std::vector<std::string> effect_list = {
         "absorption",   "bad_omen",     "blindness",       "conduit_power",
@@ -39,107 +46,100 @@ int main() {
 
     for (const std::string& a : effect_list)
         blocks.subscribe("candle_" + a,
-                         new ScentedCandleBlock(BlockProperty::Property(), a));
+                         new ScentedCandleBlock(BlockProperty(), a));
 
     blocks.subscribe(
         "honeycomb_bricks",
-        new Block(BlockProperty::Property().setMining(1).setExplosion(3)));
+        new Block(BlockProperty()
+                      .setMining(1.0)
+                      .setExplosion(3.0)
+                      .setCreativeCategory(adk::CreativeTab::CONSTRUCTION,
+                                           adk::CreativeCategory::STONEBRICK)));
     blocks.subscribe(
         "honeycomb_tiles",
-        new Block(BlockProperty::Property().setMining(1).setExplosion(3)));
+        new Block(BlockProperty().setMining(1.0).setExplosion(3.0)));
     blocks.subscribe(
         "solidified_honey",
-        new Block(BlockProperty::Property().setMining(1).setExplosion(3)));
+        new Block(BlockProperty().setMining(1.0).setExplosion(3.0)));
     blocks.subscribe(
         "smooth_honeycomb",
-        new Block(BlockProperty::Property().setMining(1).setExplosion(3)));
+        new Block(BlockProperty().setMining(1.0).setExplosion(3.0)));
     blocks.subscribe(
         "honeycomb_bricks_slab",
-        new SlabBlock(BlockProperty::Property().setMining(1).setExplosion(3)));
+        new SlabBlock(BlockProperty().setMining(1.0).setExplosion(3.0)));
     blocks.subscribe(
         "honeycomb_tiles_slab",
-        new SlabBlock(BlockProperty::Property().setMining(1).setExplosion(3)));
+        new SlabBlock(BlockProperty().setMining(1.0).setExplosion(3.0)));
     blocks.subscribe(
         "solidified_honey_slab",
-        new SlabBlock(BlockProperty::Property().setMining(1).setExplosion(3)));
+        new SlabBlock(BlockProperty().setMining(1.0).setExplosion(3.0)));
     blocks.subscribe(
         "smooth_honeycomb_slab",
-        new SlabBlock(BlockProperty::Property().setMining(1).setExplosion(3)));
+        new SlabBlock(BlockProperty().setMining(1.0).setExplosion(3.0)));
 
-    blocks.subscribe("fossilized_shell", new Block(BlockProperty::Property()));
+    blocks.subscribe("fossilized_shell", new Block(BlockProperty()));
 
-    blocks.subscribe(
-        "searocket_white",
-        new Block(BlockProperty::Property().setCollision(false).setSelection(
-            {-6, 0, -6}, {12, 13, 12})));
-    blocks.subscribe(
-        "searocket_pink",
-        new Block(BlockProperty::Property().setCollision(false).setSelection(
-            {-6, 0, -6}, {12, 13, 12})));
+    blocks.subscribe("searocket_white",
+                     new Block(BlockProperty().setCollision(false).setSelection(
+                         std::make_pair(std::vector<int>{-6, 0, -6},
+                                        std::vector<int>{12, 13, 12}))));
+    blocks.subscribe("searocket_pink",
+                     new Block(BlockProperty().setCollision(false).setSelection(
+                         std::make_pair(std::vector<int>{-6, 0, -6},
+                                        std::vector<int>{12, 13, 12}))));
 
-    blocks.subscribe(
-        "seagrass_blue",
-        new Block(BlockProperty::Property().setCollision(false).setSelection(
-            {-6, 0, -6}, {12, 13, 12})));
-    blocks.subscribe(
-        "seagrass_purple",
-        new Block(BlockProperty::Property().setCollision(false).setSelection(
-            {-6, 0, -6}, {12, 13, 12})));
+    blocks.subscribe("seagrass_blue",
+                     new Block(BlockProperty().setCollision(false).setSelection(
+                         std::make_pair(std::vector<int>{-6, 0, -6},
+                                        std::vector<int>{12, 13, 12}))));
+    blocks.subscribe("seagrass_purple",
+                     new Block(BlockProperty().setCollision(false).setSelection(
+                         std::make_pair(std::vector<int>{-6, 0, -6},
+                                        std::vector<int>{12, 13, 12}))));
 
-    blocks.subscribe("seagrass_block_blue",
-                     new Block(BlockProperty::Property()));
-    blocks.subscribe("seagrass_block_dried_blue",
-                     new Block(BlockProperty::Property()));
-    blocks.subscribe("seagrass_block_purple",
-                     new Block(BlockProperty::Property()));
-    blocks.subscribe("seagrass_block_dried_purple",
-                     new Block(BlockProperty::Property()));
+    blocks.subscribe("seagrass_block_blue", new Block(BlockProperty()));
+    blocks.subscribe("seagrass_block_dried_blue", new Block(BlockProperty()));
+    blocks.subscribe("seagrass_block_purple", new Block(BlockProperty()));
+    blocks.subscribe("seagrass_block_dried_purple", new Block(BlockProperty()));
 
-    blocks.subscribe("scute_block", new Block(BlockProperty::Property()));
-    blocks.subscribe("scute_block_tile", new Block(BlockProperty::Property()));
-    blocks.subscribe("scute_block_shingles",
-                     new Block(BlockProperty::Property()));
+    blocks.subscribe("scute_block", new Block(BlockProperty()));
+    blocks.subscribe("scute_block_tile", new Block(BlockProperty()));
+    blocks.subscribe("scute_block_shingles", new Block(BlockProperty()));
     blocks.subscribe(
         "scute_block_slab",
-        new SlabBlock(BlockProperty::Property()
-                          .setCategory(adk::CreativeCategory::SLAB)
-                          .setTab(adk::CreativeTab::CONSTRUCTION)));
+        new SlabBlock(BlockProperty().setCreativeCategory(
+            adk::CreativeTab::CONSTRUCTION, adk::CreativeCategory::SLAB)));
     blocks.subscribe(
         "scute_block_tile_slab",
-        new SlabBlock(BlockProperty::Property()
-                          .setCategory(adk::CreativeCategory::SLAB)
-                          .setTab(adk::CreativeTab::CONSTRUCTION)));
+        new SlabBlock(BlockProperty().setCreativeCategory(
+            adk::CreativeTab::CONSTRUCTION, adk::CreativeCategory::SLAB)));
     blocks.subscribe(
         "scute_block_shingles_slab",
-        new SlabBlock(BlockProperty::Property()
-                          .setCategory(adk::CreativeCategory::SLAB)
-                          .setTab(adk::CreativeTab::CONSTRUCTION)));
+        new SlabBlock(BlockProperty().setCreativeCategory(
+            adk::CreativeTab::CONSTRUCTION, adk::CreativeCategory::SLAB)));
 
     items.subscribe("scute_chestplate",
-                    new ArmorItem(ItemProperty::Property(), 6,
-                                  adk::ArmorSlot::CHEST, 100, true, 1, 1));
+                    new ArmorItem(ItemProperty(), 6, adk::ArmorSlot::CHEST, 100,
+                                  true, 1, 1));
     items.subscribe("scute_leggings",
-                    new ArmorItem(ItemProperty::Property(), 5,
-                                  adk::ArmorSlot::LEGS, 100, true, 1, 1));
+                    new ArmorItem(ItemProperty(), 5, adk::ArmorSlot::LEGS, 100,
+                                  true, 1, 1));
     items.subscribe("scute_boots",
-                    new ArmorItem(ItemProperty::Property(), 2,
-                                  adk::ArmorSlot::FEET, 100, true, 1, 1));
+                    new ArmorItem(ItemProperty(), 2, adk::ArmorSlot::FEET, 100,
+                                  true, 1, 1));
 
     items.subscribe(
         "bucket_nautilus",
-        new Item(
-            ItemProperty::Property().setIcon("bucket_nautilus").setStack(1)));
+        new Item(ItemProperty().setIcon("bucket_nautilus").setStack(1)));
     items.subscribe(
         "bucket_squid",
-        new Item(ItemProperty::Property().setIcon("bucket_squid").setStack(1)));
+        new Item(ItemProperty().setIcon("bucket_squid").setStack(1)));
     items.subscribe(
         "bucket_squid_glow",
-        new Item(
-            ItemProperty::Property().setIcon("bucket_squid_glow").setStack(1)));
+        new Item(ItemProperty().setIcon("bucket_squid_glow").setStack(1)));
     items.subscribe(
         "bucket_jellyfish",
-        new Item(
-            ItemProperty::Property().setIcon("bucket_jellyfish").setStack(1)));
+        new Item(ItemProperty().setIcon("bucket_jellyfish").setStack(1)));
 
     return 0;
 }
