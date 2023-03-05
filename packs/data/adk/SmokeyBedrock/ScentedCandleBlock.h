@@ -43,7 +43,7 @@ class ScentedCandleBlock : public CandleBlock {
         j["minecraft:block"]["components"]["minecraft:queued_ticking"]
          ["interval_range"] = {600, 1200};
         j["minecraft:block"]["components"]["minecraft:queued_ticking"]
-         ["on_tick"]["event"] = mod_id + "effect_one";
+         ["on_tick"]["event"] = mod_id + ":effect_one";
 
         // Events
         j["minecraft:block"]["events"][mod_id + ":effect_one"]["run_command"]
