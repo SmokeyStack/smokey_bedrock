@@ -13,19 +13,12 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 project(adk VERSION 0.1 LANGUAGES CXX)
 
-include_directories(include SmokeyBedrock)
+add_subdirectory(include/spdlog)
+include_directories(include include/generator include/spdlog/include)
 add_executable(adk
     Main.cpp
-)
-
-include_directories(include)
-add_executable(recipegenerator
-    RecipeGen.cpp
-)
-
-include_directories(include/generator)
-add_executable(datagenerator
-    DataGen.cpp
-    include/generator/BlockState.h
-    include/generator/ItemState.h
+    Object.cpp
+    Data.cpp
+    Recipe.cpp
+    GlobalRegistry.cpp
 )

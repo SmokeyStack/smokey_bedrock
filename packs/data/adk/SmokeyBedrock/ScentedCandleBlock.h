@@ -14,22 +14,21 @@ class ScentedCandleBlock : public CandleBlock {
     ScentedCandleBlock() {}
     /// @brief Represents a scented candle block
     /// @param property A BlockProperty object
-    ScentedCandleBlock(BlockProperty::Property property, std::string effect) {
-        _block_light_filter = property.block_light_filter;
-        _crafting = property.crafting;
-        _explosion = property.explosion;
-        _mining = property.mining;
-        _display_name = property.display_name;
-        _flammable = property.flammable;
-        _friction = property.friction;
-        _light_emission = property.light_emission;
-        _loot = property.loot;
-        _color = property.color;
-        _rotation = property.rotation;
-        _does_collide = property.does_collide;
-        _collision = property.collision;
-        _is_selectable = property.is_selectable;
-        _selection = property.selection;
+    ScentedCandleBlock(BlockProperty property, std::string effect) {
+        _block_light_filter = property.getBlockLightFilter();
+        _crafting = property.getCrafting();
+        _explosion = property.getExplosion();
+        _mining = property.getMining();
+        _display_name = property.getName();
+        _flammable = property.getFlamamble();
+        _friction = property.getFriction();
+        _light_emission = property.getLightEmission();
+        _loot = property.getLoot();
+        _color = property.getColor();
+        _rotation = property.getRotation();
+        _collision = property.getCollision();
+        _selection = property.getSelection();
+        _creative = property.getCreative();
         _effect = effect;
     }
 
@@ -44,7 +43,7 @@ class ScentedCandleBlock : public CandleBlock {
         j["minecraft:block"]["components"]["minecraft:queued_ticking"]
          ["interval_range"] = {600, 1200};
         j["minecraft:block"]["components"]["minecraft:queued_ticking"]
-         ["on_tick"]["event"] = mod_id + "effect_one";
+         ["on_tick"]["event"] = mod_id + ":effect_one";
 
         // Events
         j["minecraft:block"]["events"][mod_id + ":effect_one"]["run_command"]
