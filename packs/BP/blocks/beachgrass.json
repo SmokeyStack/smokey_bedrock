@@ -1,0 +1,32 @@
+{
+    "format_version": "1.19.50",
+    "minecraft:block": {
+        "components": {
+            "minecraft:collision_box": false,
+            "minecraft:geometry": "geometry.beachgrass",
+            "minecraft:material_instances": {
+                "*": {
+                    "ambient_occlusion": false,
+                    "face_dimming": false,
+                    "render_method": "alpha_test",
+                    "texture": "beachgrass"
+                }
+            },
+            "minecraft:selection_box": {
+                "origin": [
+                    -6,
+                    0,
+                    -6
+                ],
+                "size": [
+                    12,
+                    13,
+                    12
+                ]
+            }
+        },
+        "description": {
+            "identifier": "smokey_bedrock:beachgrass"
+        }
+    }
+}
