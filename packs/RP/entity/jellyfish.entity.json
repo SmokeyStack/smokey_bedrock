@@ -13,7 +13,7 @@
                 "default": "entity_alphablend"
             },
             "render_controllers": [
-                "controller.render.cod"
+                "controller.render.jellyfish"
             ],
             "scripts": {
                 "animate": [
@@ -25,7 +25,8 @@
                 "texture_index": 45
             },
             "textures": {
-                "default": "textures/entity/jellyfish"
+                "default": "textures/entity/jellyfish",
+                "purple": "textures/entity/jellyfish_purple"
             }
         }
     }

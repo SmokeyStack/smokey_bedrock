@@ -1,0 +1,24 @@
+{
+    "format_version": "1.16.0",
+    "render_controllers": {
+        "controller.render.jellyfish": {
+            "arrays": {
+                "textures": {
+                    "Array.top": [
+                        "Texture.default",
+                        "Texture.purple"
+                    ]
+                }
+            },
+            "geometry": "Geometry.default",
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "textures": [
+                "Array.top[q.variant]"
+            ]
+        }
+    }
+}

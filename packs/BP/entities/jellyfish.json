@@ -4,15 +4,22 @@
         "component_groups": {
             "smokey_bedrock:become_bucket": {
                 "minecraft:instant_despawn": {}
+            },
+            "smokey_bedrock:purple": {
+                "minecraft:variant": {
+                    "value": 1
+                }
             }
         },
         "components": {
             "minecraft:attack": {
-                "damage": 5
+                "damage": 5,
+                "effect_duration": 5,
+                "effect_name": "fatal_poison"
             },
             "minecraft:behavior.melee_attack": {
                 "cooldown_time": 5,
-                "speed_multiplier": 4,
+                "speed_multiplier": 2,
                 "track_target": true
             },
             "minecraft:behavior.nearest_attackable_target": {
@@ -168,6 +175,9 @@
             },
             "minecraft:underwater_movement": {
                 "value": 0.1
+            },
+            "minecraft:variant": {
+                "value": 0
             }
         },
         "description": {
@@ -177,6 +187,21 @@
             "is_summonable": true
         },
         "events": {
+            "minecraft:entity_spawned": {
+                "randomize": [
+                    {
+                        "add": {
+                            "component_groups": [
+                                "smokey_bedrock:purple"
+                            ]
+                        },
+                        "weight": 2
+                    },
+                    {
+                        "weight": 1
+                    }
+                ]
+            },
             "smokey_bedrock:become_bucket": {
                 "add": {
                     "component_groups": [
