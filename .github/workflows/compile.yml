@@ -1,86 +1,88 @@
 name: Compiling Add-On
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    push:
+        branches: ['main']
+    pull_request:
+        branches: ['main']
 
 jobs:
-  build:
-    runs-on:  windows-latest
+    build:
+        runs-on: windows-latest
 
-    steps:
-    - uses: actions/checkout@v3
+        steps:
+            - uses: actions/checkout@v3
 
-    - name: Move Data Files
-      run:  |
-        mkdir tmp
-        move packs/data/adk tmp
+            - name: Move Data Files
+              run: |
+                  mkdir tmp
+                  move packs/data/adk tmp
 
-    - uses: engineerd/configurator@v0.0.9
-      with:
-        name: "regolith.exe"
-        url:  "https://github.com/Bedrock-OSS/regolith/releases/download/1.0.3/regolith_1.0.3_Windows_x86_64.zip"
-        pathInArchive:  "regolith.exe"
+            - uses: engineerd/configurator@v0.0.9
+              with:
+                  name: 'regolith.exe'
+                  url: 'https://github.com/Bedrock-OSS/regolith/releases/download/1.0.3/regolith_1.0.3_Windows_x86_64.zip'
+                  pathInArchive: 'regolith.exe'
 
-    - name: Install Filters
-      run:  regolith install-all
+            - name: Install Filters
+              run: regolith install-all
 
-    - name: Move Data Files Back
-      run:  |
-        del packs/data/adk/Main.cpp
-        del packs/data/adk/DataGen.cpp
-        del packs/data/adk/CMakeLists.txt
-        move tmp/adk/* packs/data/adk
+            - name: Move Data Files Back
+              run: |
+                  del packs/data/adk/Main.cpp
+                  del packs/data/adk/Object.cpp
+                  del packs/data/adk/Data.cpp
+                  del packs/data/adk/Recipe.cpp
+                  del packs/data/adk/CMakeLists.txt
+                  move tmp/adk/* packs/data/adk
 
-    - name: Compile
-      run:  |
-        regolith run build
+            - name: Compile
+              run: |
+                  regolith run build
 
-    - uses: actions/upload-artifact@v3
-      with:
-        name: packs
-        path: build
+            - uses: actions/upload-artifact@v3
+              with:
+                  name: packs
+                  path: build
 
-  test:
-    runs-on:  ubuntu-latest
-    needs:  build
+    test:
+        runs-on: ubuntu-latest
+        needs: build
 
-    steps: 
-    - uses: actions/download-artifact@v3
-      with:
-        name: packs
+        steps:
+            - uses: actions/download-artifact@v3
+              with:
+                  name: packs
 
-    - name: Set Up BDS
-      uses: ScriptAPIOSS/setup-bds-action@v1.0.8
-      with:
-        BDS_VERSION:  latest
-        BDS_CHANNEL:  stable
-        EULA_ACCEPT:  true
-        PP_ACCEPT:  true
+            - name: Set Up BDS
+              uses: ScriptAPIOSS/setup-bds-action@v1.0.8
+              with:
+                  BDS_VERSION: latest
+                  BDS_CHANNEL: stable
+                  EULA_ACCEPT: true
+                  PP_ACCEPT: true
 
-    - name: Set Up BP
-      uses: ScriptAPIOSS/setup-resource-packs@v1.0.4
-      with:
-        TARGET_SOURCE_PATHS:  ./BP
-        TARGET_DEST_PATH: ./bds/development_behavior_packs
+            - name: Set Up BP
+              uses: ScriptAPIOSS/setup-resource-packs@v1.0.4
+              with:
+                  TARGET_SOURCE_PATHS: ./BP
+                  TARGET_DEST_PATH: ./bds/development_behavior_packs
 
-    - name: Set Up RP
-      uses: ScriptAPIOSS/setup-resource-packs@v1.0.4
-      with:
-        TARGET_SOURCE_PATHS:  ./RP
-        TARGET_DEST_PATH: ./bds/development_resource_packs
+            - name: Set Up RP
+              uses: ScriptAPIOSS/setup-resource-packs@v1.0.4
+              with:
+                  TARGET_SOURCE_PATHS: ./RP
+                  TARGET_DEST_PATH: ./bds/development_resource_packs
 
-    - name: Get JSON
-      run:  |
-        git clone https://github.com/SmokeyStack/smokey_bedrock_world.git
-        mkdir -p "./bds/worlds/Bedrock level"
-        mv smokey_bedrock_world/world_behavior_packs.json "./bds/worlds/Bedrock level"
-        mv smokey_bedrock_world/world_resource_packs.json "./bds/worlds/Bedrock level"
-        mv smokey_bedrock_world/level.dat "./bds/worlds/Bedrock level"
-        mv smokey_bedrock_world/level.dat_old "./bds/worlds/Bedrock level"
+            - name: Get JSON
+              run: |
+                  git clone https://github.com/SmokeyStack/smokey_bedrock_world.git
+                  mkdir -p "./bds/worlds/Bedrock level"
+                  mv smokey_bedrock_world/world_behavior_packs.json "./bds/worlds/Bedrock level"
+                  mv smokey_bedrock_world/world_resource_packs.json "./bds/worlds/Bedrock level"
+                  mv smokey_bedrock_world/level.dat "./bds/worlds/Bedrock level"
+                  mv smokey_bedrock_world/level.dat_old "./bds/worlds/Bedrock level"
 
-    - uses: SmokeyStack/add-on-ci@09136291060baec74caf83236bc54d7857ec64eb
-      with:
-        BDS_PATH: bds
+            - uses: SmokeyStack/add-on-ci@09136291060baec74caf83236bc54d7857ec64eb
+              with:
+                  BDS_PATH: bds
