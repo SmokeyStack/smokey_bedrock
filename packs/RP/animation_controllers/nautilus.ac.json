@@ -1,0 +1,55 @@
+{
+    "animation_controllers": {
+        "controller.animation.nautilus.bubbles": {
+            "initial_state": "default",
+            "states": {
+                "bubbles": {
+                    "particle_effects": [
+                        {
+                            "effect": "bubbles",
+                            "locator": "bubbles"
+                        }
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!q.is_avoiding_mobs"
+                        }
+                    ]
+                },
+                "default": {
+                    "transitions": [
+                        {
+                            "bubbles": "q.is_avoiding_mobs"
+                        }
+                    ]
+                }
+            }
+        },
+        "controller.animation.nautilus.root": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [
+                        "look"
+                    ],
+                    "transitions": [
+                        {
+                            "out_of_water": "!q.is_in_water"
+                        }
+                    ]
+                },
+                "out_of_water": {
+                    "animations": [
+                        "flop"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "q.is_in_water"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "format_version": "1.10.0"
+}

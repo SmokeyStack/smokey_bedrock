@@ -3,29 +3,30 @@
     "minecraft:client_entity": {
         "description": {
             "animations": {
-                "move": "animation.barnacle.move"
+                "tentacles": "animation.jellyfish.tentacles"
             },
             "geometry": {
-                "default": "geometry.barnacle"
+                "default": "geometry.jellyfish"
             },
-            "identifier": "smokey_bedrock:barnacle",
+            "identifier": "smokey_bedrock:jellyfish",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_alphablend"
             },
             "render_controllers": [
-                "controller.render.squid"
+                "controller.render.jellyfish"
             ],
             "scripts": {
                 "animate": [
-                    "move"
+                    "tentacles"
                 ]
             },
             "spawn_egg": {
                 "texture": "spawn_egg",
-                "texture_index": 15
+                "texture_index": 45
             },
             "textures": {
-                "default": "textures/entity/barnacle"
+                "default": "textures/entity/jellyfish",
+                "purple": "textures/entity/jellyfish_purple"
             }
         }
     }

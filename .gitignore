@@ -1,8 +1,8 @@
 /build
 /.regolith
 /node_modules
-package-lock.json
-package.json
+/packs/BP/scripts/*
+!/packs/BP/scripts/.gitkeep
 
 # adk
 adk-build
@@ -10,3 +10,4 @@ assets
 include
 test
 compile.bat
+packs/data/adk/GlobalRegistry.cpp

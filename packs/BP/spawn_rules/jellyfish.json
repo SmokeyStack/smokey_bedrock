@@ -1,0 +1,62 @@
+{
+    "format_version": "1.8.0",
+    "minecraft:spawn_rules": {
+        "conditions": [
+            {
+                "minecraft:biome_filter": {
+                    "any_of": [
+                        {
+                            "all_of": [
+                                {
+                                    "operator": "==",
+                                    "test": "has_biome_tag",
+                                    "value": "ocean"
+                                },
+                                {
+                                    "operator": "==",
+                                    "test": "has_biome_tag",
+                                    "value": "lukewarm"
+                                }
+                            ]
+                        },
+                        {
+                            "all_of": [
+                                {
+                                    "operator": "==",
+                                    "test": "has_biome_tag",
+                                    "value": "ocean"
+                                },
+                                {
+                                    "operator": "==",
+                                    "test": "has_biome_tag",
+                                    "value": "warm"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "minecraft:density_limit": {
+                    "surface": 3,
+                    "underground": 3
+                },
+                "minecraft:height_filter": {
+                    "max": 63,
+                    "min": 45
+                },
+                "minecraft:herd": {
+                    "max_size": 1,
+                    "min_size": 1
+                },
+                "minecraft:spawns_on_surface": {},
+                "minecraft:spawns_underwater": {},
+                "minecraft:weight": {
+                    "default": 100
+                }
+            }
+        ],
+        "description": {
+            "identifier": "smokey_bedrock:jellyfish",
+            "population_control": "water_animal"
+        }
+    }
+}

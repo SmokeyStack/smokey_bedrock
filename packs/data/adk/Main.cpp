@@ -1,64 +1,40 @@
-#include <fstream>
-#include <iostream>
-#include <vector>
+#include <spdlog/async.h>
+#include <spdlog/sinks/basic_file_sink.h>
+#include <spdlog/sinks/stdout_sinks.h>
+#include <spdlog/spdlog.h>
 
-#include "Block.h"
-#include "BlockProperty.h"
-#include "HeadBlock.h"
-#include "Registry.h"
-#include "SlabBlock.h"
-#include "SmokeyBedrock/ScentedCandleBlock.h"
+#include "Data.h"
+#include "Object.h"
+#include "Recipe.h"
 
 int main() {
-    const std::string MODID = "smokey_bedrock";
-    Registry<Block> blocks(MODID);
+    auto console_sink = std::make_shared<spdlog::sinks::stdout_sink_mt>();
+    console_sink->set_level(spdlog::level::err);
 
-    std::ifstream file("./data/adk/blocks.txt");
-    std::string str;
-    std::vector<std::string> block_list;
-    while (std::getline(file, str)) block_list.push_back(str);
+    auto file_sink = std::make_shared<spdlog::sinks::basic_file_sink_mt>(
+        "logs/log.txt", true);
+    file_sink->set_level(spdlog::level::info);
 
-    for (const std::string& a : block_list)
-        blocks.subscribe(a, new HeadBlock(BlockProperty::Property()));
+    spdlog::sinks_init_list sink_list = {file_sink, console_sink};
 
-    std::vector<std::string> effect_list = {
-        "absorption",   "bad_omen",     "blindness",       "conduit_power",
-        "darkness",     "fatal_poison", "fire_resistance", "haste",
-        "health_boost", "hunger",       "instant_damage",  "instant_health",
-        "invisibility", "jump_boost",   "levitation",      "mining_fatigue",
-        "nausea",       "night_vision", "poison",          "regeneration",
-        "resistance",   "saturation",   "slow_falling",    "slowness",
-        "speed",        "strength",     "village_hero",    "water_breathing",
-        "weakness",     "wither"};
+    auto object_logger = std::make_shared<spdlog::logger>(
+        "Blocks/Items", sink_list.begin(), sink_list.end());
+    auto data_logger = std::make_shared<spdlog::logger>(
+        "Data Generator", sink_list.begin(), sink_list.end());
+    auto recipe_logger = std::make_shared<spdlog::logger>(
+        "Recipe", sink_list.begin(), sink_list.end());
 
-    for (const std::string& a : effect_list)
-        blocks.subscribe("candle_" + a,
-                         new ScentedCandleBlock(BlockProperty::Property(), a));
+    spdlog::register_logger(object_logger);
+    spdlog::register_logger(data_logger);
+    spdlog::register_logger(recipe_logger);
 
-    blocks.subscribe(
-        "honeycomb_bricks",
-        new Block(BlockProperty::Property().setMining(1).setExplosion(3)));
-    blocks.subscribe(
-        "honeycomb_tiles",
-        new Block(BlockProperty::Property().setMining(1).setExplosion(3)));
-    blocks.subscribe(
-        "solidified_honey",
-        new Block(BlockProperty::Property().setMining(1).setExplosion(3)));
-    blocks.subscribe(
-        "smooth_honeycomb",
-        new Block(BlockProperty::Property().setMining(1).setExplosion(3)));
-    blocks.subscribe(
-        "honeycomb_bricks_slab",
-        new SlabBlock(BlockProperty::Property().setMining(1).setExplosion(3)));
-    blocks.subscribe(
-        "honeycomb_tiles_slab",
-        new SlabBlock(BlockProperty::Property().setMining(1).setExplosion(3)));
-    blocks.subscribe(
-        "solidified_honey_slab",
-        new SlabBlock(BlockProperty::Property().setMining(1).setExplosion(3)));
-    blocks.subscribe(
-        "smooth_honeycomb_slab",
-        new SlabBlock(BlockProperty::Property().setMining(1).setExplosion(3)));
+    Object MyAddOn("smokey_bedrock");
+    Data DataGenerator;
+    Recipe RecipeGenerator;
+
+    MyAddOn.init();
+    DataGenerator.init();
+    RecipeGenerator.init();
 
     return 0;
 }

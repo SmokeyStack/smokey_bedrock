@@ -1,8 +1,29 @@
 {
     "resource_pack_name": "vanilla",
     "texture_data": {
+        "bucket_jellyfish": {
+            "textures": "textures/items/bucket_jellyfish"
+        },
+        "bucket_nautilus": {
+            "textures": "textures/items/bucket_nautilus"
+        },
+        "bucket_squid": {
+            "textures": "textures/items/bucket_squid"
+        },
+        "bucket_squid_glow": {
+            "textures": "textures/items/bucket_squid_glow"
+        },
         "dart_shooter": {
             "textures": "textures/items/bamboo"
+        },
+        "scute_boots": {
+            "textures": "textures/items/scute_boots"
+        },
+        "scute_chestplate": {
+            "textures": "textures/items/scute_chestplate"
+        },
+        "scute_leggings": {
+            "textures": "textures/items/scute_leggings"
         }
     },
     "texture_name": "atlas.items"

@@ -1,6 +1,14 @@
-#include "generator/BlockState.h"
+#include "Data.h"
 
-int main() {
+#include <string>
+
+#include "GlobalRegistry.h"
+#include "generator/BlockState.h"
+#include "generator/ItemState.h"
+
+Data::Data() {}
+
+void Data::init() {
     headBlock("amethyst_block", "amethyst_block");
     headBlock("ancient_debris", "ancient_debris_side", "ancient_debris_side",
               "ancient_debris_side", "ancient_debris_side",
@@ -348,5 +356,49 @@ int main() {
     slabBlock("solidified_honey_slab", "solidified_honey");
     slabBlock("smooth_honeycomb_slab", "smooth_honeycomb");
 
-    return 0;
+    simpleBlock("fossilized_shell", "fossilized_shell_sides",
+                "fossilized_shell_sides", "fossilized_shell_sides",
+                "fossilized_shell_sides", "fossilized_shell",
+                "fossilized_shell_sides");
+
+    crossBlock("searocket_white", "white_searocket");
+    crossBlock("searocket_pink", "pink_searocket");
+    crossBlock("seagrass_blue", "blue_seagrass");
+    crossBlock("seagrass_purple", "purple_seagrass");
+
+    simpleBlock("seagrass_block_blue", "blue_seagrass_block_side",
+                "blue_seagrass_block_side", "blue_seagrass_block_side",
+                "blue_seagrass_block_side", "blue_seagrass_block_top",
+                "seagrass_block_bottom");
+    simpleBlock("seagrass_block_dried_blue", "dried_blue_seagrass_block_side",
+                "dried_blue_seagrass_block_side",
+                "dried_blue_seagrass_block_side",
+                "dried_blue_seagrass_block_side",
+                "dried_blue_seagrass_block_top", "dried_seagrass_block_bottom");
+    simpleBlock("seagrass_block_purple", "purple_seagrass_block_side",
+                "purple_seagrass_block_side", "purple_seagrass_block_side",
+                "purple_seagrass_block_side", "purple_seagrass_block_top",
+                "seagrass_block_bottom");
+    simpleBlock(
+        "seagrass_block_dried_purple", "dried_purple_seagrass_block_side",
+        "dried_purple_seagrass_block_side", "dried_purple_seagrass_block_side",
+        "dried_purple_seagrass_block_side", "dried_purple_seagrass_block_top",
+        "dried_seagrass_block_bottom");
+
+    simpleBlock("scute_block", "scute_block");
+    simpleBlock("scute_block_tile", "scute_block_tile");
+    simpleBlock("scute_block_shingles", "scute_block_shingles");
+    slabBlock("scute_block_slab", "scute_block");
+    slabBlock("scute_block_tile_slab", "scute_block_tile");
+    slabBlock("scute_block_shingles_slab", "scute_block_shingles");
+
+    simpleItem("scute_chestplate", "scute_chestplate");
+    armorModel("smokey_bedrock", "scute_chestplate",
+               "textures/armour/scute_upper", CHEST);
+    simpleItem("scute_leggings", "scute_leggings");
+    armorModel("smokey_bedrock", "scute_leggings",
+               "textures/armour/scute_lower", LEGS);
+    simpleItem("scute_boots", "scute_boots");
+    armorModel("smokey_bedrock", "scute_boots", "textures/armour/scute_upper",
+               FEET);
 }

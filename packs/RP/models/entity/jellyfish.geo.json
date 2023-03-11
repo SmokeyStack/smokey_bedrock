@@ -1,0 +1,94 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.jellyfish",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 3,
+				"visible_bounds_offset": [0, 0.5, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0],
+					"rotation": [90, 0, 0]
+				},
+				{
+					"name": "body",
+					"parent": "root",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-6, -5, -6], "size": [12, 10, 12], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "tentacle",
+					"parent": "root",
+					"pivot": [-3, -13, 0],
+					"cubes": [
+						{"origin": [-3.5, -18, -0.5], "size": [1, 18, 1], "uv": [24, 22]}
+					]
+				},
+				{
+					"name": "tentacle2",
+					"parent": "root",
+					"pivot": [0, -5, 3],
+					"cubes": [
+						{"origin": [-0.5, -18, 2.5], "size": [1, 18, 1], "uv": [20, 22]}
+					]
+				},
+				{
+					"name": "tentacle3",
+					"parent": "root",
+					"pivot": [3, -5, 0],
+					"cubes": [
+						{"origin": [2.5, -18, -0.5], "size": [1, 18, 1], "uv": [16, 22]}
+					]
+				},
+				{
+					"name": "tentacle4",
+					"parent": "root",
+					"pivot": [0, -5, -3],
+					"cubes": [
+						{"origin": [-0.5, -18, -3.5], "size": [1, 18, 1], "uv": [12, 22]}
+					]
+				},
+				{
+					"name": "tentacle5",
+					"parent": "root",
+					"pivot": [3, -6, -3],
+					"cubes": [
+						{"origin": [2.5, -18, -3.5], "size": [1, 18, 1], "uv": [28, 22]}
+					]
+				},
+				{
+					"name": "tentacle6",
+					"parent": "root",
+					"pivot": [3, -5, 3],
+					"cubes": [
+						{"origin": [2.5, -18, 2.5], "size": [1, 18, 1], "uv": [8, 22]}
+					]
+				},
+				{
+					"name": "tentacle7",
+					"parent": "root",
+					"pivot": [-3, -5, -3],
+					"cubes": [
+						{"origin": [-3.5, -18, -3.5], "size": [1, 18, 1], "uv": [4, 22]}
+					]
+				},
+				{
+					"name": "tentacle8",
+					"parent": "root",
+					"pivot": [-3, -5, 3],
+					"cubes": [
+						{"origin": [-3.5, -18, 2.5], "size": [1, 18, 1], "uv": [0, 22]}
+					]
+				}
+			]
+		}
+	]
+}

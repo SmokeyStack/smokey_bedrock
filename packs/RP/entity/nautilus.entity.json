@@ -1,0 +1,39 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "animations": {
+                "bubble_controller": "controller.animation.nautilus.bubbles",
+                "controller": "controller.animation.nautilus.root",
+                "flop": "animation.nautilus.flop",
+                "look": "animation.nautilus.look_at_target"
+            },
+            "geometry": {
+                "default": "geometry.nautilus"
+            },
+            "identifier": "smokey_bedrock:nautilus",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "particle_effects": {
+                "bubbles": "smokey_bedrock:nautilus_bubble"
+            },
+            "render_controllers": [
+                "controller.render.cod"
+            ],
+            "scripts": {
+                "animate": [
+                    "controller",
+                    "bubble_controller"
+                ]
+            },
+            "spawn_egg": {
+                "texture": "spawn_egg",
+                "texture_index": 45
+            },
+            "textures": {
+                "default": "textures/entity/nautilus"
+            }
+        }
+    }
+}

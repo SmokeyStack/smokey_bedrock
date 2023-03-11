@@ -1,0 +1,24 @@
+{
+    "dependencies": {
+        "@minecraft/server": "^1.1.0-beta.1.19.60-stable",
+        "typescript": "^4.9.5"
+    },
+    "name": "smokey_bedrock",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "compile": "tsc && regolith run dev"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/SmokeyStack/smokey_bedrock.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/SmokeyStack/smokey_bedrock/issues"
+    },
+    "homepage": "https://github.com/SmokeyStack/smokey_bedrock#readme",
+    "description": ""
+}
