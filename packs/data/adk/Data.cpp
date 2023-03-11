@@ -9,6 +9,153 @@
 Data::Data() {}
 
 void Data::init() {
+    headBlock("amethyst_block", "amethyst_block");
+    headBlock("ancient_debris", "ancient_debris_side", "ancient_debris_side",
+              "ancient_debris_side", "ancient_debris_side",
+              "ancient_debris_top", "ancient_debris_top");
+    headBlock("azalea_leaves", "azalea_leaves");
+    headBlock("azalea_leaves_flowered", "azalea_leaves_flowered");
+    headBlock("bamboo_block", "bamboo_block", "bamboo_block", "bamboo_block",
+              "bamboo_block", "bamboo_block_top", "bamboo_block_top");
+    headBlock("bamboo_mosaic", "bamboo_mosaic");
+    headBlock("bamboo_planks", "bamboo_planks");
+    headBlock("barrel", "barrel_top", "barrel_side", "barrel_bottom",
+              "barrel_side", "barrel_side", "barrel_side");
+    headBlock("basalt", "basalt_side", "basalt_top");
+    headBlock("bee_nest", "bee_nest_side", "bee_nest_side", "bee_nest_front",
+              "bee_nest_side", "bee_nest_top", "bee_nest_bottom");
+    headBlock("beehive", "beehive_side", "beehive_side", "beehive_front",
+              "beehive_side", "beehive_top", "beehive_top");
+    headBlock("black_glazed_terracotta", "black_glazed_terracotta");
+    headBlock("blackstone", "blackstone", "blackstone_top");
+    headBlock("blast_furnace", "blast_furnace_side", "blast_furnace_side",
+              "blast_furnace_front_off", "blast_furnace_side",
+              "blast_furnace_top", "blast_furnace_top");
+    headBlock("blue_glazed_terracotta", "blue_glazed_terracotta");
+    headBlock("blue_ice", "blue_ice");
+    headBlock("bone_block", "bone_block_side", "bone_block_top");
+    headBlock("bookshelf", "bookshelf", "bookshelf_top");
+    headBlock("brick_block", "brick");
+    headBlock("brown_glazed_terracotta", "brown_glazed_terracotta");
+    headBlock("brown_mushroom_block", "mushroom_brown_top");
+    headBlock("calcite", "calcite");
+    headBlock("cartography_table", "cartography_table_side3",
+              "cartography_table_side3", "cartography_table_side1",
+              "cartography_table_side2", "cartography_table_top",
+              "cartography_table_bottom");
+    headBlock("carved_pumpkin", "pumpkin_side", "pumpkin_side", "pumpkin_face",
+              "pumpkin_side", "pumpkin_top", "pumpkin_top");
+    headBlock("chest", "chest_inventory_side", "chest_inventory_side",
+              "chest_inventory_front", "chest_inventory_side",
+              "chest_inventory_top", "chest_inventory_top");
+    headBlock("chiseled_bookshelf", "chiseled_bookshelf_front",
+              "chiseled_bookshelf_side", "chiseled_bookshelf_side",
+              "chiseled_bookshelf_side", "chiseled_bookshelf_top",
+              "chiseled_bookshelf_top");
+    headBlock("chiseled_deepslate", "chiseled_deepslate");
+    headBlock("chiseled_nether_bricks", "chiseled_nether_bricks");
+    headBlock("chiseled_polished_blackstone", "chiseled_polished_blackstone");
+    headBlock("chorus_flower", "chorus_flower");
+    headBlock("chorus_plant", "chorus_plant");
+    headBlock("clay", "clay");
+    headBlock("coal_block", "coal_block");
+    headBlock("coal_ore", "coal_ore");
+    headBlock("cobbled_deepslate", "cobbled_deepslate");
+    headBlock("cobblestone", "cobblestone");
+    headBlock("concrete", "concrete");
+    headBlock("concrete_powder", "concrete_powder");
+    headBlock("copper_block", "copper_block");
+    headBlock("copper_ore", "copper_ore");
+    headBlock("coral_block", "coral_block");
+    headBlock("cracked_deepslate_bricks", "cracked_deepslate_bricks");
+    headBlock("cracked_deepslate_tiles", "cracked_deepslate_tiles");
+    headBlock("cracked_nether_bricks", "cracked_nether_bricks");
+    headBlock("cracked_polished_blackstone_bricks",
+              "cracked_polished_blackstone_bricks");
+    headBlock("crafting_table", "crafting_table_front", "crafting_table_side",
+              "crafting_table_front", "crafting_table_side",
+              "crafting_table_top", "crafting_table_bottom");
+    headBlock("crimson_hyphae", "crimson_log_side");
+    headBlock("crimson_nylium", "crimson_nylium_side", "crimson_nylium_side",
+              "crimson_nylium_side", "crimson_nylium_side",
+              "crimson_nylium_top", "netherrack");
+    headBlock("crimson_planks", "crimson_planks");
+    headBlock("crimson_stem", "crimson_log_side", "crimson_log_top");
+    headBlock("crying_obsidian", "crying_obsidian");
+    headBlock("cut_copper", "cut_copper");
+    headBlock("cyan_glazed_terracotta", "cyan_glazed_terracotta");
+    headBlock("deepslate", "deepslate", "deepslate_top");
+    headBlock("deepslate_bricks", "deepslate_bricks");
+    headBlock("deepslate_coal_ore", "deepslate_coal_ore");
+    headBlock("deepslate_copper_ore", "deepslate_copper_ore");
+    headBlock("deepslate_diamond_ore", "deepslate_diamond_ore");
+    headBlock("deepslate_emerald_ore", "deepslate_emerald_ore");
+    headBlock("deepslate_gold_ore", "deepslate_gold_ore");
+    headBlock("deepslate_iron_ore", "deepslate_iron_ore");
+    headBlock("deepslate_lapis_ore", "deepslate_lapis_ore");
+    headBlock("deepslate_redstone_ore", "deepslate_redstone_ore");
+    headBlock("deepslate_tiles", "deepslate_tiles");
+    headBlock("diamond_block", "diamond_block");
+    headBlock("diamond_ore", "diamond_ore");
+    headBlock("dirt", "dirt");
+    headBlock("dirt_with_roots", "dirt_with_roots");
+    headBlock("dispenser", "dispenser_side", "dispenser_side",
+              "dispenser_front_horizontal", "dispenser_side", "dispenser_top",
+              "dispenser_top");
+    headBlock("dried_kelp_block", "dried_kelp_block_side_a",
+              "dried_kelp_block_side_b", "dried_kelp_block_side_b",
+              "dried_kelp_block_side_a", "dried_kelp_block_top",
+              "dried_kelp_block_top");
+    headBlock("dripstone_block", "dripstone_block");
+    headBlock("dropper", "dropper_side", "dropper_front_vertical",
+              "dropper_front_horizontal", "dropper_side", "dropper_top",
+              "dropper_top");
+    headBlock("emerald_block", "emerald_block");
+    headBlock("emerald_ore", "emerald_ore");
+    headBlock("end_bricks", "end_bricks");
+    headBlock("end_stone", "end_stone");
+    headBlock("ender_chest", "ender_chest_inventory_side",
+              "ender_chest_inventory_side", "ender_chest_inventory_front",
+              "ender_chest_inventory_side", "ender_chest_inventory_top",
+              "ender_chest_inventory_top");
+    headBlock("exposed_copper", "exposed_copper");
+    headBlock("exposed_cut_copper", "exposed_cut_copper");
+    headBlock("farmland", "farmland_side", "farmland_side", "farmland_side",
+              "farmland_side", "farmland", "farmland_side");
+    headBlock("fletching_table", "fletching_table_side1",
+              "fletching_table_side2", "fletching_table_side1",
+              "fletching_table_side2", "fletching_table_top", "birch_planks");
+    headBlock("furnace", "furnace_side", "furnace_side", "furnace_front_off",
+              "furnace_side", "furnace_top", "furnace_top");
+    headBlock("gilded_blackstone", "gilded_blackstone");
+    headBlock("glass", "glass");
+    headBlock("glowstone", "glowstone");
+    headBlock("gold_block", "gold_block");
+    headBlock("gold_ore", "gold_ore");
+    headBlock("grass", "grass_side", "grass_side", "grass_side", "grass_side",
+              "grass_top", "grass_bottom");
+    headBlock("grass_path", "grass_path_side", "grass_path_side",
+              "grass_path_side", "grass_path_side", "grass_path_top", "dirt");
+    headBlock("gravel", "gravel");
+    headBlock("gray_glazed_terracotta", "gray_glazed_terracotta");
+    headBlock("green_glazed_terracotta", "green_glazed_terracotta");
+    headBlock("hardened_clay", "hardened_clay");
+    headBlock("hay_block", "hayblock_side", "hayblock_top");
+    headBlock("honey_block", "honey_side", "honey_side", "honey_side",
+              "honey_side", "honey_top", "honey_bottom");
+    headBlock("honeycomb_block", "honeycomb_block");
+    headBlock("ice", "ice");
+    headBlock("iron_block", "iron_block");
+    headBlock("iron_ore", "iron_ore");
+    headBlock("jukebox", "jukebox_side", "jukebox_side", "jukebox_side",
+              "jukebox_side", "jukebox_top", "jukebox_side");
+    headBlock("lapis_block", "lapis_block");
+    headBlock("lapis_ore", "lapis_ore");
+    headBlock("leaves", "leaves");
+    headBlock("leaves2", "leaves2");
+    headBlock("light_blue_glazed_terracotta", "light_blue_glazed_terracotta");
+    headBlock("light_blue_wool", "wool_colored_light_blue");
+    headBlock("light_gray_wool", "wool_colored_silver");
     headBlock("lime_glazed_terracotta", "lime_glazed_terracotta");
     headBlock("lime_wool", "wool_colored_lime");
     headBlock("lodestone", "lodestone_side", "lodestone_top");

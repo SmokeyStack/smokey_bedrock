@@ -1,8 +1,5 @@
 #include "Object.h"
 
-#include <spdlog/async.h>
-#include <spdlog/sinks/basic_file_sink.h>
-
 #include <fstream>
 #include <string>
 #include <vector>
@@ -19,10 +16,6 @@
 Object::Object(std::string id) { mod_id = id; }
 
 void Object::init() {
-    auto logger =
-        spdlog::basic_logger_mt<spdlog::async_factory>("adk", "logs/log.txt");
-    spdlog::set_default_logger(logger);
-
     Registry<Block>* blocks = new Registry<Block>(mod_id);
     Registry<Item>* items = new Registry<Item>(mod_id);
 
@@ -51,8 +44,12 @@ void Object::init() {
         "weakness",     "wither"};
 
     for (const std::string& a : effect_list)
-        blocks->subscribe("candle_" + a,
-                          new ScentedCandleBlock(BlockProperty(), a));
+        blocks->subscribe(
+            "candle_" + a,
+            new ScentedCandleBlock(
+                BlockProperty().setCreativeCategory(
+                    adk::CreativeTab::ITEMS, adk::CreativeCategory::CANDLES),
+                a));
 
     blocks->subscribe(
         "honeycomb_bricks",
