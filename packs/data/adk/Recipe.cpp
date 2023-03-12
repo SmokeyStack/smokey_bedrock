@@ -46,4 +46,28 @@ void Recipe::init() {
         .pattern("###")
         .define('#', "smokey_bedrock:smooth_honeycomb")
         .save("smooth_honeycomb_slab_recipe");
+    ShapedRecipeBuilder()
+        .shaped("smokey_bedrock:seagrass_block_blue")
+        .pattern("###")
+        .pattern("###")
+        .pattern("###")
+        .define('#', "smokey_bedrock:seagrass_blue")
+        .save("seagrass_block_blue_recipe");
+    CookingRecipeBuilder()
+        .cook("smokey_bedrock:seagrass_block_dried_blue",
+              "smokey_bedrock:seagrass_block_blue",
+              std::vector<std::string>{"furnace"})
+        .save("seagrass_block_dried_blue_recipe");
+    ShapedRecipeBuilder()
+        .shaped("smokey_bedrock:seagrass_block_purple")
+        .pattern("###")
+        .pattern("###")
+        .pattern("###")
+        .define('#', "smokey_bedrock:seagrass_purple")
+        .save("seagrass_block_purple_recipe");
+    CookingRecipeBuilder()
+        .cook("smokey_bedrock:seagrass_block_dried_purple",
+              "smokey_bedrock:seagrass_block_purple",
+              std::vector<std::string>{"furnace"})
+        .save("seagrass_block_dried_purple_recipe");
 }
