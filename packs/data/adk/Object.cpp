@@ -53,16 +53,32 @@ void Object::init() {
 
     blocks->subscribe(
         "honeycomb_bricks",
-        new Block(BlockProperty().setMining(1.0).setExplosion(3.0)));
+        new Block(BlockProperty()
+                      .setMining(1.0)
+                      .setExplosion(3.0)
+                      .setCreativeCategory(adk::CreativeTab::CONSTRUCTION,
+                                           adk::CreativeCategory::STONEBRICK)));
     blocks->subscribe(
         "honeycomb_tiles",
-        new Block(BlockProperty().setMining(1.0).setExplosion(3.0)));
+        new Block(BlockProperty()
+                      .setMining(1.0)
+                      .setExplosion(3.0)
+                      .setCreativeCategory(adk::CreativeTab::CONSTRUCTION,
+                                           adk::CreativeCategory::STONEBRICK)));
     blocks->subscribe(
         "solidified_honey",
-        new Block(BlockProperty().setMining(1.0).setExplosion(3.0)));
+        new Block(BlockProperty()
+                      .setMining(1.0)
+                      .setExplosion(3.0)
+                      .setCreativeCategory(adk::CreativeTab::CONSTRUCTION,
+                                           adk::CreativeCategory::STONEBRICK)));
     blocks->subscribe(
         "smooth_honeycomb",
-        new Block(BlockProperty().setMining(1.0).setExplosion(3.0)));
+        new Block(BlockProperty()
+                      .setMining(1.0)
+                      .setExplosion(3.0)
+                      .setCreativeCategory(adk::CreativeTab::CONSTRUCTION,
+                                           adk::CreativeCategory::STONEBRICK)));
     blocks->subscribe(
         "honeycomb_bricks_slab",
         new SlabBlock(BlockProperty()
