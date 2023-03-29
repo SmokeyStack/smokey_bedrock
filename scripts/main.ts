@@ -1,9 +1,10 @@
 import {
-    BlockLocation,
+    BlockPermutation,
     CommandResult,
     Dimension,
     Direction,
-    EntityHealthComponent,
+    Effect,
+    Entity,
     EntityInventoryComponent,
     EntityType,
     EntityTypes,
@@ -17,31 +18,43 @@ import {
     MinecraftItemTypes,
     Player,
     system,
+    Vector,
+    Vector3,
     world
 } from '@minecraft/server';
 
-world.events.entityHurt.subscribe((eventData) => {
-    if (eventData.damageSource.damagingEntity == null) return;
+function getDirectionOffset(block_face: Direction): Vector3 {
+    switch (block_face) {
+        case Direction.down:
+            return { x: 0, y: -1, z: 0 };
+        case Direction.east:
+            return { x: 1, y: 0, z: 0 };
+        case Direction.north:
+            return { x: 0, y: 0, z: -1 };
+        case Direction.south:
+            return { x: 0, y: 0, z: 1 };
+        case Direction.up:
+            return { x: 0, y: 1, z: 0 };
+        case Direction.west:
+            return { x: -1, y: 0, z: 0 };
+        default:
+            break;
+    }
+}
 
-    let entity_health: EntityHealthComponent =
-        eventData.hurtEntity.getComponent('minecraft:health') as any;
-    let entity_dimension: Dimension = eventData.hurtEntity.dimension;
+world.events.entityDie.subscribe((eventData) => {
+    const entity: Entity = eventData.deadEntity;
 
     if (
+        entity.typeId == ('minecraft:dolphin' || 'minecraft:bat') &&
         eventData.damageSource.cause != 'entityAttack' &&
-        eventData.damageSource.damagingEntity.typeId == 'minecraft:warden' &&
-        eventData.damage >= entity_health.current &&
-        (eventData.hurtEntity.typeId == 'minecraft:dolphin' ||
-            eventData.hurtEntity.typeId == 'minecraft:bat')
-    )
-        entity_dimension.spawnItem(
+        eventData.damageSource.damagingEntity.typeId == 'minecraft:warden'
+    ) {
+        entity.dimension.spawnItem(
             new ItemStack(MinecraftItemTypes.echoShard),
-            new BlockLocation(
-                Math.floor(eventData.hurtEntity.location.x),
-                Math.floor(eventData.hurtEntity.location.y + 1),
-                Math.floor(eventData.hurtEntity.location.z)
-            )
+            entity.location
         );
+    }
 });
 
 async function detectHead(player: Player) {
@@ -72,7 +85,7 @@ async function detectBoots(player: Player) {
     return (await result).successCount;
 }
 
-system.runSchedule(() => {
+system.runInterval(() => {
     let players: Player[] = world.getAllPlayers();
 
     players.forEach((player) => {
@@ -146,117 +159,102 @@ system.runSchedule(() => {
     });
 }, 20);
 
-function updateLiquid(
-    liquid_dimension: Dimension,
-    block_location: BlockLocation
-) {
+function updateLiquid(liquid_dimension: Dimension, block_location: Vector3) {
     liquid_dimension.fillBlocks(
-        block_location.offset(0, -1, 0),
-        block_location.offset(0, -1, 0),
+        Vector.add(block_location, { x: 0, y: -1, z: 0 }),
+        Vector.add(block_location, { x: 0, y: -1, z: 0 }),
         MinecraftBlockTypes.water,
         {
-            matchingBlock:
-                MinecraftBlockTypes.air.createDefaultBlockPermutation()
+            matchingBlock: BlockPermutation.resolve('minecraft:air')
         }
     );
     liquid_dimension.fillBlocks(
-        block_location.offset(1, 0, 0),
-        block_location.offset(1, 0, 0),
+        { x: block_location.x + 1, y: block_location.y, z: block_location.z },
+        { x: block_location.x + 1, y: block_location.y, z: block_location.z },
         MinecraftBlockTypes.water,
         {
-            matchingBlock:
-                MinecraftBlockTypes.air.createDefaultBlockPermutation()
+            matchingBlock: BlockPermutation.resolve('minecraft:air')
         }
     );
     liquid_dimension.fillBlocks(
-        block_location.offset(0, 0, -1),
-        block_location.offset(0, 0, -1),
+        { x: block_location.x, y: block_location.y, z: block_location.z - 1 },
+        { x: block_location.x, y: block_location.y, z: block_location.z - 1 },
         MinecraftBlockTypes.water,
         {
-            matchingBlock:
-                MinecraftBlockTypes.air.createDefaultBlockPermutation()
+            matchingBlock: BlockPermutation.resolve('minecraft:air')
         }
     );
     liquid_dimension.fillBlocks(
-        block_location.offset(0, 0, 1),
-        block_location.offset(0, 0, 1),
+        { x: block_location.x, y: block_location.y, z: block_location.z + 1 },
+        { x: block_location.x, y: block_location.y, z: block_location.z + 1 },
         MinecraftBlockTypes.water,
         {
-            matchingBlock:
-                MinecraftBlockTypes.air.createDefaultBlockPermutation()
+            matchingBlock: BlockPermutation.resolve('minecraft:air')
         }
     );
     liquid_dimension.fillBlocks(
-        block_location.offset(0, 1, 0),
-        block_location.offset(0, 1, 0),
+        { x: block_location.x, y: block_location.y + 1, z: block_location.z },
+        { x: block_location.x, y: block_location.y + 1, z: block_location.z },
         MinecraftBlockTypes.water,
         {
-            matchingBlock:
-                MinecraftBlockTypes.air.createDefaultBlockPermutation()
+            matchingBlock: BlockPermutation.resolve('minecraft:air')
         }
     );
     liquid_dimension.fillBlocks(
-        block_location.offset(-1, 0, 0),
-        block_location.offset(-1, 0, 0),
+        { x: block_location.x - 1, y: block_location.y, z: block_location.z },
+        { x: block_location.x - 1, y: block_location.y, z: block_location.z },
         MinecraftBlockTypes.water,
         {
-            matchingBlock:
-                MinecraftBlockTypes.air.createDefaultBlockPermutation()
+            matchingBlock: BlockPermutation.resolve('minecraft:air')
         }
     );
 
     liquid_dimension.fillBlocks(
-        block_location.offset(0, -1, 0),
-        block_location.offset(0, -1, 0),
+        { x: block_location.x, y: block_location.y - 1, z: block_location.z },
+        { x: block_location.x, y: block_location.y - 1, z: block_location.z },
         MinecraftBlockTypes.air,
         {
-            matchingBlock:
-                MinecraftBlockTypes.water.createDefaultBlockPermutation()
+            matchingBlock: BlockPermutation.resolve('minecraft:water')
         }
     );
     liquid_dimension.fillBlocks(
-        block_location.offset(1, 0, 0),
-        block_location.offset(1, 0, 0),
+        { x: block_location.x + 1, y: block_location.y, z: block_location.z },
+        { x: block_location.x + 1, y: block_location.y, z: block_location.z },
         MinecraftBlockTypes.air,
         {
-            matchingBlock:
-                MinecraftBlockTypes.water.createDefaultBlockPermutation()
+            matchingBlock: BlockPermutation.resolve('minecraft:water')
         }
     );
     liquid_dimension.fillBlocks(
-        block_location.offset(0, 0, -1),
-        block_location.offset(0, 0, -1),
+        { x: block_location.x, y: block_location.y, z: block_location.z - 1 },
+        { x: block_location.x, y: block_location.y, z: block_location.z - 1 },
         MinecraftBlockTypes.air,
         {
-            matchingBlock:
-                MinecraftBlockTypes.water.createDefaultBlockPermutation()
+            matchingBlock: BlockPermutation.resolve('minecraft:water')
         }
     );
     liquid_dimension.fillBlocks(
-        block_location.offset(0, 0, 1),
-        block_location.offset(0, 0, 1),
+        { x: block_location.x, y: block_location.y, z: block_location.z + 1 },
+        { x: block_location.x, y: block_location.y, z: block_location.z + 1 },
         MinecraftBlockTypes.air,
         {
-            matchingBlock:
-                MinecraftBlockTypes.water.createDefaultBlockPermutation()
+            matchingBlock: BlockPermutation.resolve('minecraft:water')
         }
     );
     liquid_dimension.fillBlocks(
-        block_location.offset(0, 1, 0),
-        block_location.offset(0, 1, 0),
+        { x: block_location.x, y: block_location.y + 1, z: block_location.z },
+        { x: block_location.x, y: block_location.y + 1, z: block_location.z },
         MinecraftBlockTypes.air,
         {
-            matchingBlock:
-                MinecraftBlockTypes.water.createDefaultBlockPermutation()
+            matchingBlock: BlockPermutation.resolve('minecraft:water')
         }
     );
     liquid_dimension.fillBlocks(
-        block_location.offset(-1, 0, 0),
-        block_location.offset(-1, 0, 0),
+        { x: block_location.x - 1, y: block_location.y, z: block_location.z },
+        { x: block_location.x - 1, y: block_location.y, z: block_location.z },
         MinecraftBlockTypes.air,
         {
-            matchingBlock:
-                MinecraftBlockTypes.water.createDefaultBlockPermutation()
+            matchingBlock: BlockPermutation.resolve('minecraft:water')
         }
     );
 }
@@ -266,46 +264,30 @@ function bucketEntity(eventData: ItemUseOnEvent, entity: string) {
 
     if (player.typeId != 'minecraft:player') return;
 
-    let offset: number[];
-
-    switch (eventData.blockFace) {
-        case Direction.down:
-            offset = [0, -1, 0];
-            break;
-        case Direction.east:
-            offset = [1, 0, 0];
-            break;
-        case Direction.north:
-            offset = [0, 0, -1];
-            break;
-        case Direction.south:
-            offset = [0, 0, 1];
-            break;
-        case Direction.up:
-            offset = [0, 1, 0];
-            break;
-        case Direction.west:
-            offset = [-1, 0, 0];
-            break;
-        default:
-            break;
-    }
-
     let item_dimension = eventData.source.dimension;
     item_dimension
         .getBlock(
-            eventData.blockLocation.offset(offset[0], offset[1], offset[2])
+            Vector.add(
+                eventData.getBlockLocation(),
+                getDirectionOffset(eventData.blockFace)
+            )
         )
         .setType(MinecraftBlockTypes.water);
 
     updateLiquid(
         item_dimension,
-        eventData.blockLocation.offset(offset[0], offset[1], offset[2])
+        Vector.add(
+            eventData.getBlockLocation(),
+            getDirectionOffset(eventData.blockFace)
+        )
     );
 
     item_dimension.spawnEntity(
         entity,
-        eventData.blockLocation.offset(offset[0], offset[1], offset[2])
+        Vector.add(
+            eventData.getBlockLocation(),
+            getDirectionOffset(eventData.blockFace)
+        )
     );
 
     let item: ItemStack = new ItemStack(MinecraftItemTypes.bucket, 1);
@@ -339,3 +321,95 @@ world.events.itemUseOn.subscribe((eventData) => {
 
     bucketEntity(eventData, bucket_entities.get(Items.get(item.typeId)).id);
 });
+
+world.events.itemUseOn.subscribe((eventData) => {
+    if (eventData.item.typeId != 'minecraft:candle') return;
+
+    let player = eventData.source;
+    let effects = player.getEffects();
+
+    if (effects.length == 0) return;
+
+    let effect = effects[0];
+    console.log(effect.displayName);
+
+    // let perm: any = MinecraftBlockTypes.get(
+    //     'smokey_bedrock:candle_darkness'
+    // ).createDefaultBlockPermutation();
+
+    eventData.source.dimension
+        .getBlock(
+            Vector.add(
+                eventData.getBlockLocation(),
+                getDirectionOffset(eventData.blockFace)
+            )
+        )
+        .setType(MinecraftBlockTypes.get('smokey_bedrock:candle_darkness'));
+
+    // switch (effect.displayName) {
+    //     case 'absorption':
+    //         break;
+    //     default:
+    //         break;
+    // }
+});
+
+// function compareMaps(
+//     map1: Map<string, number>,
+//     map2: Map<string, number>
+// ): boolean {
+//     let testVal: any;
+//     if (map1.size !== map2.size) return false;
+
+//     for (let [key, val] of map1) {
+//         testVal = map2.get(key);
+//         if (testVal !== val || (testVal === undefined && !map2.has(key)))
+//             return false;
+//     }
+
+//     return true;
+// }
+
+// world.events.itemUseOn.subscribe((eventData) => {
+//     if (eventData.item.typeId != 'minecraft:stick') return;
+
+//     let block_location: number[] = [
+//         eventData.getBlockLocation().x + offset[0],
+//         eventData.getBlockLocation().y + offset[1],
+//         eventData.getBlockLocation().z + offset[2]
+//     ];
+
+//     let player: Player = eventData.source as any;
+
+//     let requirements = new Map<string, number>();
+//     requirements.set('minecraft:emerald', 16);
+//     requirements.set('minecraft:bread', 16);
+
+//     let keys = [...requirements.keys()];
+
+//     let temp = new Map<string, number>();
+
+//     let inv: EntityInventoryComponent = player.getComponent(
+//         'minecraft:inventory'
+//     ) as any;
+
+//     for (var a = 0; a < inv.container.size; a++) {
+//         try {
+//             let item: string = inv.container.getItem(a).typeId;
+//             let amount: number = inv.container.getItem(a).amount;
+//             if (keys.includes(item)) {
+//                 temp.set(item, amount);
+//             }
+//         } catch (error) {}
+//     }
+
+//     if (compareMaps(temp, requirements)) {
+//         player.runCommandAsync(
+//             `structure load mystructure:test ${block_location[0]} ${block_location[1]} ${block_location[2]}`
+//         );
+//         player.runCommandAsync(`clear @s ${eventData.item.typeId} 0 1`);
+//         requirements.forEach((val, key) => {
+//             player.runCommandAsync(`clear @s ${key} 0 ${val}`);
+//         });
+//     }
+// });
