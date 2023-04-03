@@ -21,12 +21,18 @@
                 ]
             },
             "spawn_egg": {
-                "texture": "spawn_egg",
-                "texture_index": 45
+                "base_color": "#e500e5",
+                "overlay_color": "#ff19ff"
             },
             "textures": {
+                "blue": "textures/entity/jellyfish_blue",
+                "cyan": "textures/entity/jellyfish_cyan",
                 "default": "textures/entity/jellyfish",
-                "purple": "textures/entity/jellyfish_purple"
+                "green": "textures/entity/jellyfish_green",
+                "mint": "textures/entity/jellyfish_green_mint",
+                "purple": "textures/entity/jellyfish_purple",
+                "red": "textures/entity/jellyfish_red",
+                "yellow": "textures/entity/jellyfish_yellow"
             }
         }
     }
