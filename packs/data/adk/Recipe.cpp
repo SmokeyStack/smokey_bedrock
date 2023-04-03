@@ -123,4 +123,16 @@ void Recipe::init() {
         .pattern("# #")
         .define('#', "minecraft:scute")
         .save("scute_boots_recipe");
+
+    std::ifstream file("./data/adk/blocks.txt");
+    std::string str;
+    std::vector<std::string> block_list;
+    while (std::getline(file, str)) block_list.push_back(str);
+
+    for (const std::string& a : block_list) {
+        ShapelessRecipeBuilder()
+            .stonecutter("smokey_bedrock:mini_" + a)
+            .requires("minecraft:" + a)
+            .save("mini_" + a + "_recipe");
+    }
 }

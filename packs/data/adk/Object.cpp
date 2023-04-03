@@ -29,8 +29,9 @@ void Object::init() {
 
     for (const std::string& a : block_list) {
         blocks->subscribe(
-            a, new HeadBlock(BlockProperty().setCreativeCategory(
-                   adk::CreativeTab::ITEMS, adk::CreativeCategory::SKULL)));
+            "mini_" + a,
+            new HeadBlock(BlockProperty().setCreativeCategory(
+                adk::CreativeTab::ITEMS, adk::CreativeCategory::SKULL)));
     }
 
     std::vector<std::string> effect_list = {

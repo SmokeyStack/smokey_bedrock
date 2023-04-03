@@ -10,15 +10,18 @@ basalt
 bee_nest
 beehive
 black_glazed_terracotta
+black_wool
 blackstone
 blast_furnace
 blue_glazed_terracotta
 blue_ice
+blue_wool
 bone_block
 bookshelf
 brick_block
 brown_glazed_terracotta
 brown_mushroom_block
+brown_wool
 calcite
 cartography_table
 carved_pumpkin
@@ -51,6 +54,7 @@ crimson_stem
 crying_obsidian
 cut_copper
 cyan_glazed_terracotta
+cyan_wool
 deepslate
 deepslate_bricks
 deepslate_coal_ore
@@ -89,7 +93,9 @@ grass
 grass_path
 gravel
 gray_glazed_terracotta
+gray_wool
 green_glazed_terracotta
+green_wool
 hardened_clay
 hay_block
 honey_block
@@ -232,7 +238,7 @@ waxed_weathered_cut_copper
 weathered_copper
 weathered_cut_copper
 white_glazed_terracotta
-wood
 white_wool
+wood
 yellow_glazed_terracotta
 yellow_wool
