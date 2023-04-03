@@ -5,8 +5,14 @@
             "arrays": {
                 "textures": {
                     "Array.top": [
+                        "Texture.blue",
+                        "Texture.cyan",
                         "Texture.default",
-                        "Texture.purple"
+                        "Texture.green",
+                        "Texture.mint",
+                        "Texture.purple",
+                        "Texture.red",
+                        "Texture.yellow"
                     ]
                 }
             },

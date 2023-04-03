@@ -25,8 +25,14 @@
                 "texture_index": 45
             },
             "textures": {
+                "blue": "textures/entity/jellyfish_blue",
+                "cyan": "textures/entity/jellyfish_cyan",
                 "default": "textures/entity/jellyfish",
-                "purple": "textures/entity/jellyfish_purple"
+                "green": "textures/entity/jellyfish_green",
+                "mint": "textures/entity/jellyfish_green_mint",
+                "purple": "textures/entity/jellyfish_purple",
+                "red": "textures/entity/jellyfish_red",
+                "yellow": "textures/entity/jellyfish_yellow"
             }
         }
     }

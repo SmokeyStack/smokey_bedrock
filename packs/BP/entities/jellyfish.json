@@ -5,9 +5,39 @@
             "smokey_bedrock:become_bucket": {
                 "minecraft:instant_despawn": {}
             },
-            "smokey_bedrock:purple": {
+            "smokey_bedrock:blue": {
                 "minecraft:variant": {
                     "value": 1
+                }
+            },
+            "smokey_bedrock:cyan": {
+                "minecraft:variant": {
+                    "value": 2
+                }
+            },
+            "smokey_bedrock:green": {
+                "minecraft:variant": {
+                    "value": 3
+                }
+            },
+            "smokey_bedrock:mint": {
+                "minecraft:variant": {
+                    "value": 4
+                }
+            },
+            "smokey_bedrock:purple": {
+                "minecraft:variant": {
+                    "value": 5
+                }
+            },
+            "smokey_bedrock:red": {
+                "minecraft:variant": {
+                    "value": 6
+                }
+            },
+            "smokey_bedrock:yellow": {
+                "minecraft:variant": {
+                    "value": 7
                 }
             }
         },
@@ -140,9 +170,6 @@
                 ]
             },
             "minecraft:is_hidden_when_invisible": {},
-            "minecraft:loot": {
-                "table": "loot_tables/entities/fish.json"
-            },
             "minecraft:movement": {
                 "value": 0.1
             },
@@ -192,10 +219,58 @@
                     {
                         "add": {
                             "component_groups": [
+                                "smokey_bedrock:blue"
+                            ]
+                        },
+                        "weight": 5
+                    },
+                    {
+                        "add": {
+                            "component_groups": [
+                                "smokey_bedrock:cyan"
+                            ]
+                        },
+                        "weight": 5
+                    },
+                    {
+                        "add": {
+                            "component_groups": [
+                                "smokey_bedrock:green"
+                            ]
+                        },
+                        "weight": 5
+                    },
+                    {
+                        "add": {
+                            "component_groups": [
+                                "smokey_bedrock:mint"
+                            ]
+                        },
+                        "weight": 5
+                    },
+                    {
+                        "add": {
+                            "component_groups": [
                                 "smokey_bedrock:purple"
                             ]
                         },
-                        "weight": 2
+                        "weight": 5
+                    },
+                    {
+                        "add": {
+                            "component_groups": [
+                                "smokey_bedrock:red"
+                            ]
+                        },
+                        "weight": 5
+                    },
+                    {
+                        "add": {
+                            "component_groups": [
+                                "smokey_bedrock:yellow"
+                            ]
+                        },
+                        "weight": 5
                     },
                     {
                         "weight": 1
