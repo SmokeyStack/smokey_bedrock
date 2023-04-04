@@ -3,28 +3,12 @@
     "minecraft:entity": {
         "component_groups": {
             "dolphin_adult": {
-                "minecraft:behavior.melee_attack": {
-                    "priority": 2,
-                    "track_target": true
-                },
                 "minecraft:experience_reward": {
                     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
                 },
                 "minecraft:loot": {
                     "table": "loot_tables/entities/dolphin.json"
                 }
-            },
-            "dolphin_angry": {
-                "minecraft:angry": {
-                    "broadcast_anger": true,
-                    "broadcast_range": 16,
-                    "calm_event": {
-                        "event": "on_calm",
-                        "target": "self"
-                    },
-                    "duration": 25
-                },
-                "minecraft:on_target_acquired": {}
             },
             "dolphin_baby": {
                 "minecraft:ageable": {
@@ -147,9 +131,6 @@
             }
         },
         "components": {
-            "minecraft:attack": {
-                "damage": 3
-            },
             "minecraft:balloonable": {},
             "minecraft:behavior.avoid_mob_type": {
                 "entity_types": [
@@ -282,13 +263,6 @@
                 "can_walk": false,
                 "is_amphibious": true
             },
-            "minecraft:on_target_acquired": {
-                "event": "become_angry",
-                "target": "self"
-            },
-            "minecraft:on_target_escape": {
-                "target": "self"
-            },
             "minecraft:physics": {},
             "minecraft:pushable": {
                 "is_pushable": true,
@@ -321,13 +295,6 @@
                 "remove": {
                     "component_groups": [
                         "dolphin_baby"
-                    ]
-                }
-            },
-            "become_angry": {
-                "add": {
-                    "component_groups": [
-                        "dolphin_angry"
                     ]
                 }
             },
@@ -383,13 +350,6 @@
                 "remove": {
                     "component_groups": [
                         "dolphin_swimming_navigation"
-                    ]
-                }
-            },
-            "on_calm": {
-                "remove": {
-                    "component_groups": [
-                        "dolphin_angry"
                     ]
                 }
             },
