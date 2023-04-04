@@ -21,7 +21,7 @@
         "components": {
             "minecraft:behavior.dig": {
                 "digs_in_daylight": false,
-                "duration": 1.08,
+                "duration": 6,
                 "idle_time": 5,
                 "on_start": {
                     "event": "on_digging_event",
