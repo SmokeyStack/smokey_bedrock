@@ -16,7 +16,7 @@
             "places_feature": "smokey_bedrock:beachgrass_patch"
         },
         "distribution": {
-            "iterations": "(query.noise((variable.originx + 8) / 200.0, (variable.originz + 8) / 200.0) < -0.8) ? 1 : 2",
+            "iterations": "(q.noise((variable.originx + 8) / 200.0, (variable.originz + 8) / 200.0) < -0.8) ? 1 : 2",
             "scatter_chance": {
                 "denominator": 4,
                 "numerator": 1
@@ -32,7 +32,7 @@
                 "distribution": "uniform",
                 "extent": [
                     0,
-                    "query.heightmap(variable.worldx, variable.worldz) * 2"
+                    "q.heightmap(variable.worldx, variable.worldz) * 2"
                 ]
             },
             "z": {

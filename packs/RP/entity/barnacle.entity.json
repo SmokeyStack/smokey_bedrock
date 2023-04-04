@@ -21,8 +21,8 @@
                 ]
             },
             "spawn_egg": {
-                "texture": "spawn_egg",
-                "texture_index": 15
+                "base_color": "#122737",
+                "overlay_color": "#121437"
             },
             "textures": {
                 "default": "textures/entity/barnacle"

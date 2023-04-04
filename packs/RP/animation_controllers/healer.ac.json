@@ -6,7 +6,7 @@
                 "default": {
                     "transitions": [
                         {
-                            "looking_at_target": "!query.variant"
+                            "looking_at_target": "!q.variant"
                         }
                     ]
                 },
@@ -16,7 +16,7 @@
                     ],
                     "transitions": [
                         {
-                            "default": "query.variant"
+                            "default": "q.variant"
                         }
                     ]
                 }
@@ -31,7 +31,7 @@
                     ],
                     "transitions": [
                         {
-                            "default": "!query.variant"
+                            "default": "!q.variant"
                         }
                     ]
                 },
@@ -39,7 +39,7 @@
                     "blend_transition": 0.2,
                     "transitions": [
                         {
-                            "dancing": "query.variant"
+                            "dancing": "q.variant"
                         }
                     ]
                 }

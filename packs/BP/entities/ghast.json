@@ -4,7 +4,7 @@
         "component_groups": {
             "smokey_bedrock:ghast_adult": {
                 "minecraft:experience_reward": {
-                    "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
+                    "on_death": "q.last_hit_by_player ? 5 + (q.equipment_count * Math.Random(1,3)) : 0"
                 },
                 "minecraft:loot": {
                     "table": "loot_tables/entities/ghast.json"
@@ -15,7 +15,7 @@
             },
             "smokey_bedrock:ghast_baby": {
                 "minecraft:experience_reward": {
-                    "on_death": "query.last_hit_by_player ? 10 + (query.equipment_count * Math.Random(1,3)) : 0"
+                    "on_death": "q.last_hit_by_player ? 10 + (q.equipment_count * Math.Random(1,3)) : 0"
                 },
                 "minecraft:is_baby": {},
                 "minecraft:movement": {

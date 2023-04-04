@@ -2,43 +2,43 @@
     "format_version": "1.10.0",
     "minecraft:client_entity": {
         "description": {
-            "identifier": "smokey_bedrock:great_hunger",
-            "materials": {
-                "default": "cow"
-            },
-            "textures": {
-                "default": "textures/entity/great_hunger"
+            "animations": {
+                "dig": "animation.great_hunger.dig",
+                "emerge": "animation.great_hunger.emerge"
             },
             "geometry": {
                 "default": "geometry.great_hunger"
             },
-            "scripts": {
-                "animate": [
-                    {
-                        "emerge": "query.is_emerging"
-                    },
-                    {
-                        "dig": "query.is_digging"
-                    }
-                ]
+            "identifier": "smokey_bedrock:great_hunger",
+            "materials": {
+                "default": "cow"
             },
-            "animations": {
-                "emerge": "animation.great_hunger.emerge",
-                "dig": "animation.great_hunger.dig"
+            "particle_effects": {
+                "digging": "minecraft:warden_dig"
             },
             "render_controllers": [
                 "controller.render.cow"
             ],
+            "scripts": {
+                "animate": [
+                    {
+                        "emerge": "q.is_emerging"
+                    },
+                    {
+                        "dig": "q.is_digging"
+                    }
+                ]
+            },
+            "sound_effects": {
+                "dig": "mob.warden.dig",
+                "emerge": "mob.warden.emerge"
+            },
             "spawn_egg": {
                 "base_color": "#0F4649",
                 "overlay_color": "#39D6E0"
             },
-            "sound_effects": {
-                "emerge": "mob.warden.emerge",
-                "dig": "mob.warden.dig"
-            },
-            "particle_effects": {
-                "digging": "minecraft:warden_dig"
+            "textures": {
+                "default": "textures/entity/great_hunger"
             }
         }
     }
