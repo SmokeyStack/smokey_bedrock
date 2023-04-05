@@ -5,7 +5,8 @@
             "animations": {
                 "dig": "animation.great_hunger.dig",
                 "eat": "animation.great_hunger.eat",
-                "emerge": "animation.great_hunger.emerge"
+                "emerge": "animation.great_hunger.emerge",
+                "walk": "animation.great_hunger.walk"
             },
             "geometry": {
                 "default": "geometry.great_hunger"
@@ -30,6 +31,9 @@
                     },
                     {
                         "eat": "q.is_eating_mob"
+                    },
+                    {
+                        "walk": "q.ground_speed > 0"
                     }
                 ]
             },
