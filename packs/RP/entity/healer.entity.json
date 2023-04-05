@@ -42,8 +42,8 @@
                 ]
             },
             "spawn_egg": {
-                "base_color": "#FFFF00",
-                "overlay_color": "#FFFF00"
+                "base_color": "#e8e828",
+                "overlay_color": "#c8c815"
             },
             "textures": {
                 "default": "textures/entity/healer"
