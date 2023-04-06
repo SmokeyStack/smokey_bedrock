@@ -4,52 +4,7 @@
 			"loop": true,
 			"bones": {
 				"shield": {
-					"rotation": [
-						0,
-						"q.life_time * 360.0 + 90",
-						0
-					],
-					"position": [
-						"math.cos(q.life_time * -360.0) * 9.0",
-						0,
-						"math.sin(q.life_time * -360.0) * 9.0"
-					]
-				},
-				"shield2": {
-					"rotation": [
-						0,
-						"q.life_time * 360.0",
-						0
-					],
-					"position": [
-						"math.cos(q.life_time * -360.0 + 90.0) * 9.0",
-						0,
-						"math.sin(q.life_time * -360.0 + 90.0) * 9.0"
-					]
-				},
-				"shield3": {
-					"rotation": [
-						0,
-						"q.life_time * 360.0 + 90",
-						0
-					],
-					"position": [
-						"math.cos(q.life_time * -360.0 + 180.0) * 9.0",
-						0,
-						"math.sin(q.life_time * -360.0 + 180.0) * 9.0"
-					]
-				},
-				"shield4": {
-					"rotation": [
-						0,
-						"q.life_time * 360.0",
-						0
-					],
-					"position": [
-						"math.cos(q.life_time * -360.0 + 270.0) * 9.0",
-						0,
-						"math.sin(q.life_time * -360.0 + 270.0) * 9.0"
-					]
+					"rotation": [0, "math.cos(q.life_time) * 90.0", 0]
 				}
 			}
 		}
