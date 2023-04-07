@@ -4,7 +4,7 @@
 			"loop": true,
 			"bones": {
 				"shield": {
-					"rotation": [0, "math.cos(q.life_time) * 90.0", 0]
+					"rotation": [0, "q.life_time * 360.0", 0]
 				}
 			}
 		}

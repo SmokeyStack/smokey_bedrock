@@ -177,4 +177,8 @@ void Object::init() {
     items->subscribe(
         "bucket_jellyfish",
         new Item(ItemProperty().setIcon("bucket_jellyfish").setStack(1)));
+
+    items->subscribe(
+        "inferno_crown",
+        new ArmorItem(ItemProperty(), 2, adk::ArmorSlot::HEAD, 100, 1, 1));
 }

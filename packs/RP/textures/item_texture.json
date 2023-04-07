@@ -16,6 +16,9 @@
         "dart_shooter": {
             "textures": "textures/items/bamboo"
         },
+        "inferno_crown": {
+            "textures": "textures/items/inferno_crown"
+        },
         "scute_boots": {
             "textures": "textures/items/scute_boots"
         },

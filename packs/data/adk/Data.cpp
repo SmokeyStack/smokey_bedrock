@@ -418,4 +418,7 @@ void Data::init() {
     simpleItem("scute_boots", "scute_boots");
     armorModel("smokey_bedrock", "scute_boots", "textures/armour/scute_upper",
                FEET);
+    armorModel("smokey_bedrock", "inferno_crown",
+               "textures/armour/inferno_crown", HEAD);
+    simpleItem("inferno_crown", "inferno_crown");
 }
