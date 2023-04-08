@@ -148,7 +148,7 @@
             },
             "minecraft:is_hidden_when_invisible": {},
             "minecraft:loot": {
-                "table": "loot_tables/entities/fish.json"
+                "table": "loot_tables/entities/nautilus.json"
             },
             "minecraft:movement": {
                 "value": 0.1

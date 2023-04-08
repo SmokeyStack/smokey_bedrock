@@ -1,0 +1,23 @@
+{
+    "pools": [
+        {
+            "entries": [
+                {
+                    "functions": [
+                        {
+                            "count": {
+                                "max": 1,
+                                "min": 0
+                            },
+                            "function": "set_count"
+                        }
+                    ],
+                    "name": "minecraft:nautilus_shell",
+                    "type": "item",
+                    "weight": 1
+                }
+            ],
+            "rolls": 1
+        }
+    ]
+}
