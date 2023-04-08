@@ -28,8 +28,8 @@
                 ]
             },
             "spawn_egg": {
-                "texture": "spawn_egg",
-                "texture_index": 45
+                "base_color": "#d4ccc3",
+                "overlay_color": "#ae4635"
             },
             "textures": {
                 "default": "textures/entity/nautilus"
