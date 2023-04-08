@@ -15,7 +15,7 @@
                 "default": "geometry.player.armor.leggings"
             },
             "scripts": {
-                "parent_setup": "variable.leg_layer_visible = 0.0;",
+                "parent_setup": "v.leg_layer_visible = 0.0;",
                 "animate": [
                     "offset"
                 ]

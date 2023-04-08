@@ -38,7 +38,7 @@
             ],
             "scripts": {
                 "pre_animation": [
-                    "variable.holding_trident = q.is_item_name_any('slot.weapon.mainhand', 'minecraft:trident');"
+                    "v.holding_trident = q.is_item_name_any('slot.weapon.mainhand', 'minecraft:trident');"
                 ]
             },
             "spawn_egg": {
