@@ -421,4 +421,5 @@ void Data::init() {
     armorModel("smokey_bedrock", "inferno_crown",
                "textures/armour/inferno_crown", HEAD);
     simpleItem("inferno_crown", "inferno_crown");
+    simpleItem("dart_test", "dart_blindness");
 }

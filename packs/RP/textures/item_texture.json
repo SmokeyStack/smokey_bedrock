@@ -13,6 +13,9 @@
         "bucket_squid_glow": {
             "textures": "textures/items/bucket_squid_glow"
         },
+        "dart_blindness": {
+            "textures": "textures/items/darts/dart_blindess"
+        },
         "dart_shooter": {
             "textures": "textures/items/bamboo"
         },
