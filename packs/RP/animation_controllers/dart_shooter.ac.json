@@ -7,7 +7,7 @@
                     "animations": [
                         "first_person",
                         {
-                            "blowing": "query.main_hand_item_use_duration > 0.0f"
+                            "blowing_first": "query.main_hand_item_use_duration > 0.0f"
                         }
                     ],
                     "transitions": [

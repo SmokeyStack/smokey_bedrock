@@ -4,6 +4,7 @@
         "description": {
             "animations": {
                 "blowing": "animation.dart_shooter.blowing",
+                "blowing_first": "animation.dart_shooter.blowing_first",
                 "first_person": "animation.dart_shooter.first_person",
                 "third_person": "animation.dart_shooter.third_person",
                 "wield": "controller.animation.dart_shooter.wield"

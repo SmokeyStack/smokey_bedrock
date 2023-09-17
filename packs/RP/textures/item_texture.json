@@ -14,10 +14,31 @@
             "textures": "textures/items/bucket_squid_glow"
         },
         "dart_blindness": {
-            "textures": "textures/items/darts/dart_blindess"
+            "textures": "textures/items/darts/dart_blindness"
+        },
+        "dart_exploding": {
+            "textures": "textures/items/darts/dart_exploding"
+        },
+        "dart_hunger": {
+            "textures": "textures/items/darts/dart_hunger"
+        },
+        "dart_mining_fatigue": {
+            "textures": "textures/items/darts/dart_mining_fatigue"
+        },
+        "dart_nausea": {
+            "textures": "textures/items/darts/dart_nausea"
+        },
+        "dart_poison": {
+            "textures": "textures/items/darts/dart_poison"
         },
         "dart_shooter": {
             "textures": "textures/items/bamboo"
+        },
+        "dart_slowness": {
+            "textures": "textures/items/darts/dart_slowness"
+        },
+        "dart_weakness": {
+            "textures": "textures/items/darts/dart_weakness"
         },
         "inferno_crown": {
             "textures": "textures/items/inferno_crown"
