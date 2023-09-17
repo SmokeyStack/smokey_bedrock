@@ -80,6 +80,7 @@ void Object::init() {
                       .setExplosion(3.0)
                       .setCreativeCategory(adk::CreativeTab::CONSTRUCTION,
                                            adk::CreativeCategory::STONEBRICK)));
+
     blocks->subscribe(
         "honeycomb_bricks_slab",
         new SlabBlock(BlockProperty()
@@ -181,8 +182,4 @@ void Object::init() {
     items->subscribe(
         "inferno_crown",
         new ArmorItem(ItemProperty(), 2, adk::ArmorSlot::HEAD, 100, 1, 1));
-
-    items->subscribe(
-        "dart_test",
-        new Item(ItemProperty().setProjectileEntity("smokey_bedrock:dart")));
 }

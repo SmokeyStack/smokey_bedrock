@@ -10,6 +10,7 @@ Data::Data() {}
 
 void Data::init() {
     headBlock("mini_amethyst_block", "amethyst_block");
+
     headBlock("mini_ancient_debris", "ancient_debris_side",
               "ancient_debris_side", "ancient_debris_side",
               "ancient_debris_side", "ancient_debris_top",
@@ -421,5 +422,4 @@ void Data::init() {
     armorModel("smokey_bedrock", "inferno_crown",
                "textures/armour/inferno_crown", HEAD);
     simpleItem("inferno_crown", "inferno_crown");
-    simpleItem("dart_test", "dart_blindness");
 }

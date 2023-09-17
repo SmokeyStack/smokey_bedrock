@@ -10,116 +10,53 @@
                 "texture": "dart_shooter"
             },
             "minecraft:max_stack_size": 1,
-            "minecraft:on_use": {
-                "on_use": {
-                    "event": "minecraft:shoot"
-                }
+            "minecraft:shooter": {
+                "ammunition": [
+                    {
+                        "item": "smokey_bedrock:dart_blindness",
+                        "search_inventory": true,
+                        "use_offhand": true
+                    },
+                    {
+                        "item": "smokey_bedrock:dart_exploding",
+                        "search_inventory": true,
+                        "use_offhand": true
+                    },
+                    {
+                        "item": "smokey_bedrock:dart_hunger",
+                        "search_inventory": true,
+                        "use_offhand": true
+                    },
+                    {
+                        "item": "smokey_bedrock:dart_mining_fatigue",
+                        "search_inventory": true,
+                        "use_offhand": true
+                    },
+                    {
+                        "item": "smokey_bedrock:dart_nausea",
+                        "search_inventory": true,
+                        "use_offhand": true
+                    },
+                    {
+                        "item": "smokey_bedrock:dart_poison",
+                        "search_inventory": true,
+                        "use_offhand": true
+                    },
+                    {
+                        "item": "smokey_bedrock:dart_slowness",
+                        "search_inventory": true,
+                        "use_offhand": true
+                    },
+                    {
+                        "item": "smokey_bedrock:dart_weakness",
+                        "search_inventory": true,
+                        "use_offhand": true
+                    }
+                ]
             }
         },
         "description": {
             "identifier": "smokey_bedrock:dart_shooter"
-        },
-        "events": {
-            "minecraft:shoot": {
-                "sequence": [
-                    {
-                        "condition": "q.is_item_name_any('slot.weapon.offhand', 'smokey_bedrock:dart_exploding') || q.is_item_name_any('slot.inventory', 0, 'smokey_bedrock:dart_exploding') || q.is_item_name_any('slot.inventory', 1, 'smokey_bedrock:dart_exploding') || q.is_item_name_any('slot.inventory', 2, 'smokey_bedrock:dart_exploding') || q.is_item_name_any('slot.inventory', 3, 'smokey_bedrock:dart_exploding') || q.is_item_name_any('slot.inventory', 4, 'smokey_bedrock:dart_exploding') || q.is_item_name_any('slot.inventory', 5, 'smokey_bedrock:dart_exploding') || q.is_item_name_any('slot.inventory', 6, 'smokey_bedrock:dart_exploding') || q.is_item_name_any('slot.inventory', 7, 'smokey_bedrock:dart_exploding') || q.is_item_name_any('slot.inventory', 8, 'smokey_bedrock:dart_exploding') || q.is_item_name_any('slot.inventory', 9, 'smokey_bedrock:dart_exploding') || q.is_item_name_any('slot.inventory', 10, 'smokey_bedrock:dart_exploding') || q.is_item_name_any('slot.inventory', 11, 'smokey_bedrock:dart_exploding') || q.is_item_name_any('slot.inventory', 12, 'smokey_bedrock:dart_exploding') || q.is_item_name_any('slot.inventory', 13, 'smokey_bedrock:dart_exploding') || q.is_item_name_any('slot.inventory', 14, 'smokey_bedrock:dart_exploding') || q.is_item_name_any('slot.inventory', 15, 'smokey_bedrock:dart_exploding') || q.is_item_name_any('slot.inventory', 16, 'smokey_bedrock:dart_exploding') || q.is_item_name_any('slot.inventory', 17, 'smokey_bedrock:dart_exploding') || q.is_item_name_any('slot.inventory', 18, 'smokey_bedrock:dart_exploding') || q.is_item_name_any('slot.inventory', 19, 'smokey_bedrock:dart_exploding') || q.is_item_name_any('slot.inventory', 20, 'smokey_bedrock:dart_exploding') || q.is_item_name_any('slot.inventory', 21, 'smokey_bedrock:dart_exploding') || q.is_item_name_any('slot.inventory', 22, 'smokey_bedrock:dart_exploding') || q.is_item_name_any('slot.inventory', 23, 'smokey_bedrock:dart_exploding') || q.is_item_name_any('slot.inventory', 24, 'smokey_bedrock:dart_exploding') || q.is_item_name_any('slot.inventory', 25, 'smokey_bedrock:dart_exploding') || q.is_item_name_any('slot.inventory', 26, 'smokey_bedrock:dart_exploding') || q.is_item_name_any('slot.hotbar', 0, 'smokey_bedrock:dart_exploding') || q.is_item_name_any('slot.hotbar', 1, 'smokey_bedrock:dart_exploding') || q.is_item_name_any('slot.hotbar', 2, 'smokey_bedrock:dart_exploding') || q.is_item_name_any('slot.hotbar', 3, 'smokey_bedrock:dart_exploding') || q.is_item_name_any('slot.hotbar', 4, 'smokey_bedrock:dart_exploding') || q.is_item_name_any('slot.hotbar', 5, 'smokey_bedrock:dart_exploding') || q.is_item_name_any('slot.hotbar', 6, 'smokey_bedrock:dart_exploding') || q.is_item_name_any('slot.hotbar', 7, 'smokey_bedrock:dart_exploding') || q.is_item_name_any('slot.hotbar', 8, 'smokey_bedrock:dart_exploding')",
-                        "run_command": {
-                            "command": [
-                                "clear @s smokey_bedrock:dart_exploding 0 1"
-                            ]
-                        },
-                        "shoot": {
-                            "launch_power": 1,
-                            "projectile": "smokey_bedrock:dart<exploding>"
-                        }
-                    },
-                    {
-                        "condition": "q.is_item_name_any('slot.weapon.offhand', 'smokey_bedrock:dart_blindness') || q.is_item_name_any('slot.inventory', 0, 'smokey_bedrock:dart_blindness') || q.is_item_name_any('slot.inventory', 1, 'smokey_bedrock:dart_blindness') || q.is_item_name_any('slot.inventory', 2, 'smokey_bedrock:dart_blindness') || q.is_item_name_any('slot.inventory', 3, 'smokey_bedrock:dart_blindness') || q.is_item_name_any('slot.inventory', 4, 'smokey_bedrock:dart_blindness') || q.is_item_name_any('slot.inventory', 5, 'smokey_bedrock:dart_blindness') || q.is_item_name_any('slot.inventory', 6, 'smokey_bedrock:dart_blindness') || q.is_item_name_any('slot.inventory', 7, 'smokey_bedrock:dart_blindness') || q.is_item_name_any('slot.inventory', 8, 'smokey_bedrock:dart_blindness') || q.is_item_name_any('slot.inventory', 9, 'smokey_bedrock:dart_blindness') || q.is_item_name_any('slot.inventory', 10, 'smokey_bedrock:dart_blindness') || q.is_item_name_any('slot.inventory', 11, 'smokey_bedrock:dart_blindness') || q.is_item_name_any('slot.inventory', 12, 'smokey_bedrock:dart_blindness') || q.is_item_name_any('slot.inventory', 13, 'smokey_bedrock:dart_blindness') || q.is_item_name_any('slot.inventory', 14, 'smokey_bedrock:dart_blindness') || q.is_item_name_any('slot.inventory', 15, 'smokey_bedrock:dart_blindness') || q.is_item_name_any('slot.inventory', 16, 'smokey_bedrock:dart_blindness') || q.is_item_name_any('slot.inventory', 17, 'smokey_bedrock:dart_blindness') || q.is_item_name_any('slot.inventory', 18, 'smokey_bedrock:dart_blindness') || q.is_item_name_any('slot.inventory', 19, 'smokey_bedrock:dart_blindness') || q.is_item_name_any('slot.inventory', 20, 'smokey_bedrock:dart_blindness') || q.is_item_name_any('slot.inventory', 21, 'smokey_bedrock:dart_blindness') || q.is_item_name_any('slot.inventory', 22, 'smokey_bedrock:dart_blindness') || q.is_item_name_any('slot.inventory', 23, 'smokey_bedrock:dart_blindness') || q.is_item_name_any('slot.inventory', 24, 'smokey_bedrock:dart_blindness') || q.is_item_name_any('slot.inventory', 25, 'smokey_bedrock:dart_blindness') || q.is_item_name_any('slot.inventory', 26, 'smokey_bedrock:dart_blindness') || q.is_item_name_any('slot.hotbar', 0, 'smokey_bedrock:dart_blindness') || q.is_item_name_any('slot.hotbar', 1, 'smokey_bedrock:dart_blindness') || q.is_item_name_any('slot.hotbar', 2, 'smokey_bedrock:dart_blindness') || q.is_item_name_any('slot.hotbar', 3, 'smokey_bedrock:dart_blindness') || q.is_item_name_any('slot.hotbar', 4, 'smokey_bedrock:dart_blindness') || q.is_item_name_any('slot.hotbar', 5, 'smokey_bedrock:dart_blindness') || q.is_item_name_any('slot.hotbar', 6, 'smokey_bedrock:dart_blindness') || q.is_item_name_any('slot.hotbar', 7, 'smokey_bedrock:dart_blindness') || q.is_item_name_any('slot.hotbar', 8, 'smokey_bedrock:dart_blindness')",
-                        "run_command": {
-                            "command": [
-                                "clear @s smokey_bedrock:dart_blindness 0 1"
-                            ]
-                        },
-                        "shoot": {
-                            "launch_power": 1,
-                            "projectile": "smokey_bedrock:dart<blindess>"
-                        }
-                    },
-                    {
-                        "condition": "q.is_item_name_any('slot.weapon.offhand', 'smokey_bedrock:dart_hunger') || q.is_item_name_any('slot.inventory', 0, 'smokey_bedrock:dart_hunger') || q.is_item_name_any('slot.inventory', 1, 'smokey_bedrock:dart_hunger') || q.is_item_name_any('slot.inventory', 2, 'smokey_bedrock:dart_hunger') || q.is_item_name_any('slot.inventory', 3, 'smokey_bedrock:dart_hunger') || q.is_item_name_any('slot.inventory', 4, 'smokey_bedrock:dart_hunger') || q.is_item_name_any('slot.inventory', 5, 'smokey_bedrock:dart_hunger') || q.is_item_name_any('slot.inventory', 6, 'smokey_bedrock:dart_hunger') || q.is_item_name_any('slot.inventory', 7, 'smokey_bedrock:dart_hunger') || q.is_item_name_any('slot.inventory', 8, 'smokey_bedrock:dart_hunger') || q.is_item_name_any('slot.inventory', 9, 'smokey_bedrock:dart_hunger') || q.is_item_name_any('slot.inventory', 10, 'smokey_bedrock:dart_hunger') || q.is_item_name_any('slot.inventory', 11, 'smokey_bedrock:dart_hunger') || q.is_item_name_any('slot.inventory', 12, 'smokey_bedrock:dart_hunger') || q.is_item_name_any('slot.inventory', 13, 'smokey_bedrock:dart_hunger') || q.is_item_name_any('slot.inventory', 14, 'smokey_bedrock:dart_hunger') || q.is_item_name_any('slot.inventory', 15, 'smokey_bedrock:dart_hunger') || q.is_item_name_any('slot.inventory', 16, 'smokey_bedrock:dart_hunger') || q.is_item_name_any('slot.inventory', 17, 'smokey_bedrock:dart_hunger') || q.is_item_name_any('slot.inventory', 18, 'smokey_bedrock:dart_hunger') || q.is_item_name_any('slot.inventory', 19, 'smokey_bedrock:dart_hunger') || q.is_item_name_any('slot.inventory', 20, 'smokey_bedrock:dart_hunger') || q.is_item_name_any('slot.inventory', 21, 'smokey_bedrock:dart_hunger') || q.is_item_name_any('slot.inventory', 22, 'smokey_bedrock:dart_hunger') || q.is_item_name_any('slot.inventory', 23, 'smokey_bedrock:dart_hunger') || q.is_item_name_any('slot.inventory', 24, 'smokey_bedrock:dart_hunger') || q.is_item_name_any('slot.inventory', 25, 'smokey_bedrock:dart_hunger') || q.is_item_name_any('slot.inventory', 26, 'smokey_bedrock:dart_hunger') || q.is_item_name_any('slot.hotbar', 0, 'smokey_bedrock:dart_hunger') || q.is_item_name_any('slot.hotbar', 1, 'smokey_bedrock:dart_hunger') || q.is_item_name_any('slot.hotbar', 2, 'smokey_bedrock:dart_hunger') || q.is_item_name_any('slot.hotbar', 3, 'smokey_bedrock:dart_hunger') || q.is_item_name_any('slot.hotbar', 4, 'smokey_bedrock:dart_hunger') || q.is_item_name_any('slot.hotbar', 5, 'smokey_bedrock:dart_hunger') || q.is_item_name_any('slot.hotbar', 6, 'smokey_bedrock:dart_hunger') || q.is_item_name_any('slot.hotbar', 7, 'smokey_bedrock:dart_hunger') || q.is_item_name_any('slot.hotbar', 8, 'smokey_bedrock:dart_hunger')",
-                        "run_command": {
-                            "command": [
-                                "clear @s smokey_bedrock:dart_hunger 0 1"
-                            ]
-                        },
-                        "shoot": {
-                            "launch_power": 1,
-                            "projectile": "smokey_bedrock:dart<hunger>"
-                        }
-                    },
-                    {
-                        "condition": "q.is_item_name_any('slot.weapon.offhand', 'smokey_bedrock:dart_mining_fatigue') || q.is_item_name_any('slot.inventory', 0, 'smokey_bedrock:dart_mining_fatigue') || q.is_item_name_any('slot.inventory', 1, 'smokey_bedrock:dart_mining_fatigue') || q.is_item_name_any('slot.inventory', 2, 'smokey_bedrock:dart_mining_fatigue') || q.is_item_name_any('slot.inventory', 3, 'smokey_bedrock:dart_mining_fatigue') || q.is_item_name_any('slot.inventory', 4, 'smokey_bedrock:dart_mining_fatigue') || q.is_item_name_any('slot.inventory', 5, 'smokey_bedrock:dart_mining_fatigue') || q.is_item_name_any('slot.inventory', 6, 'smokey_bedrock:dart_mining_fatigue') || q.is_item_name_any('slot.inventory', 7, 'smokey_bedrock:dart_mining_fatigue') || q.is_item_name_any('slot.inventory', 8, 'smokey_bedrock:dart_mining_fatigue') || q.is_item_name_any('slot.inventory', 9, 'smokey_bedrock:dart_mining_fatigue') || q.is_item_name_any('slot.inventory', 10, 'smokey_bedrock:dart_mining_fatigue') || q.is_item_name_any('slot.inventory', 11, 'smokey_bedrock:dart_mining_fatigue') || q.is_item_name_any('slot.inventory', 12, 'smokey_bedrock:dart_mining_fatigue') || q.is_item_name_any('slot.inventory', 13, 'smokey_bedrock:dart_mining_fatigue') || q.is_item_name_any('slot.inventory', 14, 'smokey_bedrock:dart_mining_fatigue') || q.is_item_name_any('slot.inventory', 15, 'smokey_bedrock:dart_mining_fatigue') || q.is_item_name_any('slot.inventory', 16, 'smokey_bedrock:dart_mining_fatigue') || q.is_item_name_any('slot.inventory', 17, 'smokey_bedrock:dart_mining_fatigue') || q.is_item_name_any('slot.inventory', 18, 'smokey_bedrock:dart_mining_fatigue') || q.is_item_name_any('slot.inventory', 19, 'smokey_bedrock:dart_mining_fatigue') || q.is_item_name_any('slot.inventory', 20, 'smokey_bedrock:dart_mining_fatigue') || q.is_item_name_any('slot.inventory', 21, 'smokey_bedrock:dart_mining_fatigue') || q.is_item_name_any('slot.inventory', 22, 'smokey_bedrock:dart_mining_fatigue') || q.is_item_name_any('slot.inventory', 23, 'smokey_bedrock:dart_mining_fatigue') || q.is_item_name_any('slot.inventory', 24, 'smokey_bedrock:dart_mining_fatigue') || q.is_item_name_any('slot.inventory', 25, 'smokey_bedrock:dart_mining_fatigue') || q.is_item_name_any('slot.inventory', 26, 'smokey_bedrock:dart_mining_fatigue') || q.is_item_name_any('slot.hotbar', 0, 'smokey_bedrock:dart_mining_fatigue') || q.is_item_name_any('slot.hotbar', 1, 'smokey_bedrock:dart_mining_fatigue') || q.is_item_name_any('slot.hotbar', 2, 'smokey_bedrock:dart_mining_fatigue') || q.is_item_name_any('slot.hotbar', 3, 'smokey_bedrock:dart_mining_fatigue') || q.is_item_name_any('slot.hotbar', 4, 'smokey_bedrock:dart_mining_fatigue') || q.is_item_name_any('slot.hotbar', 5, 'smokey_bedrock:dart_mining_fatigue') || q.is_item_name_any('slot.hotbar', 6, 'smokey_bedrock:dart_mining_fatigue') || q.is_item_name_any('slot.hotbar', 7, 'smokey_bedrock:dart_mining_fatigue') || q.is_item_name_any('slot.hotbar', 8, 'smokey_bedrock:dart_mining_fatigue')",
-                        "run_command": {
-                            "command": [
-                                "clear @s smokey_bedrock:dart_mining_fatigue 0 1"
-                            ]
-                        },
-                        "shoot": {
-                            "launch_power": 1,
-                            "projectile": "smokey_bedrock:dart<mining_fatigue>"
-                        }
-                    },
-                    {
-                        "condition": "q.is_item_name_any('slot.weapon.offhand', 'smokey_bedrock:dart_nausea') || q.is_item_name_any('slot.inventory', 0, 'smokey_bedrock:dart_nausea') || q.is_item_name_any('slot.inventory', 1, 'smokey_bedrock:dart_nausea') || q.is_item_name_any('slot.inventory', 2, 'smokey_bedrock:dart_nausea') || q.is_item_name_any('slot.inventory', 3, 'smokey_bedrock:dart_nausea') || q.is_item_name_any('slot.inventory', 4, 'smokey_bedrock:dart_nausea') || q.is_item_name_any('slot.inventory', 5, 'smokey_bedrock:dart_nausea') || q.is_item_name_any('slot.inventory', 6, 'smokey_bedrock:dart_nausea') || q.is_item_name_any('slot.inventory', 7, 'smokey_bedrock:dart_nausea') || q.is_item_name_any('slot.inventory', 8, 'smokey_bedrock:dart_nausea') || q.is_item_name_any('slot.inventory', 9, 'smokey_bedrock:dart_nausea') || q.is_item_name_any('slot.inventory', 10, 'smokey_bedrock:dart_nausea') || q.is_item_name_any('slot.inventory', 11, 'smokey_bedrock:dart_nausea') || q.is_item_name_any('slot.inventory', 12, 'smokey_bedrock:dart_nausea') || q.is_item_name_any('slot.inventory', 13, 'smokey_bedrock:dart_nausea') || q.is_item_name_any('slot.inventory', 14, 'smokey_bedrock:dart_nausea') || q.is_item_name_any('slot.inventory', 15, 'smokey_bedrock:dart_nausea') || q.is_item_name_any('slot.inventory', 16, 'smokey_bedrock:dart_nausea') || q.is_item_name_any('slot.inventory', 17, 'smokey_bedrock:dart_nausea') || q.is_item_name_any('slot.inventory', 18, 'smokey_bedrock:dart_nausea') || q.is_item_name_any('slot.inventory', 19, 'smokey_bedrock:dart_nausea') || q.is_item_name_any('slot.inventory', 20, 'smokey_bedrock:dart_nausea') || q.is_item_name_any('slot.inventory', 21, 'smokey_bedrock:dart_nausea') || q.is_item_name_any('slot.inventory', 22, 'smokey_bedrock:dart_nausea') || q.is_item_name_any('slot.inventory', 23, 'smokey_bedrock:dart_nausea') || q.is_item_name_any('slot.inventory', 24, 'smokey_bedrock:dart_nausea') || q.is_item_name_any('slot.inventory', 25, 'smokey_bedrock:dart_nausea') || q.is_item_name_any('slot.inventory', 26, 'smokey_bedrock:dart_nausea') || q.is_item_name_any('slot.hotbar', 0, 'smokey_bedrock:dart_nausea') || q.is_item_name_any('slot.hotbar', 1, 'smokey_bedrock:dart_nausea') || q.is_item_name_any('slot.hotbar', 2, 'smokey_bedrock:dart_nausea') || q.is_item_name_any('slot.hotbar', 3, 'smokey_bedrock:dart_nausea') || q.is_item_name_any('slot.hotbar', 4, 'smokey_bedrock:dart_nausea') || q.is_item_name_any('slot.hotbar', 5, 'smokey_bedrock:dart_nausea') || q.is_item_name_any('slot.hotbar', 6, 'smokey_bedrock:dart_nausea') || q.is_item_name_any('slot.hotbar', 7, 'smokey_bedrock:dart_nausea') || q.is_item_name_any('slot.hotbar', 8, 'smokey_bedrock:dart_nausea')",
-                        "run_command": {
-                            "command": [
-                                "clear @s smokey_bedrock:dart_nausea 0 1"
-                            ]
-                        },
-                        "shoot": {
-                            "launch_power": 1,
-                            "projectile": "smokey_bedrock:dart<nausea>"
-                        }
-                    },
-                    {
-                        "condition": "q.is_item_name_any('slot.weapon.offhand', 'smokey_bedrock:dart_poison') || q.is_item_name_any('slot.inventory', 0, 'smokey_bedrock:dart_poison') || q.is_item_name_any('slot.inventory', 1, 'smokey_bedrock:dart_poison') || q.is_item_name_any('slot.inventory', 2, 'smokey_bedrock:dart_poison') || q.is_item_name_any('slot.inventory', 3, 'smokey_bedrock:dart_poison') || q.is_item_name_any('slot.inventory', 4, 'smokey_bedrock:dart_poison') || q.is_item_name_any('slot.inventory', 5, 'smokey_bedrock:dart_poison') || q.is_item_name_any('slot.inventory', 6, 'smokey_bedrock:dart_poison') || q.is_item_name_any('slot.inventory', 7, 'smokey_bedrock:dart_poison') || q.is_item_name_any('slot.inventory', 8, 'smokey_bedrock:dart_poison') || q.is_item_name_any('slot.inventory', 9, 'smokey_bedrock:dart_poison') || q.is_item_name_any('slot.inventory', 10, 'smokey_bedrock:dart_poison') || q.is_item_name_any('slot.inventory', 11, 'smokey_bedrock:dart_poison') || q.is_item_name_any('slot.inventory', 12, 'smokey_bedrock:dart_poison') || q.is_item_name_any('slot.inventory', 13, 'smokey_bedrock:dart_poison') || q.is_item_name_any('slot.inventory', 14, 'smokey_bedrock:dart_poison') || q.is_item_name_any('slot.inventory', 15, 'smokey_bedrock:dart_poison') || q.is_item_name_any('slot.inventory', 16, 'smokey_bedrock:dart_poison') || q.is_item_name_any('slot.inventory', 17, 'smokey_bedrock:dart_poison') || q.is_item_name_any('slot.inventory', 18, 'smokey_bedrock:dart_poison') || q.is_item_name_any('slot.inventory', 19, 'smokey_bedrock:dart_poison') || q.is_item_name_any('slot.inventory', 20, 'smokey_bedrock:dart_poison') || q.is_item_name_any('slot.inventory', 21, 'smokey_bedrock:dart_poison') || q.is_item_name_any('slot.inventory', 22, 'smokey_bedrock:dart_poison') || q.is_item_name_any('slot.inventory', 23, 'smokey_bedrock:dart_poison') || q.is_item_name_any('slot.inventory', 24, 'smokey_bedrock:dart_poison') || q.is_item_name_any('slot.inventory', 25, 'smokey_bedrock:dart_poison') || q.is_item_name_any('slot.inventory', 26, 'smokey_bedrock:dart_poison') || q.is_item_name_any('slot.hotbar', 0, 'smokey_bedrock:dart_poison') || q.is_item_name_any('slot.hotbar', 1, 'smokey_bedrock:dart_poison') || q.is_item_name_any('slot.hotbar', 2, 'smokey_bedrock:dart_poison') || q.is_item_name_any('slot.hotbar', 3, 'smokey_bedrock:dart_poison') || q.is_item_name_any('slot.hotbar', 4, 'smokey_bedrock:dart_poison') || q.is_item_name_any('slot.hotbar', 5, 'smokey_bedrock:dart_poison') || q.is_item_name_any('slot.hotbar', 6, 'smokey_bedrock:dart_poison') || q.is_item_name_any('slot.hotbar', 7, 'smokey_bedrock:dart_poison') || q.is_item_name_any('slot.hotbar', 8, 'smokey_bedrock:dart_poison')",
-                        "run_command": {
-                            "command": [
-                                "clear @s smokey_bedrock:dart_poison 0 1"
-                            ]
-                        },
-                        "shoot": {
-                            "launch_power": 1,
-                            "projectile": "smokey_bedrock:dart<poison>"
-                        }
-                    },
-                    {
-                        "condition": "q.is_item_name_any('slot.weapon.offhand', 'smokey_bedrock:dart_slowness') || q.is_item_name_any('slot.inventory', 0, 'smokey_bedrock:dart_slowness') || q.is_item_name_any('slot.inventory', 1, 'smokey_bedrock:dart_slowness') || q.is_item_name_any('slot.inventory', 2, 'smokey_bedrock:dart_slowness') || q.is_item_name_any('slot.inventory', 3, 'smokey_bedrock:dart_slowness') || q.is_item_name_any('slot.inventory', 4, 'smokey_bedrock:dart_slowness') || q.is_item_name_any('slot.inventory', 5, 'smokey_bedrock:dart_slowness') || q.is_item_name_any('slot.inventory', 6, 'smokey_bedrock:dart_slowness') || q.is_item_name_any('slot.inventory', 7, 'smokey_bedrock:dart_slowness') || q.is_item_name_any('slot.inventory', 8, 'smokey_bedrock:dart_slowness') || q.is_item_name_any('slot.inventory', 9, 'smokey_bedrock:dart_slowness') || q.is_item_name_any('slot.inventory', 10, 'smokey_bedrock:dart_slowness') || q.is_item_name_any('slot.inventory', 11, 'smokey_bedrock:dart_slowness') || q.is_item_name_any('slot.inventory', 12, 'smokey_bedrock:dart_slowness') || q.is_item_name_any('slot.inventory', 13, 'smokey_bedrock:dart_slowness') || q.is_item_name_any('slot.inventory', 14, 'smokey_bedrock:dart_slowness') || q.is_item_name_any('slot.inventory', 15, 'smokey_bedrock:dart_slowness') || q.is_item_name_any('slot.inventory', 16, 'smokey_bedrock:dart_slowness') || q.is_item_name_any('slot.inventory', 17, 'smokey_bedrock:dart_slowness') || q.is_item_name_any('slot.inventory', 18, 'smokey_bedrock:dart_slowness') || q.is_item_name_any('slot.inventory', 19, 'smokey_bedrock:dart_slowness') || q.is_item_name_any('slot.inventory', 20, 'smokey_bedrock:dart_slowness') || q.is_item_name_any('slot.inventory', 21, 'smokey_bedrock:dart_slowness') || q.is_item_name_any('slot.inventory', 22, 'smokey_bedrock:dart_slowness') || q.is_item_name_any('slot.inventory', 23, 'smokey_bedrock:dart_slowness') || q.is_item_name_any('slot.inventory', 24, 'smokey_bedrock:dart_slowness') || q.is_item_name_any('slot.inventory', 25, 'smokey_bedrock:dart_slowness') || q.is_item_name_any('slot.inventory', 26, 'smokey_bedrock:dart_slowness') || q.is_item_name_any('slot.hotbar', 0, 'smokey_bedrock:dart_slowness') || q.is_item_name_any('slot.hotbar', 1, 'smokey_bedrock:dart_slowness') || q.is_item_name_any('slot.hotbar', 2, 'smokey_bedrock:dart_slowness') || q.is_item_name_any('slot.hotbar', 3, 'smokey_bedrock:dart_slowness') || q.is_item_name_any('slot.hotbar', 4, 'smokey_bedrock:dart_slowness') || q.is_item_name_any('slot.hotbar', 5, 'smokey_bedrock:dart_slowness') || q.is_item_name_any('slot.hotbar', 6, 'smokey_bedrock:dart_slowness') || q.is_item_name_any('slot.hotbar', 7, 'smokey_bedrock:dart_slowness') || q.is_item_name_any('slot.hotbar', 8, 'smokey_bedrock:dart_slowness')",
-                        "run_command": {
-                            "command": [
-                                "clear @s smokey_bedrock:dart_slowness 0 1"
-                            ]
-                        },
-                        "shoot": {
-                            "launch_power": 1,
-                            "projectile": "smokey_bedrock:dart<slowness>"
-                        }
-                    },
-                    {
-                        "condition": "q.is_item_name_any('slot.weapon.offhand', 'smokey_bedrock:dart_weakness') || q.is_item_name_any('slot.inventory', 0, 'smokey_bedrock:dart_weakness') || q.is_item_name_any('slot.inventory', 1, 'smokey_bedrock:dart_weakness') || q.is_item_name_any('slot.inventory', 2, 'smokey_bedrock:dart_weakness') || q.is_item_name_any('slot.inventory', 3, 'smokey_bedrock:dart_weakness') || q.is_item_name_any('slot.inventory', 4, 'smokey_bedrock:dart_weakness') || q.is_item_name_any('slot.inventory', 5, 'smokey_bedrock:dart_weakness') || q.is_item_name_any('slot.inventory', 6, 'smokey_bedrock:dart_weakness') || q.is_item_name_any('slot.inventory', 7, 'smokey_bedrock:dart_weakness') || q.is_item_name_any('slot.inventory', 8, 'smokey_bedrock:dart_weakness') || q.is_item_name_any('slot.inventory', 9, 'smokey_bedrock:dart_weakness') || q.is_item_name_any('slot.inventory', 10, 'smokey_bedrock:dart_weakness') || q.is_item_name_any('slot.inventory', 11, 'smokey_bedrock:dart_weakness') || q.is_item_name_any('slot.inventory', 12, 'smokey_bedrock:dart_weakness') || q.is_item_name_any('slot.inventory', 13, 'smokey_bedrock:dart_weakness') || q.is_item_name_any('slot.inventory', 14, 'smokey_bedrock:dart_weakness') || q.is_item_name_any('slot.inventory', 15, 'smokey_bedrock:dart_weakness') || q.is_item_name_any('slot.inventory', 16, 'smokey_bedrock:dart_weakness') || q.is_item_name_any('slot.inventory', 17, 'smokey_bedrock:dart_weakness') || q.is_item_name_any('slot.inventory', 18, 'smokey_bedrock:dart_weakness') || q.is_item_name_any('slot.inventory', 19, 'smokey_bedrock:dart_weakness') || q.is_item_name_any('slot.inventory', 20, 'smokey_bedrock:dart_weakness') || q.is_item_name_any('slot.inventory', 21, 'smokey_bedrock:dart_weakness') || q.is_item_name_any('slot.inventory', 22, 'smokey_bedrock:dart_weakness') || q.is_item_name_any('slot.inventory', 23, 'smokey_bedrock:dart_weakness') || q.is_item_name_any('slot.inventory', 24, 'smokey_bedrock:dart_weakness') || q.is_item_name_any('slot.inventory', 25, 'smokey_bedrock:dart_weakness') || q.is_item_name_any('slot.inventory', 26, 'smokey_bedrock:dart_weakness') || q.is_item_name_any('slot.hotbar', 0, 'smokey_bedrock:dart_weakness') || q.is_item_name_any('slot.hotbar', 1, 'smokey_bedrock:dart_weakness') || q.is_item_name_any('slot.hotbar', 2, 'smokey_bedrock:dart_weakness') || q.is_item_name_any('slot.hotbar', 3, 'smokey_bedrock:dart_weakness') || q.is_item_name_any('slot.hotbar', 4, 'smokey_bedrock:dart_weakness') || q.is_item_name_any('slot.hotbar', 5, 'smokey_bedrock:dart_weakness') || q.is_item_name_any('slot.hotbar', 6, 'smokey_bedrock:dart_weakness') || q.is_item_name_any('slot.hotbar', 7, 'smokey_bedrock:dart_weakness') || q.is_item_name_any('slot.hotbar', 8, 'smokey_bedrock:dart_weakness')",
-                        "run_command": {
-                            "command": [
-                                "clear @s smokey_bedrock:dart_weakness 0 1"
-                            ]
-                        },
-                        "shoot": {
-                            "launch_power": 1,
-                            "projectile": "smokey_bedrock:dart<weakness>"
-                        }
-                    }
-                ]
-            }
         }
     }
 }

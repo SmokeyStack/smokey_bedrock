@@ -2,18 +2,10 @@ import {
     BlockPermutation,
     Dimension,
     Effect,
-    EffectType,
     EntityInventoryComponent,
-    EntityType,
-    EntityTypes,
-    Items,
     ItemStack,
-    ItemType,
-    ItemUseOnEvent,
-    MinecraftBlockTypes,
-    MinecraftEffectTypes,
-    MinecraftItemTypes,
     Player,
+    PlayerInteractWithBlockAfterEvent,
     Vector,
     Vector3
 } from '@minecraft/server';
@@ -26,7 +18,7 @@ function updateLiquid(
     liquid_dimension.fillBlocks(
         Vector.add(block_location, { x: 0, y: -1, z: 0 }),
         Vector.add(block_location, { x: 0, y: -1, z: 0 }),
-        MinecraftBlockTypes.water,
+        'minecraft:water',
         {
             matchingBlock: BlockPermutation.resolve('minecraft:air')
         }
@@ -34,7 +26,7 @@ function updateLiquid(
     liquid_dimension.fillBlocks(
         { x: block_location.x + 1, y: block_location.y, z: block_location.z },
         { x: block_location.x + 1, y: block_location.y, z: block_location.z },
-        MinecraftBlockTypes.water,
+        'minecraft:water',
         {
             matchingBlock: BlockPermutation.resolve('minecraft:air')
         }
@@ -42,7 +34,7 @@ function updateLiquid(
     liquid_dimension.fillBlocks(
         { x: block_location.x, y: block_location.y, z: block_location.z - 1 },
         { x: block_location.x, y: block_location.y, z: block_location.z - 1 },
-        MinecraftBlockTypes.water,
+        'minecraft:water',
         {
             matchingBlock: BlockPermutation.resolve('minecraft:air')
         }
@@ -50,7 +42,7 @@ function updateLiquid(
     liquid_dimension.fillBlocks(
         { x: block_location.x, y: block_location.y, z: block_location.z + 1 },
         { x: block_location.x, y: block_location.y, z: block_location.z + 1 },
-        MinecraftBlockTypes.water,
+        'minecraft:water',
         {
             matchingBlock: BlockPermutation.resolve('minecraft:air')
         }
@@ -58,7 +50,7 @@ function updateLiquid(
     liquid_dimension.fillBlocks(
         { x: block_location.x, y: block_location.y + 1, z: block_location.z },
         { x: block_location.x, y: block_location.y + 1, z: block_location.z },
-        MinecraftBlockTypes.water,
+        'minecraft:water',
         {
             matchingBlock: BlockPermutation.resolve('minecraft:air')
         }
@@ -66,7 +58,7 @@ function updateLiquid(
     liquid_dimension.fillBlocks(
         { x: block_location.x - 1, y: block_location.y, z: block_location.z },
         { x: block_location.x - 1, y: block_location.y, z: block_location.z },
-        MinecraftBlockTypes.water,
+        'minecraft:water',
         {
             matchingBlock: BlockPermutation.resolve('minecraft:air')
         }
@@ -75,7 +67,7 @@ function updateLiquid(
     liquid_dimension.fillBlocks(
         { x: block_location.x, y: block_location.y - 1, z: block_location.z },
         { x: block_location.x, y: block_location.y - 1, z: block_location.z },
-        MinecraftBlockTypes.air,
+        'minecraft:air',
         {
             matchingBlock: BlockPermutation.resolve('minecraft:water')
         }
@@ -83,7 +75,7 @@ function updateLiquid(
     liquid_dimension.fillBlocks(
         { x: block_location.x + 1, y: block_location.y, z: block_location.z },
         { x: block_location.x + 1, y: block_location.y, z: block_location.z },
-        MinecraftBlockTypes.air,
+        'minecraft:air',
         {
             matchingBlock: BlockPermutation.resolve('minecraft:water')
         }
@@ -91,7 +83,7 @@ function updateLiquid(
     liquid_dimension.fillBlocks(
         { x: block_location.x, y: block_location.y, z: block_location.z - 1 },
         { x: block_location.x, y: block_location.y, z: block_location.z - 1 },
-        MinecraftBlockTypes.air,
+        'minecraft:air',
         {
             matchingBlock: BlockPermutation.resolve('minecraft:water')
         }
@@ -99,7 +91,7 @@ function updateLiquid(
     liquid_dimension.fillBlocks(
         { x: block_location.x, y: block_location.y, z: block_location.z + 1 },
         { x: block_location.x, y: block_location.y, z: block_location.z + 1 },
-        MinecraftBlockTypes.air,
+        'minecraft:air',
         {
             matchingBlock: BlockPermutation.resolve('minecraft:water')
         }
@@ -107,7 +99,7 @@ function updateLiquid(
     liquid_dimension.fillBlocks(
         { x: block_location.x, y: block_location.y + 1, z: block_location.z },
         { x: block_location.x, y: block_location.y + 1, z: block_location.z },
-        MinecraftBlockTypes.air,
+        'minecraft:air',
         {
             matchingBlock: BlockPermutation.resolve('minecraft:water')
         }
@@ -115,73 +107,61 @@ function updateLiquid(
     liquid_dimension.fillBlocks(
         { x: block_location.x - 1, y: block_location.y, z: block_location.z },
         { x: block_location.x - 1, y: block_location.y, z: block_location.z },
-        MinecraftBlockTypes.air,
+        'minecraft:air',
         {
             matchingBlock: BlockPermutation.resolve('minecraft:water')
         }
     );
 }
 
-export const BUCKET_ENTITIES = new Map<ItemType, EntityType>([
-    [
-        Items.get('smokey_bedrock:bucket_nautilus'),
-        EntityTypes.get('smokey_bedrock:nautilus')
-    ],
-    [
-        Items.get('smokey_bedrock:bucket_squid'),
-        EntityTypes.get('minecraft:squid')
-    ],
-    [
-        Items.get('smokey_bedrock:bucket_squid_glow'),
-        EntityTypes.get('minecraft:glow_squid')
-    ],
-    [
-        Items.get('smokey_bedrock:bucket_jellyfish'),
-        EntityTypes.get('smokey_bedrock:jellyfish')
-    ]
+export const BUCKET_ENTITIES = new Map<string, string>([
+    ['smokey_bedrock:bucket_nautilus', 'smokey_bedrock:nautilus'],
+    ['smokey_bedrock:bucket_squid', 'minecraft:squid'],
+    ['smokey_bedrock:bucket_squid_glow', 'minecraft:glow_squid'],
+    ['smokey_bedrock:bucket_jellyfish', 'smokey_bedrock:jellyfish']
 ]);
 
-export function placeScentedCandle(eventData: ItemUseOnEvent): void {
-    const PLAYER: Player = eventData.source as any;
-    let effects: EffectType[] = [];
-
-    for (const EFF of Object.values(MinecraftEffectTypes)) {
-        const EFFECT: Effect = PLAYER.getEffect(EFF);
-        if (!EFFECT) continue;
-
-        effects.push(EFF);
-    }
-
-    let effect: string = effects[0].getName();
+export function placeScentedCandle(
+    eventData: PlayerInteractWithBlockAfterEvent
+): void {
+    const PLAYER: Player = eventData.player as any;
+    let effects: Effect[] = PLAYER.getEffects();
 
     PLAYER.dimension
         .getBlock(
             Vector.add(
-                eventData.getBlockLocation(),
+                eventData.block.location,
                 getDirectionOffset(eventData.blockFace)
             )
         )
-        .setType(MinecraftBlockTypes.get(`smokey_bedrock:candle_${effect}`));
+        .setType(`smokey_bedrock:candle_${effects[0].typeId}`);
 }
 
 export function placeBucketEntity(
-    eventData: ItemUseOnEvent,
+    eventData: PlayerInteractWithBlockAfterEvent,
     entity: string
 ): void {
-    let PLAYER: Player = eventData.source as any;
+    let PLAYER: Player = eventData.player as any;
 
-    const SOURCE_DIMENSION: Dimension = eventData.source.dimension;
+    const SOURCE_DIMENSION: Dimension = PLAYER.dimension;
+
+    let item: ItemStack = new ItemStack('minecraft:bucket', 1);
+    let inventory_component: EntityInventoryComponent = PLAYER.getComponent(
+        'minecraft:inventory'
+    ) as any;
+    inventory_component.container.setItem(PLAYER.selectedSlot, item);
+
     SOURCE_DIMENSION.getBlock(
         Vector.add(
-            eventData.getBlockLocation(),
+            eventData.block.location,
             getDirectionOffset(eventData.blockFace)
         )
-    ).setType(MinecraftBlockTypes.water);
+    ).setType('minecraft:water');
 
     updateLiquid(
         SOURCE_DIMENSION,
         Vector.add(
-            eventData.getBlockLocation(),
+            eventData.block.location,
             getDirectionOffset(eventData.blockFace)
         )
     );
@@ -189,13 +169,8 @@ export function placeBucketEntity(
     SOURCE_DIMENSION.spawnEntity(
         entity,
         Vector.add(
-            eventData.getBlockLocation(),
+            eventData.block.location,
             getDirectionOffset(eventData.blockFace)
         )
     );
-
-    let item: ItemStack = new ItemStack(MinecraftItemTypes.bucket, 1);
-    let inventory_component: EntityInventoryComponent =
-        eventData.source.getComponent('minecraft:inventory') as any;
-    inventory_component.container.setItem(PLAYER.selectedSlot, item);
 }
