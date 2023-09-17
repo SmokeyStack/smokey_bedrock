@@ -1,0 +1,36 @@
+{
+    "animation_controllers": {
+        "controller.animation.dart_shooter.wield": {
+            "initial_state": "first_person",
+            "states": {
+                "first_person": {
+                    "animations": [
+                        "first_person",
+                        {
+                            "blowing": "query.main_hand_item_use_duration > 0.0f"
+                        }
+                    ],
+                    "transitions": [
+                        {
+                            "third_person": "!c.is_first_person"
+                        }
+                    ]
+                },
+                "third_person": {
+                    "animations": [
+                        "third_person",
+                        {
+                            "blowing": "query.main_hand_item_use_duration > 0.0f"
+                        }
+                    ],
+                    "transitions": [
+                        {
+                            "first_person": "c.is_first_person"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "format_version": "1.10.0"
+}

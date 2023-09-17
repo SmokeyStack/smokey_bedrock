@@ -52,8 +52,10 @@
                         "search_inventory": true,
                         "use_offhand": true
                     }
-                ]
-            }
+                ],
+                "max_draw_duration": 10
+            },
+            "minecraft:use_duration": 1
         },
         "description": {
             "identifier": "smokey_bedrock:dart_shooter"
