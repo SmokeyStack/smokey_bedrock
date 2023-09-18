@@ -6,6 +6,7 @@ import {
     ItemStack,
     Player,
     PlayerInteractWithBlockAfterEvent,
+    PlayerInteractWithEntityAfterEvent,
     Vector,
     Vector3
 } from '@minecraft/server';
@@ -121,6 +122,13 @@ export const BUCKET_ENTITIES = new Map<string, string>([
     ['smokey_bedrock:bucket_jellyfish', 'smokey_bedrock:jellyfish']
 ]);
 
+export const BUCKETABLE_ENTITIES = new Map<string, string>([
+    ['minecraft:nautilus', 'smokey_bedrock:bucket_nautilus'],
+    ['minecraft:squid', 'smokey_bedrock:bucket_squid'],
+    ['minecraft:glow_squid', 'smokey_bedrock:bucket_squid_glow'],
+    ['smokey_bedrock:jellyfish', 'smokey_bedrock:bucket_jellyfish']
+]);
+
 export function placeScentedCandle(
     eventData: PlayerInteractWithBlockAfterEvent
 ): void {
@@ -173,4 +181,17 @@ export function placeBucketEntity(
             getDirectionOffset(eventData.blockFace)
         )
     );
+}
+
+export function pickupBucketEntity(
+    eventData: PlayerInteractWithEntityAfterEvent,
+    entity: string
+): void {
+    let PLAYER: Player = eventData.player as any;
+
+    let item: ItemStack = new ItemStack(entity, 1);
+    let inventory_component: EntityInventoryComponent = PLAYER.getComponent(
+        'minecraft:inventory'
+    ) as any;
+    inventory_component.container.setItem(PLAYER.selectedSlot, item);
 }

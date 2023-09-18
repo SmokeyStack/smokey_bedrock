@@ -10,7 +10,9 @@ import {
     world
 } from '@minecraft/server';
 import {
+    BUCKETABLE_ENTITIES,
     BUCKET_ENTITIES,
+    pickupBucketEntity,
     placeBucketEntity,
     placeScentedCandle
 } from 'item_use_on';
@@ -89,5 +91,35 @@ world.afterEvents.playerInteractWithBlock.subscribe((eventData) => {
 
         default:
             break;
+    }
+});
+
+world.afterEvents.entityHurt.subscribe((eventData) => {
+    let entity: Entity = eventData.hurtEntity;
+
+    if (
+        entity.typeId == 'minecraft:axolotl' &&
+        eventData.damageSource.cause == EntityDamageCause.sonicBoom
+    ) {
+        entity.dimension.spawnEntity(
+            'minecraft:warden<minecraft:spawn_emerging>',
+            entity.location
+        );
+        entity.remove();
+    }
+});
+
+world.afterEvents.playerInteractWithEntity.subscribe((eventData) => {
+    const ITEM: ItemStack = eventData.itemStack;
+
+    if (
+        ITEM.typeId == 'minecraft:water_bucket' &&
+        BUCKETABLE_ENTITIES.has(eventData.target.typeId)
+    ) {
+        pickupBucketEntity(
+            eventData,
+            BUCKETABLE_ENTITIES.get(eventData.target.typeId)
+        );
+        eventData.target.remove();
     }
 });

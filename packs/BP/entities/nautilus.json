@@ -1,11 +1,6 @@
 {
     "format_version": "1.16.0",
     "minecraft:entity": {
-        "component_groups": {
-            "smokey_bedrock:become_bucket": {
-                "minecraft:instant_despawn": {}
-            }
-        },
         "components": {
             "minecraft:behavior.avoid_mob_type": {
                 "entity_types": [
@@ -118,34 +113,6 @@
                     }
                 ]
             },
-            "minecraft:interact": {
-                "interactions": [
-                    {
-                        "interact_text": "action.interact.milk",
-                        "on_interact": {
-                            "event": "smokey_bedrock:become_bucket",
-                            "filters": {
-                                "all_of": [
-                                    {
-                                        "subject": "other",
-                                        "test": "is_family",
-                                        "value": "player"
-                                    },
-                                    {
-                                        "domain": "hand",
-                                        "subject": "other",
-                                        "test": "has_equipment",
-                                        "value": "water_bucket"
-                                    }
-                                ]
-                            }
-                        },
-                        "play_sounds": "milk.screamer",
-                        "transform_to_item": "smokey_bedrock:bucket_nautilus",
-                        "use_item": true
-                    }
-                ]
-            },
             "minecraft:is_hidden_when_invisible": {},
             "minecraft:loot": {
                 "table": "loot_tables/entities/nautilus.json"
@@ -190,15 +157,6 @@
             "is_experimental": false,
             "is_spawnable": true,
             "is_summonable": true
-        },
-        "events": {
-            "smokey_bedrock:become_bucket": {
-                "add": {
-                    "component_groups": [
-                        "smokey_bedrock:become_bucket"
-                    ]
-                }
-            }
         }
     }
 }

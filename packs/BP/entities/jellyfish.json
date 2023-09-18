@@ -2,9 +2,6 @@
     "format_version": "1.16.0",
     "minecraft:entity": {
         "component_groups": {
-            "smokey_bedrock:become_bucket": {
-                "minecraft:instant_despawn": {}
-            },
             "smokey_bedrock:blue": {
                 "minecraft:variant": {
                     "value": 1
@@ -141,34 +138,6 @@
                     }
                 ]
             },
-            "minecraft:interact": {
-                "interactions": [
-                    {
-                        "interact_text": "action.interact.milk",
-                        "on_interact": {
-                            "event": "smokey_bedrock:become_bucket",
-                            "filters": {
-                                "all_of": [
-                                    {
-                                        "subject": "other",
-                                        "test": "is_family",
-                                        "value": "player"
-                                    },
-                                    {
-                                        "domain": "hand",
-                                        "subject": "other",
-                                        "test": "has_equipment",
-                                        "value": "water_bucket"
-                                    }
-                                ]
-                            }
-                        },
-                        "play_sounds": "milk.screamer",
-                        "transform_to_item": "smokey_bedrock:bucket_jellyfish",
-                        "use_item": true
-                    }
-                ]
-            },
             "minecraft:is_hidden_when_invisible": {},
             "minecraft:movement": {
                 "value": 0.1
@@ -276,13 +245,6 @@
                         "weight": 1
                     }
                 ]
-            },
-            "smokey_bedrock:become_bucket": {
-                "add": {
-                    "component_groups": [
-                        "smokey_bedrock:become_bucket"
-                    ]
-                }
             }
         }
     }
