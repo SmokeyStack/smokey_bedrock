@@ -30,12 +30,6 @@
         "dried_seagrass_block_bottom": {
             "textures": "textures/blocks/dried_seagrass_block_bottom"
         },
-        "fossilized_shell": {
-            "textures": "textures/blocks/fossilized_shell"
-        },
-        "fossilized_shell_sides": {
-            "textures": "textures/blocks/fossilized_shell_sides"
-        },
         "honeycomb_bricks": {
             "textures": "textures/blocks/honeycomb_bricks"
         },

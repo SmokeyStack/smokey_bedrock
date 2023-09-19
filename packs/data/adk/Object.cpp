@@ -110,8 +110,6 @@ void Object::init() {
                           .setCreativeCategory(adk::CreativeTab::CONSTRUCTION,
                                                adk::CreativeCategory::SLAB)));
 
-    blocks->subscribe("fossilized_shell", new Block(BlockProperty()));
-
     blocks->subscribe(
         "searocket_white",
         new Block(
