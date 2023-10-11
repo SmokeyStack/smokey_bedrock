@@ -1,0 +1,4 @@
+tile.smokey_bedrock:beachgrass.name=Beachgrass
+
+entity.smokey_bedrock:baiji_dolphin.name=Baiji Dolphin
+item.spawn_egg.entity.smokey_bedrock:baiji_dolphin.name=Spawn Baiji Dolphin
