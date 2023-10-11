@@ -10,7 +10,6 @@ Data::Data() {}
 
 void Data::init() {
     headBlock("mini_amethyst_block", "amethyst_block");
-
     headBlock("mini_ancient_debris", "ancient_debris_side",
               "ancient_debris_side", "ancient_debris_side",
               "ancient_debris_side", "ancient_debris_top",
@@ -30,18 +29,36 @@ void Data::init() {
               "bee_nest_bottom");
     headBlock("mini_beehive", "beehive_side", "beehive_side", "beehive_front",
               "beehive_side", "beehive_top", "beehive_top");
+    headBlock("mini_black_concrete", "black_concrete");
+    headBlock("mini_black_concrete_powder", "black_concrete_powder");
     headBlock("mini_black_glazed_terracotta", "black_glazed_terracotta");
+    headBlock("mini_black_shulker_box", "black_shulker_box");
+    headBlock("mini_black_stained_glass", "black_stained_glass");
+    headBlock("mini_black_terracotta", "black_terracotta");
+    headBlock("mini_black_wool", "wool_colored_black");
     headBlock("mini_blackstone", "blackstone", "blackstone_top");
     headBlock("mini_blast_furnace", "blast_furnace_side", "blast_furnace_side",
               "blast_furnace_front_off", "blast_furnace_side",
               "blast_furnace_top", "blast_furnace_top");
+    headBlock("mini_blue_concrete", "blue_concrete");
+    headBlock("mini_blue_concrete_powder", "blue_concrete_powder");
     headBlock("mini_blue_glazed_terracotta", "blue_glazed_terracotta");
     headBlock("mini_blue_ice", "blue_ice");
+    headBlock("mini_blue_shulker_box", "blue_shulker_box");
+    headBlock("mini_blue_stained_glass", "blue_stained_glass");
+    headBlock("mini_blue_terracotta", "blue_terracotta");
+    headBlock("mini_blue_wool", "wool_colored_blue");
     headBlock("mini_bone_block", "bone_block_side", "bone_block_top");
     headBlock("mini_bookshelf", "bookshelf", "bookshelf_top");
     headBlock("mini_brick_block", "brick");
+    headBlock("mini_brown_concrete", "brown_concrete");
+    headBlock("mini_brown_concrete_powder", "brown_concrete_powder");
     headBlock("mini_brown_glazed_terracotta", "brown_glazed_terracotta");
     headBlock("mini_brown_mushroom_block", "mushroom_brown_top");
+    headBlock("mini_brown_shulker_box", "brown_shulker_box");
+    headBlock("mini_brown_stained_glass", "brown_stained_glass");
+    headBlock("mini_brown_terracotta", "brown_terracotta");
+    headBlock("mini_brown_wool", "wool_colored_brown");
     headBlock("mini_calcite", "calcite");
     headBlock("mini_cartography_table", "cartography_table_side3",
               "cartography_table_side3", "cartography_table_side1",
@@ -49,6 +66,10 @@ void Data::init() {
               "cartography_table_bottom");
     headBlock("mini_carved_pumpkin", "pumpkin_side", "pumpkin_side",
               "pumpkin_face", "pumpkin_side", "pumpkin_top", "pumpkin_top");
+    headBlock("mini_cherry_leaves", "cherry_leaves");
+    headBlock("mini_cherry_log", "cherry_log_side", "cherry_log_top");
+    headBlock("mini_cherry_planks", "cherry_planks");
+    headBlock("mini_cherry_wood", "cherry_log_side");
     headBlock("mini_chest", "chest_inventory_side", "chest_inventory_side",
               "chest_inventory_front", "chest_inventory_side",
               "chest_inventory_top", "chest_inventory_top");
@@ -87,7 +108,14 @@ void Data::init() {
     headBlock("mini_crimson_stem", "crimson_log_side", "crimson_log_top");
     headBlock("mini_crying_obsidian", "crying_obsidian");
     headBlock("mini_cut_copper", "cut_copper");
+    headBlock("mini_cyan_concrete", "cyan_concrete");
+    headBlock("mini_cyan_concrete_powder", "cyan_concrete_powder");
     headBlock("mini_cyan_glazed_terracotta", "cyan_glazed_terracotta");
+    headBlock("mini_cyan_shulker_box", "cyan_shulker_box");
+    headBlock("mini_cyan_stained_glass", "cyan_stained_glass");
+    headBlock("mini_cyan_terracotta", "cyan_terracotta");
+    headBlock("mini_cyan_wool", "wool_colored_cyan");
+    headBlock("mini_dark_oak_log", "dark_oak_log_side", "dark_oak_log_top");
     headBlock("mini_deepslate", "deepslate", "deepslate_top");
     headBlock("mini_deepslate_bricks", "deepslate_bricks");
     headBlock("mini_deepslate_coal_ore", "deepslate_coal_ore");
@@ -142,8 +170,20 @@ void Data::init() {
     headBlock("mini_grass_path", "grass_path_side", "grass_path_side",
               "grass_path_side", "grass_path_side", "grass_path_top", "dirt");
     headBlock("mini_gravel", "gravel");
+    headBlock("mini_gray_concrete", "gray_concrete");
+    headBlock("mini_gray_concrete_powder", "gray_concrete_powder");
     headBlock("mini_gray_glazed_terracotta", "gray_glazed_terracotta");
+    headBlock("mini_gray_shulker_box", "gray_shulker_box");
+    headBlock("mini_gray_stained_glass", "gray_stained_glass");
+    headBlock("mini_gray_terracotta", "gray_terracotta");
+    headBlock("mini_gray_wool", "wool_colored_gray");
+    headBlock("mini_green_concrete", "green_concrete");
+    headBlock("mini_green_concrete_powder", "green_concrete_powder");
     headBlock("mini_green_glazed_terracotta", "green_glazed_terracotta");
+    headBlock("mini_green_shulker_box", "green_shulker_box");
+    headBlock("mini_green_stained_glass", "green_stained_glass");
+    headBlock("mini_green_terracotta", "green_terracotta");
+    headBlock("mini_green_wool", "wool_colored_green");
     headBlock("mini_hardened_clay", "hardened_clay");
     headBlock("mini_hay_block", "hayblock_side", "hayblock_top");
     headBlock("mini_honey_block", "honey_side", "honey_side", "honey_side",
@@ -154,20 +194,41 @@ void Data::init() {
     headBlock("mini_iron_ore", "iron_ore");
     headBlock("mini_jukebox", "jukebox_side", "jukebox_side", "jukebox_side",
               "jukebox_side", "jukebox_top", "jukebox_side");
+    headBlock("mini_jungle_log", "jungle_log_side", "jungle_log_top");
     headBlock("mini_lapis_block", "lapis_block");
     headBlock("mini_lapis_ore", "lapis_ore");
     headBlock("mini_leaves", "leaves");
     headBlock("mini_leaves2", "leaves2");
+    headBlock("mini_light_blue_concrete", "light_blue_concrete");
+    headBlock("mini_light_blue_concrete_powder", "light_blue_concrete_powder");
     headBlock("mini_light_blue_glazed_terracotta",
               "light_blue_glazed_terracotta");
+    headBlock("mini_light_blue_shulker_box", "light_blue_shulker_box");
+    headBlock("mini_light_blue_stained_glass", "light_blue_stained_glass");
+    headBlock("mini_light_blue_terracotta", "light_blue_terracotta");
     headBlock("mini_light_blue_wool", "wool_colored_light_blue");
+    headBlock("mini_light_gray_concrete", "light_gray_concrete");
+    headBlock("mini_light_gray_concrete_powder", "light_gray_concrete_powder");
+    headBlock("mini_light_gray_shulker_box", "light_gray_shulker_box");
+    headBlock("mini_light_gray_stained_glass", "light_gray_stained_glass");
+    headBlock("mini_light_gray_terracotta", "light_gray_terracotta");
     headBlock("mini_light_gray_wool", "wool_colored_silver");
+    headBlock("mini_lime_concrete", "lime_concrete");
+    headBlock("mini_lime_concrete_powder", "lime_concrete_powder");
     headBlock("mini_lime_glazed_terracotta", "lime_glazed_terracotta");
+    headBlock("mini_lime_shulker_box", "lime_shulker_box");
+    headBlock("mini_lime_stained_glass", "lime_stained_glass");
+    headBlock("mini_lime_terracotta", "lime_terracotta");
     headBlock("mini_lime_wool", "wool_colored_lime");
     headBlock("mini_lodestone", "lodestone_side", "lodestone_top");
     headBlock("mini_loom", "loom_front", "loom_side", "loom_side", "loom_side",
               "loom_top", "loom_bottom");
+    headBlock("mini_magenta_concrete", "magenta_concrete");
+    headBlock("mini_magenta_concrete_powder", "magenta_concrete_powder");
     headBlock("mini_magenta_glazed_terracotta", "magenta_glazed_terracotta");
+    headBlock("mini_magenta_shulker_box", "magenta_shulker_box");
+    headBlock("mini_magenta_stained_glass", "magenta_stained_glass");
+    headBlock("mini_magenta_terracotta", "magenta_terracotta");
     headBlock("mini_magenta_wool", "wool_colored_magenta");
     headBlock("mini_magma", "magma");
     headBlock("mini_mangrove_leaves", "mangrove_leaves");
@@ -192,13 +253,19 @@ void Data::init() {
     headBlock("mini_netherite_block", "netherite_block");
     headBlock("mini_netherrack", "netherrack");
     headBlock("mini_noteblock", "noteblock");
+    headBlock("mini_oak_log", "oak_log_side", "oak_log_top");
     headBlock("mini_observer", "observer_north", "observer_east",
               "observer_south", "observer_west", "observer_top",
               "observer_bottom");
     headBlock("mini_obsidian", "obsidian");
     headBlock("mini_ochre_froglight", "ochre_froglight_side",
               "ochre_froglight_top");
+    headBlock("mini_orange_concrete", "orange_concrete");
+    headBlock("mini_orange_concrete_powder", "orange_concrete_powder");
     headBlock("mini_orange_glazed_terracotta", "orange_glazed_terracotta");
+    headBlock("mini_orange_shulker_box", "orange_shulker_box");
+    headBlock("mini_orange_stained_glass", "orange_stained_glass");
+    headBlock("mini_orange_terracotta", "orange_terracotta");
     headBlock("mini_orange_wool", "wool_colored_orange");
     headBlock("mini_oxidized_copper", "oxidized_copper");
     headBlock("mini_oxidized_cut_copper", "oxidized_cut_copper");
@@ -206,7 +273,12 @@ void Data::init() {
     headBlock("mini_packed_mud", "packed_mud");
     headBlock("mini_pearlescent_froglight", "pearlescent_froglight_side",
               "pearlescent_froglight_top");
+    headBlock("mini_pink_concrete", "pink_concrete");
+    headBlock("mini_pink_concrete_powder", "pink_concrete_powder");
     headBlock("mini_pink_glazed_terracotta", "pink_glazed_terracotta");
+    headBlock("mini_pink_shulker_box", "pink_shulker_box");
+    headBlock("mini_pink_stained_glass", "pink_stained_glass");
+    headBlock("mini_pink_terracotta", "pink_terracotta");
     headBlock("mini_pink_wool", "wool_colored_pink");
     headBlock("mini_piston", "piston_side", "piston_side", "piston_side",
               "piston_side", "piston_top_normal", "piston_bottom");
@@ -223,7 +295,12 @@ void Data::init() {
     headBlock("mini_prismarine", "prismarine");
     headBlock("mini_pumpkin", "pumpkin_side", "pumpkin_side", "pumpkin_face",
               "pumpkin_side", "pumpkin_top", "pumpkin_top");
+    headBlock("mini_purple_concrete", "purple_concrete");
+    headBlock("mini_purple_concrete_powder", "purple_concrete_powder");
     headBlock("mini_purple_glazed_terracotta", "purple_glazed_terracotta");
+    headBlock("mini_purple_shulker_box", "purple_shulker_box");
+    headBlock("mini_purple_stained_glass", "purple_stained_glass");
+    headBlock("mini_purple_terracotta", "purple_terracotta");
     headBlock("mini_purple_wool", "wool_colored_purple");
     headBlock("mini_purpur_block", "purpur_block_side", "purpur_block_side",
               "purpur_block_side", "purpur_block_side", "purpur_block_top",
@@ -236,6 +313,8 @@ void Data::init() {
     headBlock("mini_raw_copper_block", "raw_copper_block");
     headBlock("mini_raw_gold_block", "raw_gold_block");
     headBlock("mini_raw_iron_block", "raw_iron_block");
+    headBlock("mini_red_concrete", "red_concrete");
+    headBlock("mini_red_concrete_powder", "red_concrete_powder");
     headBlock("mini_red_glazed_terracotta", "red_glazed_terracotta");
     headBlock("mini_red_mushroom_block", "mushroom_red_north",
               "mushroom_red_east", "mushroom_red_south", "mushroom_red_west",
@@ -244,6 +323,9 @@ void Data::init() {
     headBlock("mini_red_sandstone", "redsandstone_side", "redsandstone_side",
               "redsandstone_side", "redsandstone_side", "redsandstone_top",
               "redsandstone_bottom");
+    headBlock("mini_red_shulker_box", "red_shulker_box");
+    headBlock("mini_red_stained_glass", "red_stained_glass");
+    headBlock("mini_red_terracotta", "red_terracotta");
     headBlock("mini_red_wool", "wool_colored_red");
     headBlock("mini_redstone_block", "redstone_block");
     headBlock("mini_redstone_lamp", "redstone_lamp_off");
@@ -284,6 +366,7 @@ void Data::init() {
     headBlock("mini_soul_sand", "soul_sand");
     headBlock("mini_soul_soil", "soul_soil");
     headBlock("mini_sponge", "sponge");
+    headBlock("mini_spruce_log", "spruce_log_side", "spruce_log_top");
     headBlock("mini_sticky_piston", "piston_side", "piston_side", "piston_side",
               "piston_side", "piston_top_sticky", "piston_bottom");
     headBlock("mini_stone", "stone");
@@ -294,6 +377,9 @@ void Data::init() {
               "stripped_bamboo_block_top");
     headBlock("mini_stripped_birch_log", "stripped_birch_log_side",
               "stripped_birch_log_top");
+    headBlock("mini_stripped_cherry_log", "stripped_cherry_log_side",
+              "stripped_cherry_log_top");
+    headBlock("mini_stripped_cherry_wood", "stripped_cherry_log_side");
     headBlock("mini_stripped_crimson_hyphae", "stripped_crimson_stem_side");
     headBlock("mini_stripped_crimson_stem", "stripped_crimson_stem_side",
               "stripped_crimson_stem_top");
@@ -340,109 +426,21 @@ void Data::init() {
     headBlock("mini_waxed_weathered_cut_copper", "weathered_cut_copper");
     headBlock("mini_weathered_copper", "weathered_copper");
     headBlock("mini_weathered_cut_copper", "weathered_cut_copper");
-    headBlock("mini_white_glazed_terracotta", "white_glazed_terracotta");
-    headBlock("mini_wood", "wood");
-    headBlock("mini_white_wool", "wool_colored_white");
-    headBlock("mini_yellow_glazed_terracotta", "yellow_glazed_terracotta");
-    headBlock("mini_yellow_wool", "wool_colored_yellow");
-    headBlock("mini_blue_concrete", "blue_concrete");
     headBlock("mini_white_concrete", "white_concrete");
     headBlock("mini_white_concrete_powder", "white_concrete_powder");
-    headBlock("mini_light_gray_shulker_box", "light_gray_shulker_box");
-    headBlock("mini_yellow_concrete", "yellow_concrete");
-    headBlock("mini_yellow_terracotta", "yellow_terracotta");
-    headBlock("mini_yellow_stained_glass", "yellow_stained_glass");
-    headBlock("mini_yellow_shulker_box", "yellow_shulker_box");
-    headBlock("mini_yellow_concrete_powder", "yellow_concrete_powder");
-    headBlock("mini_stripped_cherry_log", "stripped_cherry_log_side",
-              "stripped_cherry_log_top");
-    headBlock("mini_brown_terracotta", "brown_terracotta");
-    headBlock("mini_spruce_log", "spruce_log_side", "spruce_log_top");
-    headBlock("mini_red_shulker_box", "red_shulker_box");
-    headBlock("mini_blue_stained_glass", "blue_stained_glass");
-    headBlock("mini_red_terracotta", "red_terracotta");
-    headBlock("mini_white_terracotta", "white_terracotta");
-    headBlock("mini_white_stained_glass", "white_stained_glass");
+    headBlock("mini_white_glazed_terracotta", "white_glazed_terracotta");
     headBlock("mini_white_shulker_box", "white_shulker_box");
-    headBlock("mini_magenta_stained_glass", "magenta_stained_glass");
-    headBlock("mini_black_stained_glass", "black_stained_glass");
-    headBlock("mini_green_terracotta", "green_terracotta");
-    headBlock("mini_gray_terracotta", "gray_terracotta");
-    headBlock("mini_gray_stained_glass", "gray_stained_glass");
-    headBlock("mini_stripped_cherry_wood", "stripped_cherry_log_side");
-    headBlock("mini_red_stained_glass", "red_stained_glass");
-    headBlock("mini_purple_concrete", "purple_concrete");
-    headBlock("mini_red_concrete_powder", "red_concrete_powder");
-    headBlock("mini_red_concrete", "red_concrete");
-    headBlock("mini_purple_terracotta", "purple_terracotta");
-    headBlock("mini_brown_concrete", "brown_concrete");
-    headBlock("mini_purple_stained_glass", "purple_stained_glass");
-    headBlock("mini_purple_shulker_box", "purple_shulker_box");
-    headBlock("mini_purple_concrete_powder", "purple_concrete_powder");
-    headBlock("mini_magenta_concrete", "magenta_concrete");
-    headBlock("mini_lime_terracotta", "lime_terracotta");
-    headBlock("mini_lime_stained_glass", "lime_stained_glass");
-    headBlock("mini_lime_shulker_box", "lime_shulker_box");
-    headBlock("mini_lime_concrete_powder", "lime_concrete_powder");
-    headBlock("mini_cyan_concrete_powder", "cyan_concrete_powder");
-    headBlock("mini_lime_concrete", "lime_concrete");
-    headBlock("mini_light_gray_terracotta", "light_gray_terracotta");
-    headBlock("mini_light_gray_concrete_powder", "light_gray_concrete_powder");
-    headBlock("mini_orange_shulker_box", "orange_shulker_box");
-    headBlock("mini_orange_concrete_powder", "orange_concrete_powder");
-    headBlock("mini_orange_concrete", "orange_concrete");
-    headBlock("mini_oak_log", "oak_log_side", "oak_log_top");
-    headBlock("mini_gray_wool", "wool_colored_gray");
-    headBlock("mini_magenta_terracotta", "magenta_terracotta");
-    headBlock("mini_magenta_shulker_box", "magenta_shulker_box");
-    headBlock("mini_light_blue_terracotta", "light_blue_terracotta");
-    headBlock("mini_magenta_concrete_powder", "magenta_concrete_powder");
-    headBlock("mini_jungle_log", "jungle_log_side", "jungle_log_top");
-    headBlock("mini_pink_terracotta", "pink_terracotta");
-    headBlock("mini_pink_stained_glass", "pink_stained_glass");
-    headBlock("mini_pink_shulker_box", "pink_shulker_box");
-    headBlock("mini_light_gray_stained_glass", "light_gray_stained_glass");
-    headBlock("mini_pink_concrete_powder", "pink_concrete_powder");
-    headBlock("mini_pink_concrete", "pink_concrete");
-    headBlock("mini_orange_terracotta", "orange_terracotta");
-    headBlock("mini_orange_stained_glass", "orange_stained_glass");
-    headBlock("mini_light_gray_concrete", "light_gray_concrete");
-    headBlock("mini_light_blue_stained_glass", "light_blue_stained_glass");
-    headBlock("mini_light_blue_shulker_box", "light_blue_shulker_box");
-    headBlock("mini_light_blue_concrete_powder", "light_blue_concrete_powder");
-    headBlock("mini_light_blue_concrete", "light_blue_concrete");
-    headBlock("mini_green_wool", "wool_colored_green");
-    headBlock("mini_lime_wool", "wool_colored_lime");
-    headBlock("mini_green_stained_glass", "green_stained_glass");
-    headBlock("mini_green_shulker_box", "green_shulker_box");
-    headBlock("mini_green_concrete_powder", "green_concrete_powder");
-    headBlock("mini_brown_shulker_box", "brown_shulker_box");
-    headBlock("mini_brown_concrete_powder", "brown_concrete_powder");
-    headBlock("mini_blue_wool", "wool_colored_blue");
-    headBlock("mini_blue_terracotta", "blue_terracotta");
-    headBlock("mini_blue_concrete_powder", "blue_concrete_powder");
-    headBlock("mini_black_wool", "wool_colored_black");
-    headBlock("mini_black_shulker_box", "black_shulker_box");
-    headBlock("mini_black_concrete_powder", "black_concrete_powder");
-    headBlock("mini_black_concrete", "black_concrete");
-    headBlock("mini_cyan_shulker_box", "cyan_shulker_box");
-    headBlock("mini_cyan_concrete", "cyan_concrete");
-    headBlock("mini_black_terracotta", "black_terracotta");
-    headBlock("mini_cherry_wood", "cherry_log_side");
-    headBlock("mini_cherry_planks", "cherry_planks");
-    headBlock("mini_cherry_log", "cherry_log_side", "cherry_log_top");
-    headBlock("mini_cherry_leaves", "cherry_leaves");
-    headBlock("mini_brown_wool", "wool_colored_brown");
-    headBlock("mini_brown_stained_glass", "brown_stained_glass");
-    headBlock("mini_green_concrete", "green_concrete");
-    headBlock("mini_gray_shulker_box", "gray_shulker_box");
-    headBlock("mini_gray_concrete_powder", "gray_concrete_powder");
-    headBlock("mini_gray_concrete", "gray_concrete");
-    headBlock("mini_dark_oak_log", "dark_oak_log_side", "dark_oak_log_top");
-    headBlock("mini_blue_shulker_box", "blue_shulker_box");
-    headBlock("mini_cyan_wool", "wool_colored_cyan");
-    headBlock("mini_cyan_terracotta", "cyan_terracotta");
-    headBlock("mini_cyan_stained_glass", "cyan_stained_glass");
+    headBlock("mini_white_stained_glass", "white_stained_glass");
+    headBlock("mini_white_terracotta", "white_terracotta");
+    headBlock("mini_white_wool", "wool_colored_white");
+    headBlock("mini_wood", "wood");
+    headBlock("mini_yellow_concrete", "yellow_concrete");
+    headBlock("mini_yellow_concrete_powder", "yellow_concrete_powder");
+    headBlock("mini_yellow_glazed_terracotta", "yellow_glazed_terracotta");
+    headBlock("mini_yellow_shulker_box", "yellow_shulker_box");
+    headBlock("mini_yellow_stained_glass", "yellow_stained_glass");
+    headBlock("mini_yellow_terracotta", "yellow_terracotta");
+    headBlock("mini_yellow_wool", "wool_colored_yellow");
 
     std::vector<std::string> effect_list = {
         "absorption",   "bad_omen",     "blindness",       "conduit_power",
