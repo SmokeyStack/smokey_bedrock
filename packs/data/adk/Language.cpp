@@ -1,5 +1,9 @@
 #include "Language.h"
 
+#include <map>
+#include <string>
+#include <vector>
+
 #include "GlobalRegistry.h"
 
 Language::Language(std::string id, std::string locale) {
@@ -338,6 +342,66 @@ void Language::init() {
     add("mini_yellow_stained_glass", "Mini Yellow Stained Glass");
     add("mini_yellow_terracotta", "Mini Yellow Terracotta");
     add("mini_yellow_wool", "Mini Yellow Wool");
+
+    std::map<std::string, std::string> effect_list = {
+        std::make_pair("absorption", "Absorption"),
+        std::make_pair("bad_omen", "Bad Omen"),
+        std::make_pair("blindness", "Blindness"),
+        std::make_pair("conduit_power", "Conduit Power"),
+        std::make_pair("darkness", "Darkness"),
+        std::make_pair("fatal_poison", "Fatal Poison"),
+        std::make_pair("fire_resistance", "Fire Resistance"),
+        std::make_pair("haste", "Haste"),
+        std::make_pair("health_boost", "Health Boost"),
+        std::make_pair("hunger", "Hunger"),
+        std::make_pair("instant_damage", "Instant Damage"),
+        std::make_pair("instant_health", "Instant Health"),
+        std::make_pair("invisibility", "Invisibility"),
+        std::make_pair("jump_boost", "Jump Boost"),
+        std::make_pair("levitation", "Levitation"),
+        std::make_pair("mining_fatigue", "Mining Fatigue"),
+        std::make_pair("nausea", "Nausea"),
+        std::make_pair("night_vision", "Night Vision"),
+        std::make_pair("poison", "Poison"),
+        std::make_pair("regeneration", "Regeneration"),
+        std::make_pair("resistance", "Resistance"),
+        std::make_pair("saturation", "Saturation"),
+        std::make_pair("slow_falling", "Slow Falling"),
+        std::make_pair("slowness", "Slowness"),
+        std::make_pair("speed", "Speed"),
+        std::make_pair("strength", "Strength"),
+        std::make_pair("village_hero", "Hero of the Village"),
+        std::make_pair("water_breathing", "Water Breathing"),
+        std::make_pair("weakness", "Weakness"),
+        std::make_pair("wither", "Wither")};
+
+    for (auto const& [key, val] : effect_list)
+        add("candle_" + key, "Scented Candle of " + val);
+
+    add("honeycomb_bricks", "Honeycomb Bricks");
     add("honeycomb_tiles", "Honeycomb Tiles");
+    add("solidified_honey", "Solidified Honey");
+    add("smooth_honeycomb", "Smooth Honeycomb");
+    add("honeycomb_bricks_slab", "Honeycomb Bricks Slab");
+    add("honeycomb_tiles_slab", "Honeycomb Tiles Slab");
+    add("solidified_honey_slab", "Solidified Honey Slab");
+
+    add("smooth_honeycomb_slab", "Smooth Honeycomb Slab");
+    add("searocket_white", "White Searocket");
+    add("searocket_pink", "Pink Searocket");
+    add("seagrass_blue", "Blue Seagrass");
+    add("seagrass_purple", "Purple Seagrass");
+    add("seagrass_block_blue", "Block of Blue Seagrass");
+    add("seagrass_block_dried_purple", "Block of Dried Purple Seagrass");
+    add("seagrass_block_purple", "Block of Purple Seagrass");
+    add("seagrass_dried_purple", "Block of Dried Purple Seagrass");
+
+    add("scute_block", "Block of Scute");
+    add("scute_block_tile", "Scute Tiles");
+    add("scute_block_shingles", "Scute Shingles");
+    add("scute_block_slab", "Scute Slab");
+    add("scute_block_tile_slab", "Scute Tile Slab");
+    add("scute_block_shingles_slab", "Scute Shingle Slab");
+
     createLangFile();
 }

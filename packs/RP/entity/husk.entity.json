@@ -93,13 +93,6 @@
                     "v.tcos0 = (Math.cos(q.modified_distance_moved * 38.17) * q.modified_move_speed / v.gliding_speed_value) * 57.3;"
                 ]
             },
-            "sound_effects": {
-                "clicking": "mob.warden.clicking",
-                "dig": "mob.warden.dig",
-                "emerge": "mob.warden.emerge",
-                "roar": "mob.warden.roar",
-                "sniff": "mob.warden.sniff"
-            },
             "spawn_egg": {
                 "texture": "spawn_egg",
                 "texture_index": 28

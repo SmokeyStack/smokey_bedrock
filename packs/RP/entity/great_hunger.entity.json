@@ -37,10 +37,6 @@
                     }
                 ]
             },
-            "sound_effects": {
-                "dig": "mob.warden.dig",
-                "emerge": "mob.warden.emerge"
-            },
             "spawn_egg": {
                 "base_color": "#6a6e6f",
                 "overlay_color": "#838889"

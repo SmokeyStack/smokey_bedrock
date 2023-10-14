@@ -453,7 +453,7 @@ void Data::init() {
         "weakness",     "wither"};
 
     for (const std::string& a : effect_list)
-        candleBlock("candle_" + a, "sculk");
+        candleBlock("candle_" + a, "candle_" + a);
 
     simpleBlock("honeycomb_bricks", "honeycomb_bricks");
     simpleBlock("honeycomb_tiles", "honeycomb_tiles");

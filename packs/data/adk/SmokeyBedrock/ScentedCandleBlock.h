@@ -46,7 +46,7 @@ class ScentedCandleBlock : public CandleBlock {
 
         // Permutations
         json::object_t temp = {
-            {"condition", "q.block_property('" + mod_id + ":count') == 2"}};
+            {"condition", "q.block_state('" + mod_id + ":count') == 2"}};
         temp["components"].update(
             helper.collision(std::make_pair(std::vector<int>{-3, 0, -1},
                                             std::vector<int>{5, 6, 3}),
@@ -60,7 +60,7 @@ class ScentedCandleBlock : public CandleBlock {
               {{"interval_range", {600, 1200}},
                {"on_tick", {{"event", mod_id + ":effect_two"}}}}}});
         j["minecraft:block"]["permutations"].push_back(temp);
-        temp = {{"condition", "q.block_property('" + mod_id + ":count') == 3"}};
+        temp = {{"condition", "q.block_state('" + mod_id + ":count') == 3"}};
         temp["components"].update(
             helper.collision(std::make_pair(std::vector<int>{-2, 0, -2},
                                             std::vector<int>{5, 6, 5}),
@@ -74,7 +74,7 @@ class ScentedCandleBlock : public CandleBlock {
               {{"interval_range", {600, 1200}},
                {"on_tick", {{"event", mod_id + ":effect_three"}}}}}});
         j["minecraft:block"]["permutations"].push_back(temp);
-        temp = {{"condition", "q.block_property('" + mod_id + ":count') == 4"}};
+        temp = {{"condition", "q.block_state('" + mod_id + ":count') == 4"}};
         temp["components"].update(
             helper.collision(std::make_pair(std::vector<int>{-3, 0, -3},
                                             std::vector<int>{6, 6, 5}),
