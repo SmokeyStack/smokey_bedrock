@@ -393,6 +393,7 @@ void Language::init() {
     add("seagrass_purple", "Purple Seagrass");
     add("seagrass_block_blue", "Block of Blue Seagrass");
     add("seagrass_block_dried_purple", "Block of Dried Purple Seagrass");
+    add("seagrass_block_dried_blue", "Block of Dried Blue Seagrass");
     add("seagrass_block_purple", "Block of Purple Seagrass");
     add("seagrass_dried_purple", "Block of Dried Purple Seagrass");
 

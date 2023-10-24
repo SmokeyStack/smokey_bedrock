@@ -113,34 +113,59 @@ void Object::init() {
     blocks->subscribe(
         "searocket_white",
         new Block(
-            BlockProperty().setCollision(false).setSelection(std::make_pair(
-                std::vector<int>{-6, 0, -6}, std::vector<int>{12, 13, 12}))));
+            BlockProperty()
+                .setCollision(false)
+                .setSelection(std::make_pair(std::vector<int>{-6, 0, -6},
+                                             std::vector<int>{12, 13, 12}))
+                .setCreativeCategory(adk::CreativeTab::NATURE)));
     blocks->subscribe(
         "searocket_pink",
         new Block(
-            BlockProperty().setCollision(false).setSelection(std::make_pair(
-                std::vector<int>{-6, 0, -6}, std::vector<int>{12, 13, 12}))));
+            BlockProperty()
+                .setCollision(false)
+                .setSelection(std::make_pair(std::vector<int>{-6, 0, -6},
+                                             std::vector<int>{12, 13, 12}))
+                .setCreativeCategory(adk::CreativeTab::NATURE)));
 
     blocks->subscribe(
         "seagrass_blue",
         new Block(
-            BlockProperty().setCollision(false).setSelection(std::make_pair(
-                std::vector<int>{-6, 0, -6}, std::vector<int>{12, 13, 12}))));
+            BlockProperty()
+                .setCollision(false)
+                .setSelection(std::make_pair(std::vector<int>{-6, 0, -6},
+                                             std::vector<int>{12, 13, 12}))
+                .setCreativeCategory(adk::CreativeTab::NATURE)));
     blocks->subscribe(
         "seagrass_purple",
         new Block(
-            BlockProperty().setCollision(false).setSelection(std::make_pair(
-                std::vector<int>{-6, 0, -6}, std::vector<int>{12, 13, 12}))));
+            BlockProperty()
+                .setCollision(false)
+                .setSelection(std::make_pair(std::vector<int>{-6, 0, -6},
+                                             std::vector<int>{12, 13, 12}))
+                .setCreativeCategory(adk::CreativeTab::NATURE)));
 
-    blocks->subscribe("seagrass_block_blue", new Block(BlockProperty()));
-    blocks->subscribe("seagrass_block_dried_blue", new Block(BlockProperty()));
-    blocks->subscribe("seagrass_block_purple", new Block(BlockProperty()));
+    blocks->subscribe("seagrass_block_blue",
+                      new Block(BlockProperty().setCreativeCategory(
+                          adk::CreativeTab::NATURE)));
+    blocks->subscribe("seagrass_block_dried_blue",
+                      new Block(BlockProperty().setCreativeCategory(
+                          adk::CreativeTab::NATURE)));
+    blocks->subscribe("seagrass_block_purple",
+                      new Block(BlockProperty().setCreativeCategory(
+                          adk::CreativeTab::NATURE)));
     blocks->subscribe("seagrass_block_dried_purple",
-                      new Block(BlockProperty()));
+                      new Block(BlockProperty().setCreativeCategory(
+                          adk::CreativeTab::NATURE)));
 
-    blocks->subscribe("scute_block", new Block(BlockProperty()));
-    blocks->subscribe("scute_block_tile", new Block(BlockProperty()));
-    blocks->subscribe("scute_block_shingles", new Block(BlockProperty()));
+    blocks->subscribe("scute_block",
+                      new Block(BlockProperty().setCreativeCategory(
+                          adk::CreativeTab::NATURE)));
+    blocks->subscribe("scute_block_tile",
+                      new Block(BlockProperty().setCreativeCategory(
+                          adk::CreativeTab::NATURE)));
+    blocks->subscribe("scute_block_shingles",
+                      new Block(BlockProperty().setCreativeCategory(
+                          adk::CreativeTab::NATURE)));
     blocks->subscribe(
         "scute_block_slab",
         new SlabBlock(BlockProperty().setCreativeCategory(
