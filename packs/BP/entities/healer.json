@@ -104,11 +104,11 @@
                 "event_name": "ambient",
                 "event_names": [
                     {
-                        "condition": "query.is_using_item",
+                        "condition": "q.is_using_item",
                         "event_name": "ambient.tame"
                     },
                     {
-                        "condition": "!query.is_using_item",
+                        "condition": "!q.is_using_item",
                         "event_name": "ambient"
                     }
                 ],

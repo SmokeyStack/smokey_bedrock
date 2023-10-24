@@ -1,24 +1,34 @@
 {
+    "dependencies": [
+        {
+            "uuid": "681429C6-7E50-4DCF-B0CF-F1629CF43049",
+            "version": [
+                1,
+                0,
+                0
+            ]
+        }
+    ],
     "format_version": 2,
     "header": {
-        "name": "Smokey Bedrock",
         "description": "Made By SmokeyStack",
-        "uuid": "ada6a807-4846-4547-8b2f-250e2ff56ee7",
+        "min_engine_version": [
+            1,
+            20,
+            40
+        ],
+        "name": "SmokeyStack's Better Bedrock",
+        "uuid": "5BBFB65F-BE83-48A4-9762-C68B086C4607",
         "version": [
             1,
             0,
             0
-        ],
-        "min_engine_version": [
-            1,
-            19,
-            60
         ]
     },
     "modules": [
         {
             "type": "resources",
-            "uuid": "89cd5594-68be-49e5-9bfa-52c8ba07a07d",
+            "uuid": "0EB6C161-07E4-4AC6-B3CB-538DD512FEFE",
             "version": [
                 1,
                 0,

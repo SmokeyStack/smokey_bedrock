@@ -4,7 +4,7 @@
         "components": {
             "minecraft:allow_off_hand": true,
             "minecraft:icon": {
-                "texture": "stick"
+                "texture": "dart_mining_fatigue"
             },
             "minecraft:projectile": {
                 "projectile_entity": "smokey_bedrock:dart<mining_fatigue>"

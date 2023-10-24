@@ -4,6 +4,7 @@
 #include <spdlog/spdlog.h>
 
 #include "Data.h"
+#include "Language.h"
 #include "Object.h"
 #include "Recipe.h"
 
@@ -31,10 +32,12 @@ int main() {
     Object MyAddOn("smokey_bedrock");
     Data DataGenerator;
     Recipe RecipeGenerator;
+    Language LanguageGenerator("smokey_bedrock", "en_US");
 
     MyAddOn.init();
     DataGenerator.init();
     RecipeGenerator.init();
+    LanguageGenerator.init();
 
     return 0;
 }

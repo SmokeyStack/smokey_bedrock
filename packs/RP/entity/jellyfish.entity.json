@@ -22,7 +22,7 @@
             },
             "spawn_egg": {
                 "base_color": "#e500e5",
-                "overlay_color": "#ff19ff"
+                "overlay_color": "#e50073"
             },
             "textures": {
                 "blue": "textures/entity/jellyfish_blue",

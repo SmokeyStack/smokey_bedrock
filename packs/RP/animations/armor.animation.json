@@ -4,23 +4,23 @@
             "bones": {
                 "body": {
                     "position": [
-                        "query.get_root_locator_offset('armor_offset.chestplate', 0)",
-                        "query.get_root_locator_offset('armor_offset.chestplate', 1) + 10",
-                        "query.get_root_locator_offset('armor_offset.chestplate', 2)"
+                        "q.get_root_locator_offset('armor_offset.chestplate', 0)",
+                        "q.get_root_locator_offset('armor_offset.chestplate', 1) + 10",
+                        "q.get_root_locator_offset('armor_offset.chestplate', 2)"
                     ]
                 },
                 "leftArm": {
                     "position": [
-                        "query.get_root_locator_offset('armor_offset.left_arm', 0)",
-                        "query.get_root_locator_offset('armor_offset.left_arm', 1)",
-                        "query.get_root_locator_offset('armor_offset.left_arm', 2)"
+                        "q.get_root_locator_offset('armor_offset.left_arm', 0)",
+                        "q.get_root_locator_offset('armor_offset.left_arm', 1)",
+                        "q.get_root_locator_offset('armor_offset.left_arm', 2)"
                     ]
                 },
                 "rightArm": {
                     "position": [
-                        "query.get_root_locator_offset('armor_offset.right_arm', 0)",
-                        "query.get_root_locator_offset('armor_offset.right_arm', 1)",
-                        "query.get_root_locator_offset('armor_offset.right_arm', 2)"
+                        "q.get_root_locator_offset('armor_offset.right_arm', 0)",
+                        "q.get_root_locator_offset('armor_offset.right_arm', 1)",
+                        "q.get_root_locator_offset('armor_offset.right_arm', 2)"
                     ]
                 }
             },
@@ -30,23 +30,23 @@
             "bones": {
                 "body": {
                     "position": [
-                        "query.get_root_locator_offset('armor_offset.leggings', 0)",
-                        "query.get_root_locator_offset('armor_offset.leggings', 1) + 10",
-                        "query.get_root_locator_offset('armor_offset.leggings', 2)"
+                        "q.get_root_locator_offset('armor_offset.leggings', 0)",
+                        "q.get_root_locator_offset('armor_offset.leggings', 1) + 10",
+                        "q.get_root_locator_offset('armor_offset.leggings', 2)"
                     ]
                 },
                 "leftLeg": {
                     "position": [
-                        "query.get_root_locator_offset('armor_offset.left_leg', 0)",
-                        "query.get_root_locator_offset('armor_offset.left_leg', 1)",
-                        "query.get_root_locator_offset('armor_offset.left_leg', 2)"
+                        "q.get_root_locator_offset('armor_offset.left_leg', 0)",
+                        "q.get_root_locator_offset('armor_offset.left_leg', 1)",
+                        "q.get_root_locator_offset('armor_offset.left_leg', 2)"
                     ]
                 },
                 "rightLeg": {
                     "position": [
-                        "query.get_root_locator_offset('armor_offset.right_leg', 0)",
-                        "query.get_root_locator_offset('armor_offset.right_leg', 1)",
-                        "query.get_root_locator_offset('armor_offset.right_leg', 2)"
+                        "q.get_root_locator_offset('armor_offset.right_leg', 0)",
+                        "q.get_root_locator_offset('armor_offset.right_leg', 1)",
+                        "q.get_root_locator_offset('armor_offset.right_leg', 2)"
                     ]
                 }
             },

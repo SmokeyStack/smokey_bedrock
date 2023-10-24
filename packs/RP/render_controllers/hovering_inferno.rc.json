@@ -10,16 +10,16 @@
             ],
             "part_visibility": [
                 {
-                    "shield": "q.variant && q.health >= 30"
+                    "one": "q.variant && q.health >= 30"
                 },
                 {
-                    "shield2": "q.variant && q.health >= 20"
+                    "two": "q.variant && q.health >= 20"
                 },
                 {
-                    "shield3": "q.variant && q.health >= 10"
+                    "three": "q.variant && q.health >= 10"
                 },
                 {
-                    "shield4": "q.variant && q.health >= 0"
+                    "four": "q.variant && q.health >= 0"
                 }
             ],
             "textures": [

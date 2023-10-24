@@ -84,6 +84,9 @@
                 },
                 "sensor_range": 1
             },
+            "minecraft:experience_reward": {
+                "on_death": "q.last_hit_by_player ? 10 : 0"
+            },
             "minecraft:health": {
                 "value": 20
             },

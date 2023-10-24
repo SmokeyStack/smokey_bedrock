@@ -15,6 +15,96 @@
         "blue_seagrass_block_top": {
             "textures": "textures/blocks/blue_seagrass_block_top"
         },
+        "candle_absorption": {
+            "textures": "textures/blocks/candles/candle_absorption"
+        },
+        "candle_bad_omen": {
+            "textures": "textures/blocks/candles/candle_bad_omen"
+        },
+        "candle_blindness": {
+            "textures": "textures/blocks/candles/candle_blindness"
+        },
+        "candle_conduit_power": {
+            "textures": "textures/blocks/candles/candle_conduit_power"
+        },
+        "candle_darkness": {
+            "textures": "textures/blocks/candles/candle_darkness"
+        },
+        "candle_fatal_poison": {
+            "textures": "textures/blocks/candles/candle_fatal_poison"
+        },
+        "candle_fire_resistance": {
+            "textures": "textures/blocks/candles/candle_fire_resistance"
+        },
+        "candle_haste": {
+            "textures": "textures/blocks/candles/candle_haste"
+        },
+        "candle_health_boost": {
+            "textures": "textures/blocks/candles/candle_health_boost"
+        },
+        "candle_hunger": {
+            "textures": "textures/blocks/candles/candle_hunger"
+        },
+        "candle_instant_damage": {
+            "textures": "textures/blocks/candles/candle_instant_damage"
+        },
+        "candle_instant_health": {
+            "textures": "textures/blocks/candles/candle_instant_health"
+        },
+        "candle_invisibility": {
+            "textures": "textures/blocks/candles/candle_invisibility"
+        },
+        "candle_jump_boost": {
+            "textures": "textures/blocks/candles/candle_jump_boost"
+        },
+        "candle_levitation": {
+            "textures": "textures/blocks/candles/candle_levitation"
+        },
+        "candle_mining_fatigue": {
+            "textures": "textures/blocks/candles/candle_invisibility"
+        },
+        "candle_nausea": {
+            "textures": "textures/blocks/candles/candle_nausea"
+        },
+        "candle_night_vision": {
+            "textures": "textures/blocks/candles/candle_night_vision"
+        },
+        "candle_poison": {
+            "textures": "textures/blocks/candles/candle_poison"
+        },
+        "candle_regeneration": {
+            "textures": "textures/blocks/candles/candle_regeneration"
+        },
+        "candle_resistance": {
+            "textures": "textures/blocks/candles/candle_resistance"
+        },
+        "candle_saturation": {
+            "textures": "textures/blocks/candles/candle_saturation"
+        },
+        "candle_slow_falling": {
+            "textures": "textures/blocks/candles/candle_slow_falling"
+        },
+        "candle_slowness": {
+            "textures": "textures/blocks/candles/candle_slowness"
+        },
+        "candle_speed": {
+            "textures": "textures/blocks/candles/candle_speed"
+        },
+        "candle_strength": {
+            "textures": "textures/blocks/candles/candle_strength"
+        },
+        "candle_village_hero": {
+            "textures": "textures/blocks/candles/candle_village_hero"
+        },
+        "candle_water_breathing": {
+            "textures": "textures/blocks/candles/candle_water_breathing"
+        },
+        "candle_weakness": {
+            "textures": "textures/blocks/candles/candle_weakness"
+        },
+        "candle_wither": {
+            "textures": "textures/blocks/candles/candle_wither"
+        },
         "dried_blue_seagrass_block_side": {
             "textures": "textures/blocks/dried_blue_seagrass_block_side"
         },
@@ -29,12 +119,6 @@
         },
         "dried_seagrass_block_bottom": {
             "textures": "textures/blocks/dried_seagrass_block_bottom"
-        },
-        "fossilized_shell": {
-            "textures": "textures/blocks/fossilized_shell"
-        },
-        "fossilized_shell_sides": {
-            "textures": "textures/blocks/fossilized_shell_sides"
         },
         "honeycomb_bricks": {
             "textures": "textures/blocks/honeycomb_bricks"

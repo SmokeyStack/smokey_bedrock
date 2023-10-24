@@ -21,8 +21,8 @@
                 "controller.render.dolphin"
             ],
             "spawn_egg": {
-                "texture": "spawn_egg",
-                "texture_index": 49
+                "base_color": "#caa1c9",
+                "overlay_color": "#caa1b4"
             },
             "textures": {
                 "default": "textures/entity/baiji_dolphin"

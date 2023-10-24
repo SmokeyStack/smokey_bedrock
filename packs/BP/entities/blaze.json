@@ -42,7 +42,7 @@
             },
             "smokey_bedrock:blaze_adult": {
                 "minecraft:experience_reward": {
-                    "on_death": "query.last_hit_by_player ? 10 : 0"
+                    "on_death": "q.last_hit_by_player ? 10 : 0"
                 },
                 "minecraft:loot": {
                     "table": "loot_tables/entities/blaze.json"
@@ -53,7 +53,7 @@
             },
             "smokey_bedrock:blaze_baby": {
                 "minecraft:experience_reward": {
-                    "on_death": "query.last_hit_by_player ? 20 : 0"
+                    "on_death": "q.last_hit_by_player ? 20 : 0"
                 },
                 "minecraft:is_baby": {},
                 "minecraft:movement": {
@@ -75,9 +75,20 @@
                 "entity_types": [
                     {
                         "filters": {
-                            "subject": "other",
-                            "test": "is_family",
-                            "value": "player"
+                            "all_of": [
+                                {
+                                    "subject": "other",
+                                    "test": "is_family",
+                                    "value": "player"
+                                },
+                                {
+                                    "domain": "head",
+                                    "operator": "!=",
+                                    "subject": "other",
+                                    "test": "has_equipment",
+                                    "value": "smokey_bedrock:inferno_crown"
+                                }
+                            ]
                         },
                         "max_dist": 48
                     }

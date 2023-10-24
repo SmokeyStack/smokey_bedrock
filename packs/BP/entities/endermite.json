@@ -4,7 +4,7 @@
         "component_groups": {
             "smokey_bedrock:endermite_adult": {
                 "minecraft:experience_reward": {
-                    "on_death": "query.last_hit_by_player ? 3 : 0"
+                    "on_death": "q.last_hit_by_player ? 3 : 0"
                 },
                 "minecraft:movement": {
                     "value": 0.25
@@ -12,7 +12,7 @@
             },
             "smokey_bedrock:endermite_baby": {
                 "minecraft:experience_reward": {
-                    "on_death": "query.last_hit_by_player ? 6 : 0"
+                    "on_death": "q.last_hit_by_player ? 6 : 0"
                 },
                 "minecraft:is_baby": {},
                 "minecraft:movement": {

@@ -1,0 +1,14 @@
+{
+    "pools": [
+        {
+            "entries": [
+                {
+                    "name": "smokey_bedrock:inferno_crown",
+                    "type": "item",
+                    "weight": 1
+                }
+            ],
+            "rolls": 1
+        }
+    ]
+}

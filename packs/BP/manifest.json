@@ -1,34 +1,11 @@
 {
-    "format_version": 2,
-    "header": {
-        "name": "Smokey Bedrock",
-        "description": "Made By SmokeyStack",
-        "uuid": "985D1EE4-0E9D-49DE-9A99-E208ADC08D0C",
-        "version": [
-            1,
-            0,
-            0
-        ],
-        "min_engine_version": [
-            1,
-            19,
-            60
-        ]
-    },
-    "modules": [
+    "dependencies": [
         {
-            "type": "data",
-            "uuid": "700d26f6-d1e0-499f-8574-1367b731820e",
-            "version": [
-                1,
-                0,
-                0
-            ]
+            "module_name": "@minecraft/server",
+            "version": "1.7.0-beta"
         },
         {
-            "type": "script",
-            "entry": "scripts/main.js",
-            "uuid": "b2ad5687-f337-4db0-92fe-cd7530186dd9",
+            "uuid": "5BBFB65F-BE83-48A4-9762-C68B086C4607",
             "version": [
                 1,
                 0,
@@ -36,10 +13,41 @@
             ]
         }
     ],
-    "dependencies": [
+    "format_version": 2,
+    "header": {
+        "description": "Made By SmokeyStack",
+        "min_engine_version": [
+            1,
+            20,
+            40
+        ],
+        "name": "SmokeyStack's Better Bedrock",
+        "uuid": "681429C6-7E50-4DCF-B0CF-F1629CF43049",
+        "version": [
+            1,
+            0,
+            0
+        ]
+    },
+    "modules": [
         {
-            "module_name": "@minecraft/server",
-            "version": "1.1.0-beta"
+            "type": "data",
+            "uuid": "EE0DBBEF-8952-480C-9A3B-FE767ECEBC11",
+            "version": [
+                1,
+                0,
+                0
+            ]
+        },
+        {
+            "entry": "scripts/main.js",
+            "type": "script",
+            "uuid": "E8B1E08F-3DA2-4D54-8B9E-244B65B33CFA",
+            "version": [
+                1,
+                0,
+                0
+            ]
         }
     ]
 }

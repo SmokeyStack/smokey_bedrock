@@ -10,7 +10,7 @@
         },
         "components": {
             "minecraft:particle_initialization": {
-                "per_render_expression": "variable.size = 16 * math.clamp(variable.particle_age / variable.particle_lifetime * 0.75, 0.0, 1.0);"
+                "per_render_expression": "v.size = 16 * math.clamp(v.particle_age / v.particle_lifetime * 0.75, 0.0, 1.0);"
             },
             "minecraft:emitter_rate_steady": {
                 "spawn_rate": 4,
@@ -38,8 +38,8 @@
             "minecraft:particle_motion_dynamic": {},
             "minecraft:particle_appearance_billboard": {
                 "size": [
-                    "variable.size",
-                    "variable.size"
+                    "v.size",
+                    "v.size"
                 ],
                 "facing_camera_mode": "direction_y",
                 "direction": {
@@ -68,7 +68,7 @@
                     1,
                     1,
                     1,
-                    "Math.clamp(1.0 - math.clamp(variable.particle_age / variable.particle_lifetime, 0, 1), 0, 1)"
+                    "Math.clamp(1.0 - math.clamp(v.particle_age / v.particle_lifetime, 0, 1), 0, 1)"
                 ]
             }
         }

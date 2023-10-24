@@ -4,7 +4,7 @@
         "components": {
             "minecraft:allow_off_hand": true,
             "minecraft:icon": {
-                "texture": "stick"
+                "texture": "dart_hunger"
             },
             "minecraft:projectile": {
                 "projectile_entity": "smokey_bedrock:dart<hunger>"

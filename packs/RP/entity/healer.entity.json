@@ -38,12 +38,12 @@
             ],
             "scripts": {
                 "pre_animation": [
-                    "variable.holding_trident = query.is_item_name_any('slot.weapon.mainhand', 'minecraft:trident');"
+                    "v.holding_trident = q.is_item_name_any('slot.weapon.mainhand', 'minecraft:trident');"
                 ]
             },
             "spawn_egg": {
-                "base_color": "#FFFF00",
-                "overlay_color": "#FFFF00"
+                "base_color": "#e8e828",
+                "overlay_color": "#c8c815"
             },
             "textures": {
                 "default": "textures/entity/healer"

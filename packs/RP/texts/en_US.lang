@@ -1,0 +1,27 @@
+tile.smokey_bedrock:beachgrass.name=Beachgrass
+
+entity.smokey_bedrock:baiji_dolphin.name=Baiji Dolphin
+item.spawn_egg.entity.smokey_bedrock:baiji_dolphin.name=Spawn Baiji Dolphin
+entity.smokey_bedrock:barnacle.name=Barnacle
+item.spawn_egg.entity.smokey_bedrock:barnacle.name=Spawn Barnacle
+entity.smokey_bedrock:dart.name=Dart
+entity.smokey_bedrock:great_hunger.name=Great Hunger
+item.spawn_egg.entity.smokey_bedrock:great_hunger.name=Spawn Great Hunger
+entity.smokey_bedrock:healer.name=Healer
+item.spawn_egg.entity.smokey_bedrock:healer.name=Spawn Healer
+entity.smokey_bedrock:hovering_inferno.name=Hovering Inferno
+item.spawn_egg.entity.smokey_bedrock:hovering_inferno.name=Spawn Hovering Inferno
+entity.smokey_bedrock:jellyfish.name=Jellyfish
+item.spawn_egg.entity.smokey_bedrock:jellyfish.name=Spawn Jellyfish
+entity.smokey_bedrock:nautilus.name=Nautilus
+item.spawn_egg.entity.smokey_bedrock:nautilus.name=Spawn Nautilus
+
+item.smokey_bedrock:dart_shooter=Dart Shooter
+item.smokey_bedrock:dart_blindness=Blindness Dart
+item.smokey_bedrock:dart_exploding=Exploding Dart
+item.smokey_bedrock:dart_hunger=Hunger Dart
+item.smokey_bedrock:dart_mining_fatigue=Mining Fatigue Dart
+item.smokey_bedrock:dart_nausea=Nausea Dart
+item.smokey_bedrock:dart_poison=Poison Dart
+item.smokey_bedrock:dart_slowness=Slowness Dart
+item.smokey_bedrock:dart_weakness=Weakness Dart

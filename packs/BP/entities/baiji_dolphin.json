@@ -3,28 +3,12 @@
     "minecraft:entity": {
         "component_groups": {
             "dolphin_adult": {
-                "minecraft:behavior.melee_attack": {
-                    "priority": 2,
-                    "track_target": true
-                },
                 "minecraft:experience_reward": {
-                    "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
+                    "on_death": "q.last_hit_by_player ? Math.Random(1,3) : 0"
                 },
                 "minecraft:loot": {
                     "table": "loot_tables/entities/dolphin.json"
                 }
-            },
-            "dolphin_angry": {
-                "minecraft:angry": {
-                    "broadcast_anger": true,
-                    "broadcast_range": 16,
-                    "calm_event": {
-                        "event": "on_calm",
-                        "target": "self"
-                    },
-                    "duration": 25
-                },
-                "minecraft:on_target_acquired": {}
             },
             "dolphin_baby": {
                 "minecraft:ageable": {
@@ -147,10 +131,6 @@
             }
         },
         "components": {
-            "minecraft:attack": {
-                "damage": 3
-            },
-            "minecraft:balloonable": {},
             "minecraft:behavior.avoid_mob_type": {
                 "entity_types": [
                     {
@@ -181,27 +161,25 @@
                 "priority": 2,
                 "probability_per_strength": 0.14
             },
-            "minecraft:behavior.hurt_by_target": {
-                "priority": 1
-            },
-            "minecraft:behavior.move_to_water": {
-                "priority": 1,
-                "search_height": 5,
-                "search_range": 15
-            },
-            "minecraft:behavior.random_breach": {
-                "cooldown_time": 2,
-                "interval": 50,
-                "priority": 6,
-                "xz_dist": 6
-            },
-            "minecraft:behavior.random_look_around": {
-                "priority": 7
+            "minecraft:behavior.panic": {
+                "speed_multiplier": 5
             },
             "minecraft:behavior.random_swim": {
                 "interval": 0,
                 "priority": 5,
                 "xz_dist": 20
+            },
+            "minecraft:behavior.swim_idle": {
+                "idle_time": 5,
+                "priority": 5,
+                "success_rate": 0.1
+            },
+            "minecraft:behavior.swim_wander": {
+                "interval": 0.1,
+                "look_ahead": 2,
+                "priority": 4,
+                "speed_multiplier": 1,
+                "wander_time": 5
             },
             "minecraft:breathable": {
                 "breathes_air": true,
@@ -210,7 +188,6 @@
                 "suffocate_time": 0,
                 "total_supply": 240
             },
-            "minecraft:can_climb": {},
             "minecraft:collision_box": {
                 "height": 0.6,
                 "width": 0.9
@@ -239,10 +216,6 @@
                 "separation_weight": 1.75,
                 "use_center_of_mass": false
             },
-            "minecraft:follow_range": {
-                "max": 48,
-                "value": 48
-            },
             "minecraft:health": {
                 "max": 10,
                 "value": 10
@@ -262,32 +235,20 @@
                 ]
             },
             "minecraft:is_hidden_when_invisible": {},
-            "minecraft:jump.static": {
-                "jump_power": 0.6
-            },
-            "minecraft:leashable": {
-                "hard_distance": 6,
-                "max_distance": 10,
-                "soft_distance": 4
-            },
             "minecraft:movement": {
                 "value": 0.1
             },
+            "minecraft:movement.sway": {
+                "sway_amplitude": 0
+            },
             "minecraft:nameable": {},
             "minecraft:navigation.generic": {
-                "can_breach": true,
-                "can_path_over_water": true,
+                "can_breach": false,
+                "can_path_over_water": false,
                 "can_sink": false,
                 "can_swim": true,
                 "can_walk": false,
-                "is_amphibious": true
-            },
-            "minecraft:on_target_acquired": {
-                "event": "become_angry",
-                "target": "self"
-            },
-            "minecraft:on_target_escape": {
-                "target": "self"
+                "is_amphibious": false
             },
             "minecraft:physics": {},
             "minecraft:pushable": {
@@ -308,8 +269,7 @@
             "identifier": "smokey_bedrock:baiji_dolphin",
             "is_experimental": false,
             "is_spawnable": true,
-            "is_summonable": true,
-            "runtime_identifier": "minecraft:dolphin"
+            "is_summonable": true
         },
         "events": {
             "ageable_grow_up": {
@@ -321,13 +281,6 @@
                 "remove": {
                     "component_groups": [
                         "dolphin_baby"
-                    ]
-                }
-            },
-            "become_angry": {
-                "add": {
-                    "component_groups": [
-                        "dolphin_angry"
                     ]
                 }
             },
@@ -383,13 +336,6 @@
                 "remove": {
                     "component_groups": [
                         "dolphin_swimming_navigation"
-                    ]
-                }
-            },
-            "on_calm": {
-                "remove": {
-                    "component_groups": [
-                        "dolphin_angry"
                     ]
                 }
             },
